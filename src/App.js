@@ -1,8 +1,16 @@
-import logo from './logo.svg';
+import {Route, Routes } from 'react-router-dom';
 import './App.css';
-
+import login from './Pages/login';
 function App() {
-return <h1>Hello React</h1>
+return (
+
+<Routes>
+<Route path="/login" component={login}/>
+
+</Routes>
+
+)
 }
+
 
 export default App;
