@@ -6,27 +6,25 @@ const Userlogin = () => {
     const [Password, setPassword] = useState('');
     const sendData = (e) => {
         e.preventDefault();
-        alert(UserName);
-        alert(Password)
-       /*   post request */
-fetch("http://localhost:8000", {
-  method: "post",
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
-  },
+        
+        /*   post request */
+        fetch("http://localhost:8000/", {
+            method: "post",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
 
-  //make sure to serialize your JSON body
-  body: JSON.stringify({
-    name: UserName,
-    password: Password
-  })
-})
-.then( (response) => { 
-   //do something awesome that makes the world a better place
-});
+            //make sure to serialize your JSON body
+            body: JSON.stringify({
+                name: UserName,
+                password: Password
+            })
+        })
+            .then(res => res.json())
+            .then(d => { alert(d.message) })
     }
- return (
+    return (
         <>
             <br />
             <br />
@@ -45,8 +43,8 @@ fetch("http://localhost:8000", {
                                     <label className="form-label" for="loginName">Email</label>
                                 </div>
                                 <div className="form-outline mb-4">
-                                    <input type="password" id="loginPassword" class="form-control" 
-                                    onChange={e=>{setPassword(e.target.value)}}/>
+                                    <input type="password" id="loginPassword" class="form-control"
+                                        onChange={e => { setPassword(e.target.value) }} />
                                     <label className="form-label" for="loginPassword">Password</label>
                                 </div>
 
