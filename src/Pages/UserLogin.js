@@ -10,7 +10,7 @@ const Userlogin = () => {
         e.preventDefault();
 
         /*   post request */
-        fetch("https://backend-p18d.onrender.com", {
+        fetch("https://backend-pedm.onrender.com/postemail", {
             method: "post",
             headers: {
                 'Accept': 'application/json',
