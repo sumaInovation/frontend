@@ -47,21 +47,16 @@ const Userlogin = () => {
                                     <label className="form-label" for="loginName">Email</label>
                                 </div>
                                 <div className="form-outline mb-4">
-                                    <input type="email" id="loginName" class="form-control"
+                                    <input type="text" id="loginName" class="form-control"
                                         onChange={e => { setTitle(e.target.value) }} />
                                     <label className="form-label" for="loginName">Title</label>
                                 </div>
                                 <div className="form-outline mb-4">
-                                    <input type="email" id="loginName" class="form-control"
+                                    <input type="text" id="loginName" class="form-control"
                                         onChange={e => { setMessage(e.target.value) }} />
                                     <label className="form-label" for="loginName">Message</label>
                                 </div>
-                                <div className="form-outline mb-4">
-                                    <input type="password" id="loginPassword" class="form-control"
-                                        onChange={e => { setPassword(e.target.value) }} />
-                                    <label className="form-label" for="loginPassword">Password</label>
-                                </div>
-
+                                
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 
 
