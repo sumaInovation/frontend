@@ -4,6 +4,7 @@ import About from "./Pages/About"
 import Contact from "./Pages/Contact"
 import Userlogin from "./Pages/UserLogin"
 import Singup from "./Pages/Singup"
+import Wsclient from "./Pages/Wsclient"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="contact" element={ <Contact/> } />
         <Route path="/login" element={<Userlogin/>}/>
         <Route path="/singup" element={<Singup/>}/>
+        <Route path="/wsclient" element={<Wsclient/>}/>
       </Routes>
     </div>
   )
