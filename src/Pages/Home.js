@@ -5,7 +5,7 @@ import logo from '../Images/Logo.png'
 function Home (){ 
 	return (
         <div>
-          <image src={logo}></image>
+          <img src={logo}></img>
         <h1>This is the home123 page</h1>
     </div>
     )
