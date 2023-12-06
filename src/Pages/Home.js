@@ -6,7 +6,7 @@ function Home (){
 	return (
         <div>
           <img src={ResizeLogo}></img>
-        <h1>This is the home123 page</h1>
+           <h2>SumaAutomationLK</h2>
     </div>
     )
 } 
