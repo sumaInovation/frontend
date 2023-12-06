@@ -5,7 +5,7 @@ import logo from '../Images/Logo.png'
 function Home (){ 
 	return (
         <div>
-          <img src={logo}></img>
+          <img src={ResizeLogo}></img>
         <h1>This is the home123 page</h1>
     </div>
     )
