@@ -20,7 +20,12 @@ export default function Topbar() {
           </li>
           <li className="topListItem">
             <Link className="link" to="/">
-              HOME
+              PLC Programming
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              C/C++ Programming
             </Link>
           </li>
           <li className="topListItem">ABOUT</li>
