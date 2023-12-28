@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './plc.css'
 const Plc = () => {
   return (
     <div>
