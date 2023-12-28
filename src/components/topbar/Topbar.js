@@ -32,7 +32,17 @@ export default function Topbar() {
           <li className="topListItem">CONTACT</li>
           <li className="topListItem">
             <Link className="link" to="/write">
-              WRITE
+              Websocket
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              HTTP
+            </Link>
+          </li>
+          <li className="topListItem">
+            <Link className="link" to="/">
+              Socket IO
             </Link>
           </li>
           {user && <li className="topListItem">LOGOUT</li>}
