@@ -28,8 +28,6 @@ export default function Topbar() {
               C/C++ Programming
             </Link>
           </li>
-          <li className="topListItem">ABOUT</li>
-          <li className="topListItem">CONTACT</li>
           <li className="topListItem">
             <Link className="link" to="/write">
               Websocket
