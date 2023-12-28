@@ -15,7 +15,7 @@ export default function Topbar() {
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              <image src="./Image/newlogo.png"/>
+              
             </Link>
           </li>
           <li className="topListItem">
