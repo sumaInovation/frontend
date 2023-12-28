@@ -15,7 +15,7 @@ export default function Topbar() {
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              
+
             </Link>
           </li>
           <li className="topListItem">
@@ -50,7 +50,7 @@ export default function Topbar() {
           <Link className="link" to="/">
             <img
               className="topImg"
-              src="https://media.licdn.com/dms/image/D5603AQFas9BgRzUONQ/profile-displayphoto-shrink_200_200/0/1673965074160?e=2147483647&v=beta&t=a4DEoipQ85BvR2IhQXE8xYuEeDrB8QBnnpgfKbhxPSI"
+              src="frontend\src\Image\newlogo.png"
               alt=""
             />
           </Link>
