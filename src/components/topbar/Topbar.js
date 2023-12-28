@@ -19,17 +19,17 @@ export default function Topbar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/plc">
               PLC Programming
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/programming">
               C/C++ Programming
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/write">
+            <Link className="link" to="/">
               Websocket
             </Link>
           </li>
@@ -47,7 +47,7 @@ export default function Topbar() {
       </div>
       <div className="topRight">
         {user ? (
-          <Link className="link" to="/settings">
+          <Link className="link" to="/">
             <img
               className="topImg"
               src="https://media.licdn.com/dms/image/D5603AQFas9BgRzUONQ/profile-displayphoto-shrink_200_200/0/1673965074160?e=2147483647&v=beta&t=a4DEoipQ85BvR2IhQXE8xYuEeDrB8QBnnpgfKbhxPSI"
