@@ -43,7 +43,6 @@ export default function Topbar() {
               Socket IO
             </Link>
           </li>
-          {user && <li className="topListItem">LOGOUT</li>}
         </ul>
       </div>
       <div className="topRight">
@@ -57,16 +56,8 @@ export default function Topbar() {
           </Link>
         ) : (
           <ul className="topList">
-            <li className="topListItem">
-              <Link className="link" to="/login">
-                LOGIN
-              </Link>
-            </li>
-            <li className="topListItem">
-              <Link className="link" to="/register">
-                REGISTER
-              </Link>
-            </li>
+          
+            
           </ul>
 
         )}
