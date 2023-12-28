@@ -15,7 +15,7 @@ export default function Topbar() {
         <ul className="topList">
           <li className="topListItem">
             <Link className="link" to="/">
-              HOME
+              HOME1
             </Link>
           </li>
           <li className="topListItem">
@@ -56,11 +56,11 @@ export default function Topbar() {
           </Link>
         ) : (
           <ul className="topList">
-          
-            
+
+
           </ul>
 
-        )}   
+        )}
         <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
