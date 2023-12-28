@@ -50,7 +50,7 @@ export default function Topbar() {
           <Link className="link" to="/">
             <img
               className="topImg"
-              src='newlogo.png'
+              src="https://media.licdn.com/dms/image/D5603AQFas9BgRzUONQ/profile-displayphoto-shrink_200_200/0/1673965074160?e=2147483647&v=beta&t=a4DEoipQ85BvR2IhQXE8xYuEeDrB8QBnnpgfKbhxPSI"
               alt=""
             />
           </Link>
