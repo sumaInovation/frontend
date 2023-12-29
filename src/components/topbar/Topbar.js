@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
-
+import logo from 'mycorrectlogo.png'
 export default function Topbar() {
   const user = true;
   return (
@@ -50,7 +50,7 @@ export default function Topbar() {
           <Link className="link" to="/">
             <img
               className="topImg"
-              src="https://media.licdn.com/dms/image/D5603AQFas9BgRzUONQ/profile-displayphoto-shrink_200_200/0/1673965074160?e=2147483647&v=beta&t=a4DEoipQ85BvR2IhQXE8xYuEeDrB8QBnnpgfKbhxPSI"
+              src={logo}
               alt=""
             />
           </Link>
