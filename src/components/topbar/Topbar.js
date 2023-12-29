@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./topbar.css";
-import logo from 'mycorrectlogo.png'
+import logo from '../topbar/mycorrectlogo.png'
 export default function Topbar() {
   const user = true;
   return (
