@@ -1,14 +1,18 @@
+import Cards from "./Cards";
 import Header from "./Header";
-import Layout from "./Layout";
+
 
 
 function App() {
     return (
       <div className="App">
-       <Header/>
-       <Layout/>
+     
+
+       
+        <Cards/>
+     
       </div>
-    );
+    )
   }
   
   export default App;
