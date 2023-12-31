@@ -1,25 +1,12 @@
-import Topbar from "./components/topbar/Topbar";
-import Homepage from "./pages/Home/Homepage.js";
-import Cprograming from "./pages/Cprogramming/Cprogramming.js"
-import Plc from "./pages/Plc/Plc.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./Header";
+
 
 function App() {
-  return (
-    <Router>
-        <Topbar />
-      <Routes>
-      <Route path="/" element={<Homepage/>}/>
-      <Route path="plc1" element={<Plc/>}/>
-      <Route path="programming" element={<Cprograming/>}/>
-      </Routes>
-    
-
-      
-      </Router>
-    
+    return (
+      <div className="App">
+       <Header/>
+      </div>
+    );
+  }
   
-   );
-}
-
-export default App;
+  export default App;
