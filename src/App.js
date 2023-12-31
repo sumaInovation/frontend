@@ -10,7 +10,7 @@ function App() {
         <Topbar />
       <Routes>
       <Route path="/" element={<Homepage/>}/>
-      <Route path="plc" element={<Plc/>}/>
+      <Route path="plc1" element={<Plc/>}/>
       <Route path="programming" element={<Cprograming/>}/>
       </Routes>
     
