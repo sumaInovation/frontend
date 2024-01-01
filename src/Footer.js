@@ -47,7 +47,7 @@ export default function Footer() {
             <Typography variant="h6" color="text.primary" gutterBottom>
               Follow Us
             </Typography>
-            <Link href="https://www.facebook.com/" color="inherit">
+            <Link href="https://web.facebook.com/profile.php?id=61554924071381" color="inherit">
               <Facebook />
             </Link>
             <Link
