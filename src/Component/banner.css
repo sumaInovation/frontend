@@ -13,8 +13,8 @@
     width: 300px;
     height: 200px;
   }
-  .banner-inner h2 {
-    font-size: 1.0rem;
+  .banner-inner h1 {
+    font-size: 1.5rem;
   }
   .banner-inner p {
     margin: 0;
