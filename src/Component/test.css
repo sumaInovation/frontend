@@ -17,7 +17,7 @@ body {
     color: #FFF;
     text-decoration: none;
     display: block;
-    transition: all 0.3s ease-out;
+    transition: all 0.4s ease-out;
   }
   
   .nav a:hover {
