@@ -25,6 +25,7 @@
     text-decoration: none;
     margin-right: 10px;
     display: block;
+    transition: all 0.3s ease-out;
   }
   .nav a:hover {
     color: #c5cae9;
