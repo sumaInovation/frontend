@@ -1,1 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro";
+}
+/* Header CSS Part */
+.header {
+  margin-left: 1px;
+  margin-right: 1px;
+  background-color: #283593;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+.nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+.nav a {
+  color: #ffff;
+  text-decoration: none;
+  margin-right: 10px;
+  display: block;
+}
+.nav a:hover {
+  color: #c5cae9;
+  transform: rotate(6deg);
+}
+/* Banner CSS Part */
+.banner {
+  background-color: #c5cae9;
+  padding: 25px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-inner {
+  max-width: 760px;
+}
+.banner-inner img {
+  width: 300px;
+  height: 200px;
+}
+.banner-inner h2 {
+  font-size: 2.5rem;
+}
+.banner-inner p {
+  margin: 0;
+  font-size: 1rem;
+}
+.banner-inner a {
+  text-decoration: none;
+  color: white;
+  background-color: #283593;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+}
+.banner-inner a:hover {
+  background-color: lightgray;
+}
+.features {
+  background-color: #e8eaf6;
+  padding: 60px 45px;
+}
+.feature-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap:45px;
+  grid-row-gap:45px;
+}
 
