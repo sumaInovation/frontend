@@ -15,7 +15,7 @@ const Test = () => {
 
 <div className="hero">
   <div className="hero-inner">
-    <h1>Welcome To SUMAAUTOMATIONLK!</h1>
+    <h1>Welcome To Our Site!</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nesciunt accusantium tempora voluptatem velit enim quaerat sapiente sed, repellat temporibus eaque dignissimos, saepe ab recusandae incidunt fuga veniam vero vitae!</p>
     <a href="#" class="button">Learn More</a>
   </div>
@@ -24,28 +24,28 @@ const Test = () => {
 <div className="features">
   <div className="features-inner">
     <div className="featured-item">
-      <h3>PLC Programming</h3>
+      <h3>Cool Feature #1</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
     <div className="featured-item">
-      <h3>C/C++ Programming</h3>
+      <h3>Cool Feature #2</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
     <div className="featured-item">
-      <h3>Online Course</h3>
+      <h3>Cool Feature #3</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
 
     <div className="featured-item">
-      <h3>Industrial Workshop</h3>
+      <h3>Cool Feature #4</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
     <div className="featured-item">
-      <h3>Parctical sessions</h3>
+      <h3>Cool Feature #5</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
     <div className="featured-item">
-      <h3>Basic Electronic course</h3>
+      <h3>Cool Feature #6</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit fuga, quod, eligendi iusto tenetur culpa veniam animi minus odit cupiditate, ducimus accusamus quaerat numquam odio corporis earum cum harum dolorem.</p>
     </div>
     <div className="featured-item">
