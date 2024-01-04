@@ -1,15 +1,11 @@
 
 import './App.css';
-import Banner from './Component/Banner';
-import Features from './Component/Features';
-import Header from './Component/Header';
+import Test from './Component/Test.js';
 
 function App() {
   return (
     <>
-    <Header/>
-    <Banner/>
-    <Features/>
+    <Test/>
     </>
 
   );
