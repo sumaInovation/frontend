@@ -7,7 +7,7 @@ const Mainpage = () => {
      
     <div className='container'>
       <div className='banner'>
-     <img src={logo}></img>
+      <img src={logo} className='logoimg'></img>
 
 
       </div>
