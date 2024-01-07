@@ -13,7 +13,7 @@ import Contact from './Pages/Contact/Contact';
 function App() {
   return (
     <>
-    <BrowserRouter>
+    {/* <BrowserRouter>
     <Navbar/>
     <Routes>
     <Route path="/" element={<Mainpage/>}></Route>
@@ -22,9 +22,9 @@ function App() {
     <Route path="/Contact" element={<Contact/>}></Route>
     </Routes>
    
-    </BrowserRouter>
+    </BrowserRouter> */}
  
-    
+    <Mainpage/>
    </>
 
   
