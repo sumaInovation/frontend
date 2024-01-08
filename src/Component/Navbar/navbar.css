@@ -1,59 +1,85 @@
-.container{
-  max-width: 760px;
-  margin: auto;
-  
-}
-
-.header {
-  margin: 0, auto;
+.destop-navbar {
+  width: 100vw;
   display: flex;
-  justify-content: space-around;
-  padding: 16px;
-  box-shadow: 0 1px 3px -2px black;
-  background-color: darkgray;
+  justify-content: space-between;
   align-items: center;
+  background-color: gray;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 5px;
 }
 
-.checkbox1 {
-  display: none;
+.sidenav a {
+  text-decoration: none;
 }
-
-
-.nav-menu {
+.desktop-nav-menu a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #121010;
+  display: block;
+  transition: 0.3s;
+}
+.desktop-nav-menu {
   display: flex;
-  list-style: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
   gap: 10px;
-  font-size: 1.5rem;
 }
-#check:checked ~ .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  background-color:rgb(17, 229, 151);
-  align-items: center;
+.logo-icon {
+  font-size: 3rem;
 }
-#check2:checked ~ p{
+.mobile-nav-item {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+input {
   display: none;
 }
 
-.mobile-menu {
-  display: none;
+.sidenav a:hover {
+  color: #f1f1f1;
 }
-label {
-  font-size: 26px;
+
+label,
+p {
   color: black;
+  font-size: 3rem;
+}
+#check:checked ~ .sidenav {
+  width: 250px;
+}
+
+.ss {
+  color: wheat;
+  display: flex;
+  justify-content: flex-end;
+}
+.tt {
   display: none;
 }
-@media only screen and (max-width: 760px) {
-    body {
-      background-color: lightblue;
-    }
-    label {
-        font-size: 26px;
-        color: black;
-        display: inline-block;
-      }
-      .nav-menu{display:none}
-    
+
+@media only screen and (max-width: 600px) {
+  .tt {
+    display: flex;
+    justify-content: flex-end;
   }
- 
+  .desktop-nav-menu {
+    display: none;
+  }
+}

@@ -1,39 +1,54 @@
-import React, { useState } from 'react'
-import './navbar.css'
-import { FaBeer } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./navbar.css";
 const Navbar = () => {
-  const [menu,setMenu]=useState('home')
   return (
-    <div className='container'>
-      <input type="checkbox" id="check" className="checkbox1"/>
-      <div className='header'>
-       
-        < div className='logo'><h2>SUMAAUTOMATIONLK</h2></div>
-        <ul className='nav-menu'>
-          <li onClick={()=>setMenu('home')}><Link to="/">HOME</Link>{menu==='home'?<hr/>:<></> }</li>
-          <li onClick={()=>setMenu('Services')}><Link to="/Services">Services</Link>{menu==='Services'?<hr/>:<></>}</li>
-          <li onClick={()=>setMenu('About')}><Link to="/About">About</Link>{menu==='About'?<hr/>:<></>}</li>
-          <li onClick={()=>setMenu('Contact')}><Link to="/Contact">Contact</Link>{menu==='Contact'?<hr/>:<></>}</li>
-          
-        
-        </ul>
-        <label for="check">&#9776;</label>
+    <>
+      <div className="con">
+        <div className="destop-navbar">
+          <div className="logo">
+            <h3 className="logo-icon">&#9883;</h3>
+            <h1>SUMAAUTOMATIONLK</h1>
+          </div>
+          <div className="desktop-nav-menu">
+            <a href="#">HOME</a>
+            <a href="#">Services</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+          </div>
+          <label for="check" className="tt">
+            &#9776;
+          </label>
+        </div>
+        <input type="checkbox" id="check"></input>
 
+        <div id="mySidenav" class="sidenav">
+          <label for="check" className="ss">
+            &#9747;
+          </label>
+          <a href="#">
+            <label for="check" className="mobile-nav-item">
+              HOME
+            </label>
+          </a>
+          <a href="#">
+            <label for="check" className="mobile-nav-item">
+              Services
+            </label>
+          </a>
+          <a href="#">
+            <label for="check" className="mobile-nav-item">
+              About
+            </label>
+          </a>
+          <a href="#">
+            <label for="check" className="mobile-nav-item">
+              Contact
+            </label>
+          </a>
+        </div>
       </div>
-      <ul className='mobile-menu'>
-      <li onClick={()=>setMenu('home')}><Link to="/">HOME</Link>{menu==='home'?<hr/>:<></> }</li>
-          <li onClick={()=>setMenu('Services')}><Link to="/Services">Services</Link>{menu==='Services'?<hr/>:<></>}</li>
-          <li onClick={()=>setMenu('About')}><Link to="/About">About</Link>{menu==='About'?<hr/>:<></>}</li>
-          <li onClick={()=>setMenu('Contact')}><Link to="/Contact">Contact</Link>{menu==='Contact'?<hr/>:<></>}</li>
-          
-          
-          
-        </ul>
-      
+    </>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Navbar
+export default Navbar;
