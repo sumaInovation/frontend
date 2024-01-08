@@ -1,5 +1,5 @@
 .destop-navbar {
-  
+  height:75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,6 +31,7 @@
 }
 .desktop-nav-menu {
   display: flex;
+
 }
 .logo {
   display: flex;
