@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="destop-navbar">
           <div className="logo">
             <h3 className="logo-icon">&#9883;</h3>
-            <h1>SUMAAUTOMATIONLK</h1>
+            <h2>SUMAAUTOMATIONLK</h2>
           </div>
           <div className="desktop-nav-menu">
             <a href="#">HOME</a>

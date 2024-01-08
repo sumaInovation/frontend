@@ -1,5 +1,5 @@
 .destop-navbar {
-  width: 100vw;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 .logo-icon {
   font-size: 3rem;
