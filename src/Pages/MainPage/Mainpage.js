@@ -28,6 +28,7 @@ const Mainpage = () => {
         <p>We Are Countucting Practical sessions</p>
       </div>
       </div>
+      
     </div>
   );
 };
