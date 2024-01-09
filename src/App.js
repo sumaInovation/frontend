@@ -21,7 +21,7 @@ import Footer from './page/Footer';
               <Route path="*" element={<NoPage/>} />
             </Route>
           </Routes>
-          <Footer/>
+          <Footer/>   
         </BrowserRouter>
       );
     
