@@ -1,11 +1,11 @@
 import React from 'react'
 
-const NoPage = () => {
+const About = () => {
   return (
     <div>
-      Not Found!
+      About
     </div>
   )
 }
 
-export default NoPage
+export default About
