@@ -11,7 +11,7 @@ import About from './page/About';
     const App=()=> {
       return (
         <BrowserRouter>
-          <Routes>
+          <Routes>  
             <Route path="/" element={<Layout/>}>
               <Route index element={<Home/>} />
               <Route path="Services" element={<Services/>} />
