@@ -25,10 +25,10 @@ const Layout = () => {
           <label for="check" className="ss" >
             &#9747;
           </label>
-            <a href="/" className="mobile-nav-item">HOME</a>
-            <a href="/Services" className="mobile-nav-item">Services</a>
-            <a href="/About" className="mobile-nav-item">About</a>
-            <a href="/Contact" className="mobile-nav-item">Contact</a>
+            <Link to="/" className="mobile-nav-item">HOME</Link>
+            <Link to="/Services" className="mobile-nav-item">Services</Link>
+            <Link to="/About" className="mobile-nav-item">About</Link>
+            <Link to="/Contact" className="mobile-nav-item">Contact</Link>
         </div>
       </div>
 
