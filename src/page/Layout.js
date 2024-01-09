@@ -10,7 +10,7 @@ const Layout = () => {
             <h3>SUMAAUTOMATIONLK</h3>
           </div>
           <div className="desktop-nav-menu">
-            <a href="/">HOME</a>
+            <Link to="/">HOME</Link>
             <Link to="/Services">Services</Link>
             <Link to="/About">About</Link>
             <Link to="/Contact">Contact</Link>
@@ -19,16 +19,16 @@ const Layout = () => {
             &#9776;
           </label>
         </div>
-        <input type="checkbox" id="check"></input>
+        <input type="checkbox" id="check" ></input>
 
         <div id="mySidenav" class="sidenav">
-          <label for="check" className="ss">
+          <label for="check" className="ss" >
             &#9747;
           </label>
-            <Link to="/" className="mobile-nav-item "  >HOME</Link>
-            <Link to="/Services" className="mobile-nav-item">Services</Link>
-            <Link to="/About" className="mobile-nav-item">About</Link>
-            <Link to="/Contact" className="mobile-nav-item">Contact</Link>
+            <a href="/" className="mobile-nav-item">HOME</a>
+            <a href="/Services" className="mobile-nav-item">Services</a>
+            <a href="/About" className="mobile-nav-item">About</a>
+            <a href="/Contact" className="mobile-nav-item">Contact</a>
         </div>
       </div>
 
