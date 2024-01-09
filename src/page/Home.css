@@ -1,52 +1,35 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.home-container{
-display: grid;
-grid-template-columns: repeat(4,1fr);
-grid-auto-rows: minmax(100px,auto);
-justify-content: space-around;
-align-items: center;
-  grid-template-areas:
-  "PLC PLC C C"
-  "Online Online Workshop Workshop";
 
-}
-.PLC{
-grid-area: PLC;
-background-color: chartreuse;
-border: 1px solid black;
-}
-.C{
-grid-area: C;
-background-color: blanchedalmond;
-border: 1px solid black;
-}
-.Online{
-grid-area: Online;
-background-color: blueviolet;
-border: 1px solid black;
-}
-.Workshop{
-grid-area: Workshop;
-background-color: aqua;
-border: 1px solid black;
 
-}
-@media only screen and (max-width: 760px) {
-    .home-container{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        grid-auto-rows: minmax(100px,auto);
-        justify-content: space-around;
-        align-items: center;
-          grid-template-areas:
-          "PLC PLC PLC PLC"
-          "C C C C"
-          "Online Online Online Online" 
-          "Workshop Workshop Workshop Workshop";
-        
-        }
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.new.siemens.com/siemens/assets/api/uuid:5fb43946-1982-46c8-a5ce-5e2d41698257/width:1125/quality:high/crop:0,104:0:0,799:1/SIMATIC-S7-1500-CPUs.webp");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  
+  .hero-text button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .hero-text button:hover {
+    background-color: #555;
+    color: white;
   }
