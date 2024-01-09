@@ -10,10 +10,10 @@ const Navbar = () => {
             <h3>SUMAAUTOMATIONLK</h3>
           </div>
           <div className="desktop-nav-menu">
-            <a href="#">HOME</a>
-            <a href="#">Services</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="/">HOME</a>
+            <a href="/Services">Services</a>
+            <a href="/About">About</a>
+            <a href="/Contact">Contact</a>
           </div>
           <label for="check" className="tt">
             &#9776;
@@ -25,26 +25,10 @@ const Navbar = () => {
           <label for="check" className="ss">
             &#9747;
           </label>
-          <a href="#">
-            <label for="check" className="mobile-nav-item">
-              HOME
-            </label>
-          </a>
-          <a href="#">
-            <label for="check" className="mobile-nav-item">
-              Services
-            </label>
-          </a>
-          <a href="#">
-            <label for="check" className="mobile-nav-item">
-              About
-            </label>
-          </a>
-          <a href="#">
-            <label for="check" className="mobile-nav-item">
-              Contact
-            </label>
-          </a>
+            <a href="/" className="mobile-nav-item "  >HOME</a>
+            <a href="/Services" className="mobile-nav-item">Services</a>
+            <a href="/About" className="mobile-nav-item">About</a>
+            <a href="/Contact" className="mobile-nav-item">Contact</a>
         </div>
       </div>
     </>

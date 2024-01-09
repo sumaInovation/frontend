@@ -1,4 +1,42 @@
-.hero{
-  height: 100vh;
-  display: flex;
+.grid-section{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: space-around;
+    grid-template-areas:
+    "plc-section C-section"
+    "Online-section Workshop-section";
+
 }
+.plc-section{
+    grid-area: plc-section;
+    background-color: antiquewhite;
+}
+.C-section{
+    grid-area: C-section;
+    background-color: rgb(21, 206, 101);
+}
+.Online-section{
+    grid-area: Online-section;
+    background-color: rgb(68, 45, 197);
+}
+.Workshop-section{
+    grid-area: Workshop-section;
+    background-color: rgb(212, 55, 186);
+}
+
+
+@media only screen and (max-width: 760px) {
+    .grid-section{
+
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: space-around;
+        grid-template-areas:
+        "plc-section"
+        "C-section"
+        "Online-section"
+        "Workshop-section";
+    
+    }
+  }

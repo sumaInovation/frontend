@@ -64,6 +64,7 @@ p {
 }
 #check:checked ~ .sidenav {
   width: 250px;
+  
 }
 
 .ss {
