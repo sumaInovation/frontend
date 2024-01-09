@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home-container{
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-auto-rows: minmax(100px,auto);
+justify-content: space-around;
+align-items: center;
+  grid-template-areas:
+  "PLC PLC C C"
+  "Online Online Workshop Workshop";
+
+}
+.PLC{
+grid-area: PLC;
+background-color: chartreuse;
+border: 1px solid black;
+}
+.C{
+grid-area: C;
+background-color: blanchedalmond;
+border: 1px solid black;
+}
+.Online{
+grid-area: Online;
+background-color: blueviolet;
+border: 1px solid black;
+}
+.Workshop{
+grid-area: Workshop;
+background-color: aqua;
+border: 1px solid black;
+
+}
+@media only screen and (max-width: 760px) {
+    .home-container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-auto-rows: minmax(100px,auto);
+        justify-content: space-around;
+        align-items: center;
+          grid-template-areas:
+          "PLC PLC PLC PLC"
+          "C C C C"
+          "Online Online Online Online" 
+          "Workshop Workshop Workshop Workshop";
+        
+        }
+  }
