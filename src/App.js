@@ -6,6 +6,7 @@ import Contact from './page/Contact';
 import NoPage from './page/NoPage';
 import Services from './page/Services';
 import About from './page/About';
+import Footer from './page/Footer';
     
     
     const App=()=> {
@@ -20,6 +21,7 @@ import About from './page/About';
               <Route path="*" element={<NoPage/>} />
             </Route>
           </Routes>
+          <Footer/>
         </BrowserRouter>
       );
     
