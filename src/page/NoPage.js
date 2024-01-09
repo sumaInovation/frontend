@@ -1,11 +1,11 @@
 import React from 'react'
 
-const About = () => {
+const NoPage = () => {
   return (
     <div>
-      About
+      
     </div>
   )
 }
 
-export default About
+export default NoPage

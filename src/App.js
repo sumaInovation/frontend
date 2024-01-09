@@ -1,30 +1,27 @@
-
-import './App.css';
-import Navbar from './Component/Navbar/Navbar';
-import About from './Pages/About/About';
-import Mainpage from './Pages/MainPage/Mainpage';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import Services from './Pages/Services/Services';
-import Contact from './Pages/Contact/Contact';
-import Footer from './Component/Footer/Footer';
-function App() {
-  return (
-    <>
+    import React from 'react'
+    import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './page/Layout';
+import Home from './page/Home';
+import Blog from './page/Blog';
+import Contact from './page/Contact';
+import NoPage from './page/NoPage';
     
-    <BrowserRouter>
-    <Navbar/>
-    <Routes>
-    <Route path="/"  element={<Mainpage/>}></Route>
-    <Route path="/About" element={<About/>}></Route>
-    <Route path="/Services" element={<Services/>}></Route>
-    <Route path="/Contact" element={<Contact/>}></Route>
-    </Routes>
-   <Footer/>
-    </BrowserRouter>
- 
-
-   </>
- );
+    
+    const App=()=> {
+      return (
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout/>}>
+              <Route index element={<Home/>} />
+              <Route path="blogs" element={<Blog/>} />
+              <Route path="contact" element={<Contact/>} />
+              <Route path="*" element={<NoPage/>} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      );
+    
+  
 }
 
-export default App;
+export default App
