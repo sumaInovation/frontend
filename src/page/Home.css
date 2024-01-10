@@ -1,35 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section img {
+  width: 600px;
+}
+.hero-section {
+  background-color: rgb(26, 25, 25);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  justify-content: space-around;
+  align-items: center;
+  margin: 0, auto;
+  grid-template-areas:
+    "main-text main-text icon  "
+    "sub-text sub-text icon  ";
+}
+.main-text {
+  padding: 10px;
+  font-size: 2.5rem;
+  color: rgb(49, 49, 194);
+  grid-area: main-text;
+}
+.sub-text a {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  color: aqua;
+  margin-left: 100px;
+}
+.sub-text {
+  padding: 10px;
+  color: white;
+  grid-area: sub-text;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icon {
+  grid-area: icon;
+
+  display: block;
+  align-items: start;
+}
+.Main-section{
+
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-auto-rows: minmax(100px,auto);
+  justify-content: space-around;
+  align-items: center;
+  grid-template-areas: 
+  "grid11 grid12"
+  "grid21 grid22";
+}
+.grid11{
+  grid-area: grid11;
+}
+.grid12{
+  grid-area: grid12;
+}
+.grid21{
+  grid-area: grid21;
+}
+.grid22{
+  grid-area: grid22;
+}
 
 
-  .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.new.siemens.com/siemens/assets/api/uuid:5fb43946-1982-46c8-a5ce-5e2d41698257/width:1125/quality:high/crop:0,104:0:0,799:1/SIMATIC-S7-1500-CPUs.webp");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
+@media only screen and (max-width: 760px) {
+  .hero-section {
+    background-color: rgb(26, 25, 25);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    justify-content: space-around;
+    align-items: center;
+    margin: 0, auto;
+    grid-template-areas:
+      "main-text"
+      "sub-text"
+      "icon";
   }
-  
-  .hero-text {
+  .main-text{
+    font-size: 20px;
+    padding: 60px;
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
+    
   }
-  
-  .hero-text button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
+  .sub-text{
+    font-size: 20px;
+    padding: 50px;
     text-align: center;
-    cursor: pointer;
+
   }
-  
-  .hero-text button:hover {
-    background-color: #555;
-    color: white;
+  .Main-section{
+
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    justify-content: space-around;
+    align-items: center;
+    grid-template-areas: 
+    "grid11"
+    "grid12"
+    "grid21 "
+    "grid22 ";
   }
+}
