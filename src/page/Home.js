@@ -16,10 +16,22 @@ const Home = () => {
      </div>
     </div>
     <div className="content">
-      <div className="PLC">PLC</div>
-      <div className="PLC">PLC</div>
-      <div className="PLC">PLC</div>
-      <div className="PLC">PLC</div>
+      <div className="PLC">
+        <h1>PLC Programming</h1>
+      <img src={plc}/>
+      </div>
+      <div className="C">
+      <h1>Robotics Courses</h1>
+      <img src={MC }/>
+      </div>
+      <div className="Online">
+      <h1>Our Online Courses</h1>
+      <img src={Online}/>
+      </div>
+      <div className="Workshop">
+      <h1>Industrial Workshop</h1>
+      <img src={Industrial}/>
+      </div>
      </div>
     </>
   );

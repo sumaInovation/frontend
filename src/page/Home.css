@@ -1,5 +1,50 @@
 .Hero-img img{
-
-
-    width: 100%;
+width: 100%;
 }
+.content{
+
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-auto-rows: minmax(100px,auto);
+grid-template-areas: "PLC C"
+                      "Online Workshop";
+gap: 10px;
+background-color: aquamarine;
+}
+.PLC{
+    text-align: center;
+    border: 3px solid rgb(21, 15, 175);
+    grid-area: PLC;
+    img{width: 100%;}
+}
+.C{
+    text-align: center;
+    grid-area: C;
+    img{width: 100%;}
+    border: 3px solid rgb(21, 15, 175);
+}
+.Online{
+    text-align: center;
+    grid-area: Online;
+    img{width: 100%;}
+    border: 3px solid rgb(21, 15, 175);
+}
+.Workshop{
+    text-align: center;
+    grid-area: Workshop;
+    img{width: 100%;}
+    border: 3px solid rgb(21, 15, 175);
+}
+@media only screen and (max-width: 600px) {
+    .content{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: "PLC "
+                         "C"
+                      "Online"
+                       "Workshop";
+    }
+    .PLC {width: 100%;}
+    .C {width: 100%;}
+    .Online {width: 100%;}
+    .Workshop {width: 100%;}
+  }
