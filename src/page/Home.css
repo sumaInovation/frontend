@@ -1,3 +1,7 @@
+
+@import  "./picture/plc.jpg";
+
+
 .Hero-img img{
 width: 100%;
 }
@@ -11,6 +15,7 @@ grid-template-areas: "PLC C"
 gap: 10px;
 background-color: aquamarine;
 }
+
 .PLC{
     text-align: center;
     border: 3px solid rgb(21, 15, 175);
