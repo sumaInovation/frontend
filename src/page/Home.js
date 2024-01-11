@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className="Online">
       <h1>Our Online Courses</h1>
-      <img src={Online}/>
+      <img src={MC}/>
       </div>
       <div className="Workshop">
       <h1>Industrial Workshop</h1>
