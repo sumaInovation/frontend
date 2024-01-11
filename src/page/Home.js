@@ -9,42 +9,26 @@ import Industrial from "./picture/Industrial.jpg";
 const Home = () => {
   return (
     <>
-      <div className="hero-section">
-        <div className="main-text">
-          <h1>WELCOM TO SUMAAUTOMATIONLK</h1>
-        </div>
-        <div className="sub-text">
-          <p style={{ color: "white" }}>
-         Let Start Best Experiance On Industrial Automation communinty
-            <a href="#">Read More</a>
-            <a
-              href="/About"
-              style={{ backgroundColor: "white", color: "black" }}
-            >
-              Contact Us
-            </a>
-          </p>
-        </div>
-        <div className="icon">
-          <img src={logo} />
-        </div>
+     <div className="hero-section">
+     
+     <div className="Hero-img">
+      <img src={logo}/>
+     </div>
+     <div className="Main-text">
+      <h1>WELCOME</h1>
       </div>
-      <br/>
-      <div className="Main-section">
-        
-        <div className="grid11">
-          <img src={plc}/>
-        </div>
-        <div className="grid12">
-          <img src={MC}/>
-        </div>
-        <div className="grid21">
-          <img src={Online} style={{width:"739px", height:"390px"}}/>
-        </div>
-        <div className="grid22">
-        <img src={Industrial} style={{width:"739px", height:"390px"}}/>
-        </div>
-      </div>
+      <div className="Sub-text">
+      <p>We Are Counducting  PLC
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sunt impedit? 
+     </p>
+     </div>
+    </div>
+    <div className="content">
+      <div className="PLC">PLC</div>
+      <div className="PLC">PLC</div>
+      <div className="PLC">PLC</div>
+      <div className="PLC">PLC</div>
+     </div>
     </>
   );
 };

@@ -7,7 +7,7 @@ import NoPage from './page/NoPage';
 import Services from './page/Services';
 import About from './page/About';
 import Footer from './page/Footer';
-    
+import './App.css'
     
     const App=()=> {
       return (

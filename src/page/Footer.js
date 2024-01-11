@@ -16,22 +16,22 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-col">
-          <h4>get help</h4>
+          <h4>Contact</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">shipping</a></li>
-            <li><a href="#">returns</a></li>
-            <li><a href="#">order status</a></li>
-            <li><a href="#">payment options</a></li>
+            <li><a href="#">Tel:+94762183549</a></li>
+            <li><a href="#">Email:<br/>sumaautomation@gmail.com</a></li>
+            <li><a href="#">Address:<br/>Pahalagama Rd,Gampahaga</a></li>
+            {/* <li><a href="#">order status</a></li>
+            <li><a href="#">payment options</a></li> */}
           </ul>
         </div>
         <div className="footer-col">
           <h4>online shop</h4>
           <ul>
-            <li><a href="#">watch</a></li>
-            <li><a href="#">bag</a></li>
-            <li><a href="#">shoes</a></li>
-            <li><a href="#">dress</a></li>
+            <li><a href="#">PLC</a></li>
+            <li><a href="#">Arduino</a></li>
+            <li><a href="#">Arduino Modules</a></li>
+            <li><a href="#">PLC Modules</a></li>
           </ul>
         </div>
         <div className="footer-col">
