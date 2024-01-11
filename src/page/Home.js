@@ -15,23 +15,22 @@ const Home = () => {
      <img src={logo}/>
      </div>
     </div>
-    <div className="content">
-      <div className="PLC">
-        
-      <img src={plc}/>
+     <div className="content">
+
+      <div className="plc">
+      <img src={logo}/>
       </div>
-      <div className="C">
-   
-      <img src={MC }/>
+      <div className="c">
+      <img src={logo}/>
       </div>
-      <div className="Online">
-      
-      <img src={MC}/>
+      <div className="online">
+      <img src={logo}/>
       </div>
-      <div className="Workshop">
-    <img src={Industrial}/>
+      <div className="workshop">
+      <img src={logo}/>
       </div>
      </div>
+     
     </>
   );
 };
