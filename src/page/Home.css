@@ -20,7 +20,7 @@
 }
 .Main-text{
     grid-area: Main-text;
-    h1{text-align: center;color: rgb(59, 59, 212); font-size:3rem;}
+    h1{text-align: center;color: rgb(231, 231, 243); font-size:3rem;}
    
 }
 .Sub-text{
