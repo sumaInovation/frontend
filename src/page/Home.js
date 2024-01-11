@@ -9,13 +9,13 @@ import Industrial from "./picture/Industrial.jpg";
 const Home = () => {
   return (
     <>
-     <div className="hero-section">
+     {/* <div className="hero-section">
      
      <div className="Hero-img">
      <img src={logo}/>
      </div>
-    </div>
-     <div className="content">
+    </div> */}
+     {/* <div className="content">
 
       <div className="plc">
       <img src={logo}/>
@@ -29,7 +29,7 @@ const Home = () => {
       <div className="workshop">
       <img src={logo}/>
       </div>
-     </div>
+     </div> */}
      
     </>
   );

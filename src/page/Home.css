@@ -2,9 +2,10 @@
 
 
 .Hero-img img{
+    min-width: 320px;
    width: 100%;
 }
-.plc img{
+/* .plc img{
     width: 100%;
 }
 .c img{
@@ -15,4 +16,4 @@
 }
 .workshop img{
     width: 100%;
-}
+} */
