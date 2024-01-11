@@ -25,7 +25,7 @@
 }
 .Sub-text{
     grid-area: Sub-text;
-    p{justify-content: center; color: aliceblue;}
+    p{text-align: center; color: aliceblue;}
 }
 
 
@@ -64,6 +64,7 @@ grid-auto-rows: minmax(100px,auto);
 
 
 @media only screen and (max-width: 760px) {
+    p{text-align: center; color: aliceblue;}
     .Main-text h1{font-size: 1rem;}
     .Sub-text p{font-size: 1rem;}
     .hero-section{
@@ -76,6 +77,7 @@ grid-auto-rows: minmax(100px,auto);
     .Hero-img{width: 100%;}
 }
 @media only screen and (max-width: 300px) {
+    p{text-align: center; color: aliceblue;}
     .Main-text h1{font-size: 0.5rem;}
     .Sub-text p{font-size: 0.4rem;}
     .Hero-img{width: 100%;}
