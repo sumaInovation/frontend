@@ -18,18 +18,18 @@ const Home = () => {
     <div className="content">
       <div className="PLC">
         
-      <img src={logo}/>
+      <img src={plc}/>
       </div>
       <div className="C">
    
-      <img src={logo }/>
+      <img src={MC }/>
       </div>
       <div className="Online">
       
-      <img src={logo}/>
+      <img src={MC}/>
       </div>
       <div className="Workshop">
-    <img src={logo}/>
+    <img src={Industrial}/>
       </div>
      </div>
     </>
