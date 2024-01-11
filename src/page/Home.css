@@ -5,15 +5,19 @@
     min-width: 320px;
    width: 100%;
 }
-/* .plc img{
+.plc img{
+    min-width: 320px;
     width: 100%;
 }
 .c img{
+    min-width: 320px;
     width: 100%;
 }
 .online img{
+    min-width: 320px;
     width: 100%;
 }
 .workshop img{
+    min-width: 320px;
     width: 100%;
-} */
+}

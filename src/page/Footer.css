@@ -11,12 +11,10 @@ body{
 .container{
   max-width: 1170px;
   margin:auto;
- 
 }
 .row{
   display: flex;
   flex-wrap: wrap;
-  
 }
 ul{
   list-style: none;
@@ -84,7 +82,6 @@ ul{
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{
-    
     width: 50%;
     margin-bottom: 30px;
 }
