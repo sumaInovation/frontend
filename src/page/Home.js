@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import logo from "./picture/hero-img.png";
+import logo from "./picture/banner-transformed.jpeg";
 import plc from "./picture/plc.jpg";
 import MC from "./picture/microcontroller.jpg";
 import Online from "./picture/Online.jpg";
@@ -12,15 +12,7 @@ const Home = () => {
      <div className="hero-section">
      
      <div className="Hero-img">
-      {/* <img src={logo} alt="test"/> */}
-     </div>
-     <div className="Main-text">
-      <h1>WELCOME</h1>
-      </div>
-      <div className="Sub-text">
-      <p>We Are Counducting  PLC
-     
-     </p>
+     <img src={logo}/>
      </div>
     </div>
     <div className="content">
