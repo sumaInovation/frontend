@@ -2,6 +2,7 @@
 
 
 .Hero-img img{
+   
 width: 100%;
 }
 .content{
@@ -47,8 +48,8 @@ background-color: aquamarine;
                       "Online"
                        "Workshop";
     }
-    .PLC {width: 100%;}
+    /* .PLC {width: 100%;}
     .C {width: 100%;}
     .Online {width: 100%;}
-    .Workshop {width: 100%;}
+    .Workshop {width: 100%;} */
   }

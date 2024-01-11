@@ -21,7 +21,7 @@ import './App.css'
               <Route path="*" element={<NoPage/>} />
             </Route>
           </Routes>
-          <Footer/>   
+          {/* <Footer/>    */}
         </BrowserRouter>
       );
     
