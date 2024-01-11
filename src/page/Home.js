@@ -12,7 +12,7 @@ const Home = () => {
      <div className="hero-section">
      
      <div className="Hero-img">
-      <img src={logo}/>
+      {/* <img src={logo} alt="test"/> */}
      </div>
      <div className="Main-text">
       <h1>WELCOME</h1>
