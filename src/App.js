@@ -13,7 +13,7 @@ import './App.css'
       return (
         <BrowserRouter>
           <Routes>  
-            <Route path="/" element={<Layout/>}>
+             <Route path="/" element={<Home/>}>
               <Route index element={<Home/>} />
               <Route path="Services" element={<Services/>} />
               <Route path="contact" element={<Contact/>} />
@@ -21,7 +21,7 @@ import './App.css'
               <Route path="*" element={<NoPage/>} />
             </Route>
           </Routes>
-          <Footer/>   
+          {/* <Footer/>    */}
         </BrowserRouter>
       );
     
