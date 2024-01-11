@@ -27,6 +27,42 @@
     grid-area: Sub-text;
     p{justify-content: center; color: aliceblue;}
 }
+
+
+.content{
+background-color: aqua;
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-auto-rows: minmax(100px,auto);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 760px) {
     .Main-text h1{font-size: 1rem;}
     .Sub-text p{font-size: 1rem;}

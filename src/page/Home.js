@@ -19,7 +19,7 @@ const Home = () => {
       </div>
       <div className="Sub-text">
       <p>We Are Counducting  PLC
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, sunt impedit? 
+     
      </p>
      </div>
     </div>
