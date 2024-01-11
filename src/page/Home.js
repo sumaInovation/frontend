@@ -1,38 +1,31 @@
-import React from "react";
-import "./Home.css";
-import logo from "./picture/banner-transformed.jpeg";
-import plc from "./picture/plc.jpg";
-import MC from "./picture/microcontroller.jpg";
-import Online from "./picture/Online.jpg";
-import Industrial from "./picture/Industrial.jpg";
-
+import React from 'react'
+import './Home.css'
+import log from './picture/hero-img.png'
 const Home = () => {
   return (
     <>
-     <div className="hero-section">
-     
-     <div className="Hero-img">
-     <img src={logo}/>
-     </div>
-    </div>
-     <div className="content">
+    
+  <header className="container">
 
-      <div className="plc">
-      <img src={logo}/>
-      </div>
-      <div className="c">
-      <img src={logo}/>
-      </div>
-      <div className="online">
-      <img src={logo}/>
-      </div>
-      <div className="workshop">
-      <img src={logo}/>
-      </div>
-     </div>
-     
+<div className="hero">
+  <section class="hero-left">
+    <h1>WELCOME TO SUMAAUTOMATIONLK</h1>
+    <p>
+      We Are conducting PLC & Industrial Automation courses 
+      
+    </p>
+
+    <a href="#">Get Started</a>
+  </section>
+
+  <section className="right">
+    <img src={log} alt="Hero illustration" />
+  </section>
+</div>
+</header>
+      
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
