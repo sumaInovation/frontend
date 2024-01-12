@@ -15,6 +15,7 @@ const Hero = () => {
           backSpeed={60}
           loop
         />
+        <p>Learn PLC & Advance Robotics with us!</p>
          <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' >Learn More</button>
      </div>
     
