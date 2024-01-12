@@ -13,7 +13,7 @@ const Card = () => {
             PLC Programming
           </h2>
           <p className="text-center">Description and price display here</p>
-          <button>More</button>
+          <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
           <img src={plc} className="w-[50%] mx-auto mt-[-3rem] bg-white" />
@@ -21,7 +21,7 @@ const Card = () => {
             PLC Programming
           </h2>
           <p className="text-center">Description and price display here</p>
-          <button>More</button>
+          <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
           <img src={plc} className="w-[50%] mx-auto mt-[-3rem] bg-white" />
@@ -29,7 +29,7 @@ const Card = () => {
             PLC Programming
           </h2>
           <p className="text-center">Description and price display here</p>
-          <button>More</button>
+          <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
           <img src={plc} className="w-[50%] mx-auto mt-[-3rem] bg-white" />
@@ -37,7 +37,7 @@ const Card = () => {
             PLC Programming
           </h2>
           <p className="text-center">Description and price display here</p>
-          <button>More</button>
+          <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' >More</button>
         </div>
       </div>
     </div>
