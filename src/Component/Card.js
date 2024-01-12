@@ -1,8 +1,8 @@
 import React from "react";
 import plc from "../Assets/plc.jpg";
-import mc from "../Assets/plc.jpg";
-import online from "../Assets/plc.jpg";
-import workshop from "../Assets/plc.jpg";
+import mc from "../Assets/mc.jpg";
+import workshop from "../Assets/workshop.jpg";
+import online from "../Assets/online.jpg";
 const Card = () => {
   return (
     <div className="w-full py-[10rem] bg-white">
@@ -16,7 +16,7 @@ const Card = () => {
           <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
-          <img src={plc} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
+          <img src={mc} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
           <h2 className="font-bold text-6xl py-8 text-center">
             C+C++ Programming
           </h2>
@@ -24,17 +24,17 @@ const Card = () => {
           <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
-          <img src={plc} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
+          <img src={workshop} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
           <h2 className="font-bold text-6xl py-8 text-center">
-            Online Courses
+            Industrial Workshop
           </h2>
           <p className="text-center">Description and price display here</p>
           <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' > More</button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105  duration-75">
-          <img src={plc} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
+          <img src={online} className="w-[100%] mx-auto mt-[-3rem] bg-white" />
           <h2 className="font-bold text-6xl py-8 text-center">
-            Industrial Workshop
+            Online Courses
           </h2>
           <p className="text-center">Description and price display here</p>
           <button  className='bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3' >More</button>
