@@ -13,7 +13,7 @@ const Content = () => {
           ullam id itaque voluptas. Doloribus fugit fugiat vel sint, quam
           repellat?
         </p>
-        <button  className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-white' >Learn More</button>
+        <button  className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-[#00df9a]' >Learn More</button>
         </div>
       </div>
     </div>
