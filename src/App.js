@@ -8,7 +8,7 @@ import Card from './Component/Card';
       return (
         <>
         <Navbar/>
-        {/* <Hero/> */}
+        <Hero/>
       {/* <Content/> */}
       {/* <Card/> */}
         </>
