@@ -8,7 +8,7 @@ const Card = () => {
     <div className="w-full py-[10rem] bg-white">
       <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8">
         <div className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
-          <img src={plc} className="w-[500px] mx-auto mt-[-3rem] bg-white" />
+          {/* <img src={plc} className="w-[500px] mx-auto mt-[-3rem] bg-white" /> */}
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             PLC Programming
           </h2>
