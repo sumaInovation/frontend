@@ -8,8 +8,8 @@ import Card from './Component/Card';
       return (
         <>
         <Navbar/>
-        <Hero/>
-      <Content/>
+        {/* <Hero/> */}
+      {/* <Content/> */}
       {/* <Card/> */}
         </>
       );
