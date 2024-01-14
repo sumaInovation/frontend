@@ -10,7 +10,7 @@ import Card from './Component/Card';
         <Navbar/>
         <Hero/>
       <Content/>
-      <Card/>
+      {/* <Card/> */}
         </>
       );
     
