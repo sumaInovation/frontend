@@ -3,8 +3,7 @@ import logo from "../Assets/hero-img.png";
 const Content = () => {
   return (
     <div className="w-full px-6 py-6 bg-white " style={{border:"1px solid black"}}>
-      hello
-      <div className="max-w-[800px] mx-auto grid md:grid-cols-2">
+      <div className="max-w-[800px] mx-auto grid md:grid-cols-2 bg-white">
         <img src={logo}   className='w-[500px] mx-auto my-4 ' />
        <div className='flex flex-col items-center justify-center'>
         <h1 className='text-[#00df9a] font-bold text-4xl px-4 py-4'>PLC & Advance Robotic Courses</h1>
