@@ -51,12 +51,12 @@ const Footer = () => {
               </a>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" className="text-white">
                 Online
               </a>
             </p>
             <p>
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" className="text-white">
                 Workshop
               </a>
             </p>
@@ -67,22 +67,22 @@ const Footer = () => {
               Product
             </h6>
             <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 Arduino
               </a>
             </p>
             <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 PLC
               </a>
             </p>
             <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 HMI
               </a>
             </p>
             <p>
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 Help
               </a>
             </p>
