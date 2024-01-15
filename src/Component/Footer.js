@@ -9,12 +9,12 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer class="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
+    <footer class="bg-[#000300] text-center lg:text-left">
       <div class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
-        <div class="mr-12 hidden lg:block">
+        <div class="text-white mr-12 hidden lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
-        <div className='grid grid-cols-2 gap-20 md:flex'>
+        <div className='grid grid-cols-2 gap-20 text-white md:flex'>
           <FaDribbbleSquare size={30}/>
           <FaFacebookSquare size={30}/>
           <FaGithubSquare size={30}/> 
@@ -26,8 +26,8 @@ const Footer = () => {
 
       <div class="mx-6 py-10 text-center md:text-left">
         <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div class="">
-            <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+          <div class="text-white">
+            <h6 class="text-white mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
               SUMAAUTOMATIONLK
             </h6>
             <p>
@@ -41,12 +41,12 @@ const Footer = () => {
               Courses
             </h6>
             <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 PLC
               </a>
             </p>
             <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" class="text-white">
                 C/C++
               </a>
             </p>
@@ -92,7 +92,7 @@ const Footer = () => {
             <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
               Contact
             </h6>
-            <p class="mb-4 flex items-center justify-center md:justify-start">
+            <p class="text-white mb-4 flex items-center justify-center md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ const Footer = () => {
               </svg>
               N0 40, Pahalagama Rd, Gampaha
             </p>
-            <p class="mb-4 flex items-center justify-center md:justify-start">
+            <p class="text-white mb-4 flex items-center justify-center md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ const Footer = () => {
               </svg>
               sumaautomation@gmail.com
             </p>
-            <p class="mb-4 flex items-center justify-center md:justify-start">
+            <p class="text-white mb-4 flex items-center justify-center md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -131,7 +131,7 @@ const Footer = () => {
               </svg>
               + 94 71 53 94 596
             </p>
-            <p class="flex items-center justify-center md:justify-start">
+            <p class="text-white flex items-center justify-center md:justify-start">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
