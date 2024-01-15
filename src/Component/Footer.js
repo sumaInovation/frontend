@@ -9,9 +9,9 @@ import {
 } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer class="bg-[#000300] text-center lg:text-left">
-      <div class="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
-        <div class="text-white mr-12 hidden lg:block">
+    <footer className="bg-[#000300] text-center lg:text-left max-w[800px]">
+      <div className="flex items-center justify-center p-6 border-b-2 border-neutral-200 dark:border-neutral-500 lg:justify-between">
+        <div className="hidden mr-12 text-white lg:block">
           <span>Get connected with us on social networks:</span>
         </div>
         <div className='grid grid-cols-2 gap-20 text-white md:flex'>
@@ -24,10 +24,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="mx-6 py-10 text-center md:text-left">
-        <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div class="text-white">
-            <h6 class="text-white mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+      <div className="py-10 mx-6 text-center md:text-left">
+        <div className="grid gap-8 grid-1 md:grid-cols-2 lg:grid-cols-4">
+          <div className="text-white">
+            <h6 className="flex items-center justify-center mb-4 font-semibold text-white uppercase md:justify-start">
               SUMAAUTOMATIONLK
             </h6>
             <p>
@@ -36,34 +36,34 @@ const Footer = () => {
             </p>
           </div>
 
-          <div class="">
-            <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          <div className="">
+            <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
               Courses
             </h6>
-            <p class="mb-4">
+            <p className="mb-4">
               <a href="#!" class="text-white">
                 PLC
               </a>
             </p>
-            <p class="mb-4">
+            <p className="mb-4">
               <a href="#!" class="text-white">
                 C/C++
               </a>
             </p>
-            <p class="mb-4">
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+            <p className="mb-4">
+              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
                 Online
               </a>
             </p>
             <p>
-              <a href="#!" class="text-neutral-600 dark:text-neutral-200">
+              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
                 Workshop
               </a>
             </p>
           </div>
 
-          <div class="">
-            <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          <div className="">
+            <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
               Product
             </h6>
             <p class="mb-4">
@@ -150,10 +150,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="bg-neutral-200 p-6 text-center dark:bg-neutral-700">
+      <div class="bg-[#000300] p-6 text-center text-white ">
         <span>© 2023 Copyright:</span>
         <a
-          class="font-semibold text-neutral-600 dark:text-neutral-400"
+          class="font-semibold text-white"
           href="https://sumaautomation.lk/"
         >
           SUMAAUTOMATIONLK
