@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
 
           <div className="">
-            <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
+            <h6 className="flex justify-center mb-4 font-semibold text-white uppercase md:justify-start">
               Courses
             </h6>
             <p className="mb-4">
@@ -63,7 +63,7 @@ const Footer = () => {
           </div>
 
           <div className="">
-            <h6 className="flex justify-center mb-4 font-semibold uppercase md:justify-start">
+            <h6 className="flex justify-center mb-4 font-semibold text-white uppercase md:justify-start">
               Product
             </h6>
             <p class="mb-4">
