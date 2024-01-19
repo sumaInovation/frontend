@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../Assets/hero-img.png";
-import {motion} from 'framer-motion'
+
 const Content = () => {
   return (
-    <motion.div
+    <div
 className="w-full px-6 py-6 bg-white " style={{border:"1px solid black"}}>
       <div className="max-w-[800px] mx-auto grid md:grid-cols-2 bg-white">
         <img src={logo}   className='w-[500px] mx-auto my-4 ' />
@@ -18,7 +18,7 @@ className="w-full px-6 py-6 bg-white " style={{border:"1px solid black"}}>
         <button  className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-[#00df9a]' >Learn More</button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
