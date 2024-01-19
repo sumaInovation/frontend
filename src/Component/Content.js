@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../Assets/hero-img.png";
+import {motion} from 'framer-motion'
 
 const Content = () => {
   return (
@@ -15,7 +16,11 @@ className="w-full px-6 py-6 bg-white " style={{border:"1px solid black"}}>
           ullam id itaque voluptas. Doloribus fugit fugiat vel sint, quam
           repellat?
         </p>
-        <button  className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-[#00df9a]' >Learn More</button>
+        <motion.button  
+        whileHover={{backgroundColor:"blue",scale:1.5}}
+        
+        
+        className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-[#00df9a]' >Learn More</motion.button>
         </div>
       </div>
     </div>

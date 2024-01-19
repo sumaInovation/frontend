@@ -4,11 +4,20 @@ import mc from "../Assets/mc.jpg";
 import workshop from "../Assets/workshop.jpg";
 import online from "../Assets/online.jpg";
 import { Link } from "react-router-dom";
+import {motion} from 'framer-motion'
 const Card = () => {
   return (
     <div className="w-full py-[10rem] bg-white">
       <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8">
-        <div className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+
+        
+        <motion.div 
+        initial={{opacity:0,scale:0}}
+        whileInView={{opacity:1,scale:1}}
+        transition={{duration:1}}
+        
+        
+        className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img src={plc} className="w-[500px] mx-auto mt-[-3rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             PLC Programming
@@ -23,8 +32,12 @@ const Card = () => {
             {" "}
             <Link to="/pcl">More</Link>
           </button>
-        </div>
-        <div className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+        </motion.div>
+        <motion.div 
+         initial={{opacity:0,scale:0}}
+         whileInView={{opacity:1,scale:1}}
+         transition={{duration:1}}
+         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img src={mc} className="w-[500px] mx-auto mt-[-3rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             C/C++ Programming
@@ -39,8 +52,15 @@ const Card = () => {
             {" "}
             <Link to="/cpro">More</Link>
           </button>
-        </div>
-        <div className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+        </motion.div>
+        <motion.div
+         initial={{opacity:0,scale:0}}
+         whileInView={{opacity:1,scale:1}}
+         transition={{duration:1}}
+         
+        
+        
+        className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img src={online} className="w-[500px] mx-auto mt-[-3rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             Online Courses
@@ -55,8 +75,15 @@ const Card = () => {
             {" "}
             <Link to="/online">More</Link>
           </button>
-        </div>
-        <div className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+        </motion.div>
+        <motion.div 
+        
+        initial={{opacity:0,scale:0}}
+        whileInView={{opacity:1,scale:1}}
+        transition={{duration:1}}
+        
+        
+        className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img
             src={workshop}
             className="w-[500px] mx-auto mt-[-3rem] bg-white"
@@ -74,7 +101,7 @@ const Card = () => {
             {" "}
             <Link to="/workshop">More</Link>
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
