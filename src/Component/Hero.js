@@ -12,7 +12,7 @@ const Hero = () => {
        animate={{scale:1}}
        transition={{duration:2}}
         
-        className="text-[#00df9a] md:text-7xl sm:text-6xl text-1xl font-bold md:py-6 " >
+        className="text-[#00df9a] md:text-7xl sm:text-6xl text-2xl font-bold md:py-6 " >
           WELCOME TO SUMAAUTOMATIOIN
         </motion.h1>
         <Typed
