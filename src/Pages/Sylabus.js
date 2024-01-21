@@ -3,22 +3,22 @@ import { motion } from "framer-motion";
 const Sylabus = () => {
   return (
     <div className=" w-full py-[1rem]   bg-black m-auto">
-      <h2 className="py-8 font-bold text-center text-1xl md:text-3xl text-gray-50">
+      <h2 className="py-8 font-bold text-center text-1xl md:text-3xl text-[#00df9a]">
         Basic PLC Course
-      </h2>
+     </h2>
       {/* Animate part */}
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
-        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-[#41c97c]"
+        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-[#e7ebe9]"
       >
         {/* topic1 */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             Introduction
@@ -49,7 +49,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 mx-1 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             Contactor Logic
@@ -85,7 +85,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             Introduction to PLC Programming
@@ -112,7 +112,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             LADER Programming I
@@ -133,7 +133,7 @@ const Sylabus = () => {
             <br />
             a.ON Delay Timer
             <br />
-            b.OFF Delay Limer
+            b.OFF Delay Timer
             <br />
             c.Retentive Timer
             <br />
@@ -156,7 +156,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             LADER Programming II
@@ -200,7 +200,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             LADER Programming III
@@ -238,7 +238,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             LADER Programming IV
@@ -268,7 +268,7 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 2.5, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-slate-400 hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 font-bold text-center text-1xl md:text-3xl">
             Practicals
@@ -285,8 +285,8 @@ const Sylabus = () => {
             <h6 className="text-1xl text-[#5050ca]">
               III. Stepper Motor Controlling
             </h6>
-             1.Speed Controlling
-             3.Position Controlling
+             1.Speed Controlling<br/>
+             3.Position Controlling<br/>
              <h6 className="text-1xl text-[#5050ca]">
               IV. Encoder Interfacing
             </h6>
@@ -295,8 +295,8 @@ const Sylabus = () => {
             <h6 className="text-1xl text-[#5050ca]">
               V. Sensor Interfacing
             </h6>
-             1.Proximity Sensor
-             3.Temperature Sensor
+             1.Proximity Sensor<br/>
+             3.Temperature Sensor<br/>
              4.Level Sensor
              <h6 className="text-1xl text-[#5050ca]">
               VI. Basci PID
