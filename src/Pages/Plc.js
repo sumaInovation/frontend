@@ -5,7 +5,7 @@ import {Navigate} from 'react-router-dom'
 const Plc = () => {
   const [isTab, setIsTab] = useState(0);
   return (
-    <div>
+    <div>   
       <Navigate t='/plc'/>
       <div className="w-full py-[10rem] bg-white">
 
