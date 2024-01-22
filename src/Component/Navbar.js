@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import logo from '../Assets/im1.png'
 const Navbar = () => {
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
@@ -9,7 +10,9 @@ const Navbar = () => {
 
   return (
     <div className=" text-white flex   items-center h-24 max-w-[1240px] mx-auto p-4 ">
-      <h className=" w-full text-6xl font-bold text-[#00df9a] m-4">SA</h>
+      {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
+      <img src={logo}   className='w-[300px] mx-auto my-4 ' />
+        {/* </h> */}
 
       <ul className="hidden md:flex">
         <li className="p-4 rounded-md hover:bg-sky-700">
