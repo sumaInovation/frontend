@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className=" text-white flex   items-center h-24 max-w-[1240px] mx-auto p-4 ">
       {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
-      <img src={logo}   className='w-[250px] md:mx-auto md:w-[300px]' />
+      <img src={logo}   className='w-[250px] md:mx-auto md:w-[300px] lg:w-[500px]' />
         {/* </h> */}
 
       <ul className="hidden md:flex">
