@@ -2,10 +2,8 @@ import React from "react";
 import { motion } from "framer-motion";
 const Sylabus = () => {
   return (
-    <div className=" w-full py-[1rem]   bg-black m-auto">
-      {/* <h2 className="py-8 font-bold text-center text-1xl md:text-3xl text-[#00df9a]">
-        Basic PLC Course
-     </h2> */}
+    <>
+
       {/* Animate part */}
       <motion.div
         initial={{ x: "-100vw" }}
@@ -321,7 +319,7 @@ const Sylabus = () => {
         </motion.div>
 
       </motion.div>
-    </div>
+    </>
   );
 };
 
