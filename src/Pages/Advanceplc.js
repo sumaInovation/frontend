@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-const Sylabus = () => {
+const Advanceplc = () => {
   return (
     <>
 
@@ -19,7 +19,7 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Introduction
+            Introduction to TIA Portal
           </h2>
 
         </motion.div>
@@ -30,14 +30,52 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Contactor Logic
+          Basic instructions
           </h2>
+          1.Bit logic contacts and coils<br/>
+          2.Set and reset instructions .<br/>
+          3.Positive and negative edge instructions.<br/>
+          4.Timers  & Counters.<br/>
+          5.Compare instructions.<br/>
+          6.Math  Instructions.<br/>
+          7.Convert instructions.<br/>
+          8.Round and truncate instructions.<br/>
 
-          Overwive of Contactor<br />
-          Desing Contactor Logic<br />
-          Realay ,Timer & Counter<br />
-          Desing contactor Logic System
+          </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+          Basic instructions
+          </h2>
+          9.Scale and normalize instructions <br />
+          10.Program control.<br/>
+          11.Jump and label instructions.<br/>
+          12.SWITCH instruction.<br/>
+          13.AND, OR, and XOR instructions.<br/>
+          14.Invert instruction.<br/>
+          15.Encode and decode instructions.<br/>
+          16.Shift and Rotate .<br/>
+          
 
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+          Technology instructions 
+          </h2>
+           High-speed counter.<br />
+          1.Operation of the high-speed counter.<br/>
+          2.Selecting the functionality for the HSC.<br/>
+          3.Input addresses for the HSC.<br/>
+          
 
 
         </motion.div>
@@ -48,13 +86,34 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Introduction to PLC
+          Technology instructions
           </h2>
-          PLC Scan Cycle<br />
-          Basic Logic Element<br />
-          Implement logic system using LADER<br />
-          I/O on PLC<br />
-          Sensors and actuaters interfacing
+          PID control<br/>
+          1.PID algorithm.<br/>
+          2.Inserting the PID instruction and technological object.<br/>
+          3.PID_Compact instruction.<br/>
+          4.PID_3STEP instruction.<br/>
+          5.Configuring the PID controller.<br/>
+          6.Commissioning the PID controller.<br/>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+          Technology instructions
+          </h2>
+          Motion control <br />
+        1.Configuring a pulse generator(PWM).<br/>
+        2.Configuring the axis<br/>
+        3.Motion control instructions.<br/>
+        a.MC_Power instruction<br/>
+        b.MC_Reset instruction.<br/>
+        c.MC_Home instruction.<br/>
+        d.MC_MoveAbsolute instruction.<br/>
+        e.MC_MoveRelative instruction.<br/>
 
         </motion.div>
         <motion.div
@@ -64,20 +123,14 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Timers & Counters
+            Technology instructions
           </h2>
-          Introduction to Timer<br />
-          SIMATIC Timer Instructions <br />
-          IEC Timer <br />
-          Interval Timers <br />
-          Usage of different Timer<br />
-          Introduction to Counter<br />
-          SIMATIC Counter Instructions<br />
-          IEC Counter Instructions<br />
-          Usage of different counters
-
-
-        </motion.div>
+          Motion control<br/>
+          3.Motion control instructions<br/>
+          f.MC_MoveVelocity instruction<br/>
+          g.MC_MoveJog instruction<br/>
+          h.MC_CommandTable instruction<br/>
+          </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -85,11 +138,13 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            MOVE Instruction
+          Programming concepts
           </h2>
-          Move Byte, Word, Double Word, or Real<br />
-          Move Byte Immediate <br />
-          Block Move Instructions<br />
+          1.Using blocks to structure your program<br/>
+          2.Organization block (OB)<br/>
+          3.Function (FC)<br/>
+          4.Function block (FB)<br/>
+          5.Data block (DB).
 
         </motion.div>
         <motion.div
@@ -99,52 +154,16 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Compare Instructions
+            Communications
           </h2>
-          Comparing Numerical Values<br />
-          Compare String
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
-        >
-          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Shift and Rotate Instructions
-          </h2>
-          Shift Right and Shift Left Instructions<br />
-          Rotate Right and Rotate Left Instructions <br />
-          Shift Register Bit Instruction<br />
-          Swap Bytes Instruction
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
-        >
-          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Math Instructions
-          </h2>
-          Add, Subtract, Multiply, and Divide Instructions <br />
-          Multiply Int to Double Int and Divide Int with Remainder <br />
-          Numeric Functions Instructions<br />
-          Increment and Decrement Instructions
-
-
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
-        >
-          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Logical Operations Instructions
-          </h2>
-          Invert Instructions <br />
-          AND, OR, and Exclusive OR Instructions
+          1.PROFINET Communication<br/>
+          2.Local/Partner connection<br/>
+          3.Open user communication<br/>
+          4.Modbus RTU communication<br/>
+          5.Modbus TCP/IP communication<br/>
+          6.S7 communication
+          
+          
 
         </motion.div>
 
@@ -303,4 +322,4 @@ const Sylabus = () => {
   );
 };
 
-export default Sylabus;
+export default Advanceplc;

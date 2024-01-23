@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from 'framer-motion'
 import Sylabus from "./Sylabus";
 import {Navigate} from 'react-router-dom'
+import Advanceplc from "./Advanceplc";
 const Plc = () => {
   const [isTab, setIsTab] = useState(0);
   return (
@@ -56,13 +57,13 @@ const Plc = () => {
 
         <ul class="block text-sm font-medium text-center text-gray-500 rounded-lg shadow sm:flex dark:divide-gray-700 dark:text-gray-400">
           <li class="w-full ">
-            <button onClick={() => { setIsTab(1) }} class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">SYLABUS</button>
+            <button onClick={() => { setIsTab(1) }} class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">BASCI PLC COURSE</button>
           </li>
           <li class="w-full">
-            <button onClick={() => { setIsTab(2) }} class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">GALLERY</button>
+            <button onClick={() => { setIsTab(2) }} class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">ADVANCE PLC COURSE</button>
           </li>
           <li class="w-full">
-            <button onClick={() => { setIsTab(3) }} class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">More Deatils</button>
+            <button onClick={() => { setIsTab(3) }} class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">GALERY</button>
           </li>
 
         </ul>
@@ -73,7 +74,7 @@ const Plc = () => {
         isTab === 1 && (<Sylabus />)
       }
       {
-        isTab === 2 && (<div className="text-white"> Hello2</div>)
+        isTab === 2 && (<Advanceplc/>)
       }
       {
         isTab === 3 && (<div className="text-white"> Hello3</div>)
