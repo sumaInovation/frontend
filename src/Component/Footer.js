@@ -42,24 +42,24 @@ const Footer = () => {
               Courses
             </h6>
             <p className="mb-4">
-            <Link href="/plc" class="text-white">
+            <Link to="/plc" class="text-white">
                 PLC
               </Link>
             </p>
             <p className="mb-4">
-              <Link href="/cpro" class="text-white">
+              <Link to="/cpro" class="text-white">
                 C/C++
               </Link>
             </p>
             <p className="mb-4">
-            <Link href="/online" class="text-white">
+            <Link to="/online" class="text-white">
                 Online
               </Link>
             </p>
             <p>
-              <a href="/workshop" className="text-white">
+              <Link to="/workshop" className="text-white">
                 Workshop
-              </a>
+              </Link>
             </p>
           </div>
 

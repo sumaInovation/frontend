@@ -10,14 +10,16 @@ const Sylabus = () => {
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
-        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-[#e7ebe9]"
+        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-green-300"
       >
 
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Introduction
@@ -28,14 +30,16 @@ const Sylabus = () => {
         whileInView={{scale:1}}
         transition={{duration:2}}
         
-        src={img2} className='w-[300px]'/>
+        src={img2} className='w-[300px] bg-red'/>
 
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Contactor Logic
@@ -53,7 +57,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Introduction to PLC
@@ -69,7 +75,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Timers & Counters
@@ -90,7 +98,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             MOVE Instruction
@@ -104,7 +114,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Compare Instructions
@@ -116,7 +128,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Shift and Rotate Instructions
@@ -130,7 +144,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Math Instructions
@@ -146,7 +162,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Logical Operations Instructions
@@ -160,7 +178,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             String & Table Instructions
@@ -176,7 +196,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Conversion Instructions
@@ -192,7 +214,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Subroutine & Interrupts
@@ -208,7 +232,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Communications Instructions
@@ -227,7 +253,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             High-Speed Counter
@@ -242,7 +270,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             PWM & PTO Instruction
@@ -260,7 +290,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Analog I/O 
@@ -276,7 +308,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             HMI & Touch Screen interfacing
@@ -292,7 +326,9 @@ const Sylabus = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
-          className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals Lessons

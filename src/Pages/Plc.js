@@ -9,7 +9,7 @@ const Plc = () => {
   return (
     <div>   
       <Navigate t='/plc'/>
-      <div className="w-full py-[10rem] bg-white">
+      <div className="w-full py-[10rem] bg-neutral-700">
 
         <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#009B77]">
         <Typed
@@ -32,7 +32,7 @@ const Plc = () => {
           initial={{y:"-20vh"}}
           animate={{y:0}}
           transition={{duration:1}}
-          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl bg-cyan-400 hover:scale-105">
             <h2 className="py-8 font-bold text-center text-2xl md:text-3xl text-[#6b5b95]">Basic Course</h2>
             <p className='font-semibold text-center text-[1.5rem]'>
               Duration:4 Months<br />
@@ -47,7 +47,7 @@ const Plc = () => {
      initial={{y:"-20vh"}}
      animate={{y:0}}
      transition={{duration:1}}
-    className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+    className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 bg-cyan-400">
             <h2 className="py-8 font-bold text-center text-1xl md:text-3xl text-[#6b5b95]">Advance Course</h2>
             <p className='font-semibold text-center text-[1.5rem]'>
               Duration:4 Months<br />

@@ -20,7 +20,8 @@ className="w-full px-6 py-6 bg-white " style={{border:"1px solid black"}}>
         whileHover={{backgroundColor:"blue",scale:1.5}}
         
         
-        className='bg-[#151515] w-[200px] rounded-md mx-auto my-6 py-3 text-[#00df9a]' >Learn More</motion.button>
+        className='bg-gradient-to-r from-green-400
+         to-blue-500 hover:from-pink-500 hover:to-yellow-500 ... w-[200px] rounded-md mx-auto my-6 py-3 text-[#000300]' >Learn More</motion.button>
         </div>
       </div>
     </div>

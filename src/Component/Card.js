@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
 const Card = () => {
   return (
-    <div className="w-full py-[10rem] bg-white">
+    <div className="w-full py-[10rem] bg-stone-200">
       <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8">
 
         
