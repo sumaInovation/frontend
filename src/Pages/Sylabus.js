@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import img2 from '../Assets/200plc.webp'
 const Sylabus = () => {
   return (
     <>
@@ -21,6 +22,13 @@ const Sylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Introduction
           </h2>
+          PLC Course For Beginer Level
+        <motion.img 
+        initial={{scale:0}}
+        whileInView={{scale:1}}
+        transition={{duration:2}}
+        
+        src={img2} className='w-[300px]'/>
 
         </motion.div>
         <motion.div

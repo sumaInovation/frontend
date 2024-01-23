@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import img2 from '../Assets/S7-1500-Image.webp'
 const Advanceplc = () => {
     return (
         <>
@@ -21,6 +22,14 @@ const Advanceplc = () => {
                     <h2 className="py-8 text-base font-bold text-center md:text-3xl">
                         Introduction to TIA Portal
                     </h2>
+                    TIA Portal base 1200PLC programming 
+                    <motion.img 
+                    initial={{scale:0}}
+                    whileInView={{scale:1}}
+                    transition={{duration:2}}
+                    
+                    
+                    src={img2}  className="w-[300px] "/>
 
                 </motion.div>
                 <motion.div
@@ -192,6 +201,7 @@ const Advanceplc = () => {
                     2.Ac Server Motor Controlling vis PWM<br />
                     3.AC Server Motor Controlling vis Modbu RTU<br />
                     4.AC Servo Motor Postion Controlling<br />
+                  
                     5.AC Servo Motor Speed Controlling<br />
 
 
@@ -232,8 +242,29 @@ const Advanceplc = () => {
                     </h2>
                     1.AC Servo motor PID Controlling<br/>
                     2.AC induction Motor PID Controlling<br/>
-                    3.DC Motor PID Controlling
+                    3.DC Motor PID Controlling<br/>
+                    4.HMI Controll Automation System<br/>
+                    5.SACDA Controll Automation system<br/>
+                    
+                    
                 </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ delay: 1, duration: 0.5 }}
+                    className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
+                >
+                    <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+                        Practicals
+                    </h2>
+                    1.Arduino with PLC communication via Modbus RTU<br/>
+                    2.Arduino with PLC communication  vis Modbus TCP/IP<br/>
+                    3.Factory IO Syatem<br/>
+                    
+                    
+                    
+                </motion.div>
+
 
 </motion.div>
         </>
