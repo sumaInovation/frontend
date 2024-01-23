@@ -41,22 +41,22 @@ const Footer = () => {
               Courses
             </h6>
             <p className="mb-4">
-              <a href="#!" class="text-white">
+              <a href="/plc" class="text-white">
                 PLC
               </a>
             </p>
             <p className="mb-4">
-              <a href="#!" class="text-white">
+              <a href="/cpro" class="text-white">
                 C/C++
               </a>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-white">
+              <a href="/online" className="text-white">
                 Online
               </a>
             </p>
             <p>
-              <a href="#!" className="text-white">
+              <a href="/workshop" className="text-white">
                 Workshop
               </a>
             </p>
