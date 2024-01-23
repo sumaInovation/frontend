@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import Sylabus from "./Sylabus";
 import {Navigate} from 'react-router-dom'
 import Advanceplc from "./Advanceplc";
+import Typed from "react-typed";
 const Plc = () => {
   const [isTab, setIsTab] = useState(0);
   return (
@@ -10,8 +11,19 @@ const Plc = () => {
       <Navigate t='/plc'/>
       <div className="w-full py-[10rem] bg-white">
 
-        <h2 className="py-8 text-5xl font-bold text-center md:text-7xl text-[#009B77]">
-          PLC PROGRAM
+        <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#009B77]">
+        <Typed
+       
+       
+       strings={["PLC  PROGRAMMING"]}
+       typeSpeed={120}
+       backSpeed={60}
+       loop
+     />
+
+
+          
+         
         </h2>
         <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8">
 

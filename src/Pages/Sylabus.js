@@ -249,7 +249,7 @@ const Sylabus = () => {
           </h2>
           1.Introduction to PWM/PTO.<br />
           2.Speed controlling in stepper motor using PWM.<br />
-          3.Position control in stepper motor using PTO
+          3.Position control in stepper motor using PTO<br/>
           4.Basic Information for Open Loop Position Control Using Steppers or Servos.<br />
           5.Instructions Created by the Position Control Wizard<br />
 
@@ -303,6 +303,7 @@ const Sylabus = () => {
           4.Stepper Motor Position Controlling.<br/>
           5.Encoder interfacing.<br/>
           6.DC Motor Speed controlling using PID.<br/>
+          7.Elevator Control System Using a PLC
         
 
         </motion.div>

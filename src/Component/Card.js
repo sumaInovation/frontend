@@ -30,7 +30,7 @@ const Card = () => {
 
           <button className="bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3">
             {" "}
-            <Link to="/pcl">More</Link>
+            <Link to="/plc">More</Link>
           </button>
         </motion.div>
         <motion.div 
