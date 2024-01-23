@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FaDribbbleSquare,
   FaFacebookSquare,
@@ -41,19 +42,19 @@ const Footer = () => {
               Courses
             </h6>
             <p className="mb-4">
-              <a href="/plc" class="text-white">
+            <Link href="/plc" class="text-white">
                 PLC
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="/cpro" class="text-white">
+              <Link href="/cpro" class="text-white">
                 C/C++
-              </a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="/online" className="text-white">
+            <Link href="/online" class="text-white">
                 Online
-              </a>
+              </Link>
             </p>
             <p>
               <a href="/workshop" className="text-white">
