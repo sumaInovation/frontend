@@ -271,8 +271,11 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Logical Operations Instructions
+            HMI & Touch Screen interfacing
           </h2>
+          1.Basic HMI Operations.<br/>
+          2.Desining HMI Project.<br/>
+          3.Communication HMI with PLC
 
 
         </motion.div>
@@ -284,9 +287,15 @@ const Sylabus = () => {
           className="flex flex-col w-full p-4 my-4 text-center duration-75 bg-white rounded-lg shadow-xl hover:scale-105"
         >
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
-            Logical Operations Instructions
+            Practicals Lessons
           </h2>
-
+          1.PushButton & Sensors interfacing.<br/>
+          2.DC Motor Speed controlling.<br/>
+          3.Stepper Motor Speed Controlling.<br/>
+          4.Stepper Motor Position Controlling.<br/>
+          5.Encoder interfacing.<br/>
+          6.DC Motor Speed controlling using PID.<br/>
+        
 
         </motion.div>
 
