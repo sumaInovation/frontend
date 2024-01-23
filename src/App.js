@@ -17,7 +17,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="plc" element={<Plc />} />
+          <Route path="/plc" element={<Plc />} />
           <Route path="/cpro" element={<Cprogramming />} />
           <Route path="/online" element={<Online />} />
           <Route path="/workshop" element={<Workshop />} />
