@@ -26,8 +26,8 @@ const Plc = () => {
       
         <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 ">
           <motion.div
-            initial={{ y: "-20vh" }}
-            animate={{ y: 0 }}
+            initial={{ x: "-20vh" }}
+            animate={{ x: 0 }}
             transition={{ duration: 1 }}
             whileHover={{scale:1.2}}
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
@@ -50,9 +50,10 @@ const Plc = () => {
           </motion.div>
 
           <motion.div
-            initial={{ y: "-20vh" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ x: "200vh" }}
+            animate={{ x: 0 }}
+            
+            transition={{ duration: 2.5 }}
             whileHover={{scale:1.2}}
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
           >
@@ -86,7 +87,7 @@ const Plc = () => {
               class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white"
               aria-current="page"
             >
-              BASCI PLC COURSE
+              BEGINNER LEVEL
             </button>
           </li>
           <li class="w-full">
@@ -96,7 +97,7 @@ const Plc = () => {
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              ADVANCE PLC COURSE
+              ADVANCE LEVEL
             </button>
           </li>
           <li class="w-full">

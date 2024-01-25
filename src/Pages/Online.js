@@ -117,6 +117,26 @@ const Online = () => {
           <li class="w-full">
             <button
               onClick={() => {
+                setIsTab(2);
+              }}
+              class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              KIDS ROBOTICS
+            </button>
+          </li>
+          <li class="w-full">
+            <button
+              onClick={() => {
+                setIsTab(2);
+              }}
+              class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              ADVANCE ROBOTICS
+            </button>
+          </li>
+          <li class="w-full">
+            <button
+              onClick={() => {
                 setIsTab(3);
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
@@ -130,7 +150,8 @@ const Online = () => {
       {/* Content */}
       {isTab === 1 && <Sylabus />}
       {isTab === 2 && <Advanceplc />}
-      {isTab === 3 && <div className="text-white"> Hello3</div>}
+      {isTab === 3 && <div className="text-white"> Advance Robotic</div>}
+      {isTab === 4 && <div className="text-white"> KIDS ROBORTICS</div>}
     </div>
   );
 };

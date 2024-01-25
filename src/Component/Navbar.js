@@ -9,12 +9,15 @@ const Navbar = () => {
   };
 
   return (
+    <div className="">
+      
+    
     <div className=" text-white flex    items-center h-24 max-w-[1240px] mx-auto p-4 ">
       {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
       <img src={logo}  alt="userimg" className='w-[250px] md:mx-auto md:w-[300px] lg:w-[500px] ' />
         {/* </h> */}
 
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex ">
         <li className="p-4 rounded-md hover:bg-sky-700">
           <Link to="/">HOME</Link>
         </li>
@@ -90,6 +93,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+    </div>
     </div>
   );
 };

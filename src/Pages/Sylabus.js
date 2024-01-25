@@ -10,7 +10,7 @@ const Sylabus = () => {
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
         transition={{ duration: 1 }}
-        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-green-300"
+        className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 bg-gray-100 dark:bg-gray-800"
       >
 
         <motion.div
