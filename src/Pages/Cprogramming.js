@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Sylabus from "./Sylabus";
 import { Navigate } from "react-router-dom";
-import Advanceplc from "./Advanceplc";
 import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
+import Advancerobotics from "./Advancerobotics";
+import Kidsrobotics from "./Kidsrobotics";
 const Cprogramming = () => {
   const [isTab, setIsTab] = useState(0);
   return (
@@ -128,8 +128,8 @@ const Cprogramming = () => {
       </div>
 
       {/* Content */}
-      {isTab === 1 && <Sylabus />}
-      {isTab === 2 && <Advanceplc />}
+      {isTab === 1 && <Kidsrobotics/>}
+      {isTab === 2 && <Advancerobotics/>}
       {isTab === 3 && <div className="text-white"> Hello3</div>}
     </div>
   );
