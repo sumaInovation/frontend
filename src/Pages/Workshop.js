@@ -28,7 +28,7 @@ const Workshop = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1 }}
             whileHover={{scale:1.2}}
-            className="flex flex-col p-4 my-4 duration-75 rounded-lg shadow-xl w-[600px] hover:scale-105 "
+            className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 md:w-[600px]"
           >
             
             
@@ -37,7 +37,7 @@ const Workshop = () => {
                Industrial Workshop
             </h2>
             <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
-              We Are Conducting one day workshop for<br/> industrial emplyooes
+              We Are Conducting <br/>one day workshop for<br/> industrial emplyooes
              
              
             </p>
