@@ -9,6 +9,8 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import Registration from "./Pages/Registration";
+import Singup from "./Pages/Singin";
      
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route path="/workshop" element={<Workshop />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/registration' element={<Registration/>}/>
+          <Route path='/singin' element={<Singup/>}/>
         </Routes>
         <Footer />
       </BrowserRouter> 
