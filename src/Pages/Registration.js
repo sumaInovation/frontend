@@ -10,11 +10,11 @@ const [password,setPassword]=useState();
 const Navigate =useNavigate()
 const Handlesubmit=(e)=>{
 e.preventDefault();
-
-axios.post('http://localhost:3001/',{Fname,Lname,email,password})
-.then(result=>{})
+var namef;
+axios.post('https://http-server-r3wc.onrender.com/',{Fname,Lname,email,password})
+.then(result=>{console.log(result.Lname); namef=result.Fname})
 .catch(error=>{})
-if(Fname==='sumanga'){Navigate('/')}
+if(namef==='sumanga'){Navigate('/')}
 }
 
 
