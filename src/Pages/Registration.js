@@ -12,7 +12,7 @@ const Handlesubmit=(e)=>{
 e.preventDefault();
 var namef;
 axios.post('https://http-server-r3wc.onrender.com/',{Fname,Lname,email,password})
-.then(result=>{console.log(result.data); namef=result.Fname})
+.then(result=>{console.log(result.data); namef=result.data.Fname})
 .catch(error=>{})
 if(namef==='sumanga'){Navigate('/')}
 }
