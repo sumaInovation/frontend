@@ -1,21 +1,22 @@
 
 import React, { useState } from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 const Registration = () => {
 const [Fname,setFName]=useState();
 const [Lname,setLName]=useState();
 const [email,setEmail]=useState();
 const [password,setPassword]=useState();
+const Navigate =useNavigate()
 const Handlesubmit=(e)=>{
+e.preventDefault();
 
-  e.preventDefault();
-axios.post('',{Fname,Lname,email,password})
-.then(
-  result=>console.log(result)
-
-)
-.catch(error=>console.log(error))
+axios.post('http://localhost:3001/',{Fname,Lname,email,password})
+.then(result=>{})
+.catch(error=>{})
+if(Fname==='sumanga'){Navigate('/')}
 }
+
 
   return (
 
