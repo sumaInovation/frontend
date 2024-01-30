@@ -9,7 +9,7 @@ const Registration = () => {
   const[Number,setNumber]=useState();
   const Navigate = useNavigate();
   const [post,setPost]=useState(null)
-const [reqdata,setReqdata]=useState(0);
+const [reqdata,setReqdata]=useState(1);
 useEffect(()=>{
   fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
