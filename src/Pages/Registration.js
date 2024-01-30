@@ -9,7 +9,7 @@ const Registration = () => {
   const[Number,setNumber]=useState();
   const Navigate = useNavigate();
   const [post,setPost]=useState(null)
-const [reqdata,setReqdata]=useState(1);
+const [reqdata,setReqdata]=useState(0);
 useEffect(()=>{
   fetch('https://jsonplaceholder.typicode.com/todos/1')
   .then(response => response.json())
@@ -23,6 +23,7 @@ useEffect(()=>{
 
   
   const Handlesubmit = (e) => {
+    setReqdata(0);
     e.preventDefault();
     var namef;
     //Create New User
@@ -36,10 +37,8 @@ useEffect(()=>{
         //Navigate('/');
       
        }
-       setReqdata(1)
-      })
-      .then(()=>{
-        setReqdata(0)
+       setReqdata(0)
+       alert('Completed')
       })
       .catch((error) => {alert('Error')});
     
