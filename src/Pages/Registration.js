@@ -31,14 +31,15 @@ useEffect(()=>{
       .post("https://http-server-r3wc.onrender.com/registration", { Name, Number,Course, Email, password })
       .then((result) => {
        if(result.data==='Already exsiting'){
-        setReqdata("hello")
+        setReqdata(0)
         alert('Emali Adress is exsisting');
        } else{
         //Navigate('/');
+        setReqdata(2)
       
        }
-       setReqdata(0)
-       alert('Completed')
+      
+      
       })
       .catch((error) => {alert('Error')});
     
@@ -189,6 +190,9 @@ useEffect(()=>{
      
       </>
     );
+  }
+  if(reqdata==2){
+    Navigate('/singin')
   }
   
 };
