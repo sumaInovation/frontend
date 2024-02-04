@@ -37,7 +37,7 @@ const Workshop = () => {
                Industrial Workshop
             </h2>
             <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
-              We Are Conducting <br/>one day workshop for<br/> industrial emplyooes
+            Now you can join our one day workshop <br/>and enhance your skills
              
              
             </p>
@@ -52,7 +52,7 @@ const Workshop = () => {
             backSpeed={60}
             loop
           /> */}
-          We Improve Your Industrial Skills 
+         The Pioneer Of Your Engineering Dream 
         </h2>
         <motion.button  
         whileHover={{backgroundColor:"blue",scale:1.5}}
