@@ -1,42 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Registration = () => {
   const [Name, setName] = useState();
   const [Course, setCourse] = useState();
   const [Email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [Password, setPassword] = useState();
   const [Number, setNumber] = useState();
   const Navigate = useNavigate();
-  const [post, setPost] = useState(null)
   const [reqdata, setReqdata] = useState(0);
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(response => response.json())
-      .then(json => {
-        console.log(json.userId)
-        setPost(json.userId)
-      })
-
-  }, [])
-
-
-
+  const [reg_state,setRegstate]=useState("REGISTER NOW")
   const Handlesubmit = (e) => {
     setReqdata(1);
     e.preventDefault();
-    var namef;
+ 
     //Create New User
-    axios
-      .post("https://http-server-r3wc.onrender.com/registration", { Name, Number, Course, Email, password })
-      .then((result) => {
-        if (result.data === 'Already exsiting') {
-          setReqdata(0)
-          alert('Emali Adress is exsisting');
-        } else {
-        setReqdata(2)
 
-        }
+    
+   axios
+      .post("https://http-server-r3wc.onrender.com/registration", { Name, Number, Course, Email, Password,"Verification":false })
+      .then((result) => {
+        setReqdata(1)
+        if (result.data ==="OK") {
+          setReqdata(0);
+          setRegstate("REGISTRATION SUCCUSSFULLY");
+          
+        } else {
+          if(result.data ==="Already exsiting"){
+            setRegstate("ALREADY EXSISTING");
+          }else{
+            setRegstate("REGISTRATION FAILED");
+          }
+        setReqdata(0)
+        
+        
+      }
 
 
       })
@@ -44,12 +42,12 @@ const Registration = () => {
 
   };
 
-  if (reqdata == 0) {
+  if (reqdata === 0) {
     return (
       <div className="grid min-h-screen bg-white place-items-center">
         <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
           <h1 className="text-xl font-semibold text-center md:text-2xl">
-            REGISTER NOW
+            {reg_state}
           </h1>
           <form onSubmit={Handlesubmit} className="mt-6">
             <div className="">
@@ -190,7 +188,7 @@ const Registration = () => {
       </>
     );
   }
-  if (reqdata == 2) {
+  if (reqdata === 2) {
     Navigate('/singin')
   }
 
