@@ -44,7 +44,7 @@ const Navbar = () => {
           </li>
          <li className="p-4">
             <Link to="/singin" >
-              SINGIN
+              Singin
             </Link>
 
           </li>
