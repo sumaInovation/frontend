@@ -264,7 +264,9 @@ const Advancerobotics = () => {
           <br />
           12.2 Stepper Motor Controlling
           <br />
-          (PWM Base Contrlling technique)
+          12.3 PWM Base Controlling technique
+          <br/>
+          12.4 Servo Motor Controlling   
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -285,7 +287,135 @@ const Advancerobotics = () => {
           13.2 Wireless Communication
             
         </motion.div>
+      
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">RFID & GSM Modules</h3>
+          14.0 Home automation system controll via HTTP
+          <br />
+          14.1 Arduino and GSM-based Security Alert message to multiple numbers<br/>
+          <br/>
+          14.2 GSM and GPS based  location tracking
+          <br/>
+          14.3 RFID and GSM-based Students Attendance<br/> System with vb.net application
+            
+        </motion.div>
+      
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">Finger print sensor</h3>
+          15.0 Door lock system 
+          <br />
+          15.1 Students Attendance<br/> System with vb.net application<br/>
+         
+            
+        </motion.div>
+       
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">Web controll Project</h3>
+          16.0 DC Motor Speed & Direction control via web
+          <br />
+          16.1 Factory data monitoring through online<br/>
+          <br/>
+          16.2 Real time data monitoring via socket IO
+            
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">STM32 Base Project</h3>
+          16.0 DC Motor Speed & Direction control via WIFI
+          <br />
+          16.1 Factory data monitoring through WIFI<br/>
+          <br/>
+          16.2 Real time data monitoring via WIFI
+            
+        </motion.div>
+      
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">Arduino Base Project</h3>
+          17.0 Line following robot controll
+          <br />
+          17.1 Obstacle Avoiding Robot<br/>
+          <br/>
+          17.2 Arduino-Controlled Model Elevator
+            
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals
+          </h2>
+          <h3 className="font-bold">PID Controlling</h3>
+          18.0 DC motor speed controlling via PID
+          <br />
+          18.1 Surface Temparature controlling<br/>
+          <br/>
+            
+        </motion.div>
+
+
+
+
+
+
+        
       </motion.div>
+      
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import img2 from '../Assets/200plc.webp'
+import img2 from '../Assets/200plc.png'
 const Sylabus = () => {
   return (
     <>
@@ -339,10 +339,51 @@ const Sylabus = () => {
           4.Stepper Motor Position Controlling.<br/>
           5.Encoder interfacing.<br/>
           6.DC Motor Speed controlling using PID.<br/>
-          7.Elevator Control System Using a PLC
+       
+        </motion.div>
         
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals Lessons
+          </h2>
+          1.PushButton & Sensors interfacing.<br/>
+          2.DC Motor Speed controlling.<br/>
+          3.Stepper Motor Speed Controlling.<br/>
+          4.Stepper Motor Position Controlling.<br/>
+          5.Encoder interfacing.<br/>
+          6.DC Motor Speed controlling using PID.<br/>
+          7.Elevator Control System Using a PLC
         </motion.div>
+         
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          className="flex flex-col w-full p-4 my-4 text-center 
+          duration-75 rounded-lg shadow-xl hover:scale-105
+           bg-gradient-to-r from-cyan-500 to-blue-500 ..."
+        >
+          <h2 className="py-8 text-base font-bold text-center md:text-3xl">
+            Practicals Lessons
+          </h2>
+          1.Design a Conveyor System<br/>
+          2.Water Filling system usin Factory IO.<br/>
+          3.Web Control Home Automation System<br/>
+          4.PLC to VB.NET communication
+         
+        </motion.div>
+
+
+        
 </motion.div>
  </>
   );
