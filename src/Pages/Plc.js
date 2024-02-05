@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Sylabus from "./Sylabus";
 import { Navigate } from "react-router-dom";
@@ -7,6 +9,10 @@ import Typed from "react-typed";
 import background from "../Assets/plc3.png";
 const Plc = () => {
   const [isTab, setIsTab] = useState(0);
+  const { pathname } = useLocation();
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, [pathname]);
   return (
     <div>
       <Navigate t="/plc" />

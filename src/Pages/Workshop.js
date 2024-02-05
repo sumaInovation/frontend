@@ -1,3 +1,5 @@
+import {useLocation} from 'react-router-dom';
+import { useEffect } from "react";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Sylabus from "./Sylabus";
@@ -7,6 +9,11 @@ import Typed from "react-typed";
 import background from "../Assets/worksop1.jpg";
 const Workshop = () => {
   const [isTab, setIsTab] = useState(0);
+  const location = useLocation();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <Navigate to="/workshop" />
