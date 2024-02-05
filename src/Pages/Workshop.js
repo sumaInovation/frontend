@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Sylabus from "./Sylabus";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Advanceplc from "./Advanceplc";
 import Typed from "react-typed";
 import background from "../Assets/worksop1.jpg";
@@ -60,7 +60,7 @@ const Workshop = () => {
         
         className='bg-gradient-to-r from-green-400
          to-blue-500 hover:from-pink-500 hover:to-yellow-500 ... w-[200px] rounded-md mx-auto my-6 py-3 text-[#000300]' >
-          Contact Us</motion.button>
+          <Link to='/contact'>Contact Us</Link></motion.button>
       </div>
       
 
