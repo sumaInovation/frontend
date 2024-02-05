@@ -107,7 +107,7 @@ useEffect(() => {
               class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white"
               aria-current="page"
             >
-              BASCI PLC COURSE
+              PLC BEGINER LEVEL
             </button>
           </li>
           <li class="w-full">
@@ -117,27 +117,7 @@ useEffect(() => {
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              ADVANCE PLC COURSE
-            </button>
-          </li>
-          <li class="w-full">
-            <button
-              onClick={() => {
-                setIsTab(2);
-              }}
-              class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-            >
-              KIDS ROBOTICS
-            </button>
-          </li>
-          <li class="w-full">
-            <button
-              onClick={() => {
-                setIsTab(2);
-              }}
-              class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
-            >
-              ADVANCE ROBOTICS
+              PLC ADVANCE LEVEL
             </button>
           </li>
           <li class="w-full">
@@ -147,17 +127,27 @@ useEffect(() => {
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              GALERY
+            ROBOTICS BEGINER LEVEL
+            </button>
+          </li>
+          <li class="w-full">
+            <button
+              onClick={() => {
+                setIsTab(4);
+              }}
+              class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
+            >
+              ROBORTICS ADVANCE LEVEL
             </button>
           </li>
         </ul>
       </div>
 
       {/* Content */}
-      {isTab === 1 && <Sylabus />}
-      {isTab === 2 && <Advanceplc />}
-      {isTab === 3 && <div className="text-white"> Advance Robotic</div>}
-      {isTab === 4 && <div className="text-white"> KIDS ROBORTICS</div>}
+      {isTab === 1 && <div className="text-white"> PLC BEGINER LEVEL</div>}
+      {isTab === 2 && <div className="text-white"> PLC ADVANCE LEVEL</div>}
+      {isTab === 3 && <div className="text-white">ROBORTICS BEGINER LEVEL</div>}
+      {isTab === 4 && <div className="text-white"> ROBORTICS ADVANCE LEVEL </div>}
     </div>
   );
 };
