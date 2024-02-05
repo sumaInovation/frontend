@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState,useEffect } from "react"
+import { useLocation, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import Sylabus from "./Sylabus";
-import { Navigate } from "react-router-dom";
-import Advanceplc from "./Advanceplc";
 import Typed from "react-typed";
 import background from "../Assets/online1.jpg";
 const Online = () => {
