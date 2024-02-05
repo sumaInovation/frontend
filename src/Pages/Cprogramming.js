@@ -5,8 +5,15 @@ import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
 import Advancerobotics from "./Advancerobotics";
 import Kidsrobotics from "./Kidsrobotics";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 const Cprogramming = () => {
+  const { pathname } = useLocation();
   const [isTab, setIsTab] = useState(0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <div>
       <Navigate t="/cpro" />
