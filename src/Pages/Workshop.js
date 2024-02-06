@@ -14,7 +14,7 @@ const Workshop = () => {
  }, [pathname]);
   return (
     <div>
-      <Navigate to="/workshop" />
+    
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
