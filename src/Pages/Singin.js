@@ -21,7 +21,7 @@ export default function Singup() {
         axios
             .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
             .then(res => {
-                if (res.data === "verified") {
+                if (res.data.Verification) {
                     Navigate('/loginuser', {
                         state:
                         {
@@ -32,7 +32,7 @@ export default function Singup() {
                         }
                     })
                 }
-                if (res.data === "not verified") {
+                if (!res.data.Verification) {
                     Navigate('/loginuser', {
                         state:
                             { verification: "not verified", userName: Email }
