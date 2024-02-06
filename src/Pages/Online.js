@@ -16,7 +16,7 @@ useEffect(() => {
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
         >
-          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#672c507d]">
+          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#65eb6bc7]">
           <Typed
             strings={["ONLINE  COURSES"]}
             typeSpeed={120}

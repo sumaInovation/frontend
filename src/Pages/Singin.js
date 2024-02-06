@@ -25,11 +25,15 @@ export default function Singup() {
                     Navigate('/loginuser', {
                         state:
                         {
+                            
                             verification: "verified",
-                            userName: Email,
-                        
-
-                        }
+                            userName: res.data.Email,
+                            Name:res.data.Name,
+                            Number:res.data.Number,
+                            Course:res.data.Course,
+                            StartDate:res.data.StartDate,
+                            EndDate:res.data.EndDate
+                            }
                     })
                 }
                 if (!res.data.Verification) {

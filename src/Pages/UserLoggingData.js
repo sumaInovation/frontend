@@ -30,13 +30,13 @@ const UserLoggingData = (state) => {
               User Details
             </h2>
             <p className="  text-start m-auto">
-              NAME:S Wimaladasa
+              NAME:{location.state.Name}
               <br />
-              COURSE:C/C++
+              COURSE:{location.state.Course}
               <br/>
               EMAIL:{location.state.userName}
               <br/>
-              PHONE:+94762183549
+              PHONE:{location.state.Number}
             </p>
             
             
@@ -54,9 +54,9 @@ const UserLoggingData = (state) => {
       Course Details
     </h2>
     <p className="  text-start m-auto">
-      START DATE:2023.01.12
+    START DATE:{location.state.StartDate}
       <br />
-      END DATA:2023.05.12
+      END DATE:{location.state.EndDate}
       <br/>
       COURSE FEE:25000LKR
       <br/>
