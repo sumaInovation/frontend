@@ -6,7 +6,7 @@ import axios from "axios";
 import im4 from '../Assets/im4.png'
 export default function Singup() {
 const { pathname } = useLocation()
-const [isComplete,setIsComplete]=useState(1)
+const [isComplete,setIsComplete]=useState(0)
 useEffect(() => {
   window.scrollTo(0, 0);
 }, [pathname]);
@@ -15,6 +15,7 @@ useEffect(() => {
     const [Password,setPassword]=useState(0)
     const Navigate=useNavigate()
     const Handlesubmit = (e) => {
+        setIsComplete(1);
         e.preventDefault();
         axios
       .post("https://http-server-r3wc.onrender.com/login", {Email, Password})
@@ -28,7 +29,7 @@ useEffect(() => {
         if(res.data==="Wrong Password"){
             console.log('Wrong password')
         }
-        
+        setIsComplete(0);
         
       })
       .catch(()=>{
