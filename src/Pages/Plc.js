@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import Sylabus from "./Sylabus";
+import Basiplcsylabus from "./Basiplcsylabus";
 import { Navigate } from "react-router-dom";
 import Advanceplc from "./Advanceplc";
 import Typed from "react-typed";
@@ -120,7 +120,7 @@ useEffect(() => {
       </div>
 
       {/* Content */}
-      {isTab === 1 && <Sylabus />}
+      {isTab === 1 && <Basiplcsylabus />}
       {isTab === 2 && <Advanceplc />}
       {isTab === 3 && <div className="text-white"> Hello3</div>}
     </div>

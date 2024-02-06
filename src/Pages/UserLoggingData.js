@@ -7,11 +7,18 @@ const UserLoggingData = (state) => {
     const { pathname } = useLocation();
     useEffect(() => {
       window.scrollTo(0, 0);
-    }, [pathname]);
+    }, ["/"]);
   return (
     <div className='text-white'>
-        <h1>Welcome to {location.state.userName}!!!</h1>
-      {location.state.verification}
+        <h1 className='  text-center text-3xl text-[#00df9a]'>Welcome to {location.state.userName}!!!</h1>
+      {location.state.verification==="not verified" && 
+      <h1 className='  text-4xl text-center'>Your Account Not Veryfied!
+      <br/>Please log your email and verfied account</h1>}
+      {location.state.verification==="verified" && <div className='text-white'>
+        HELLO
+        
+        
+      </div>}
     </div>
   )
 }

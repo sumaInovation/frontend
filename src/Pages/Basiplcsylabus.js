@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import img2 from '../Assets/200plc.png'
-const Sylabus = () => {
+const Basiplcsylabus = () => {
   return (
     <>
 
@@ -389,4 +389,4 @@ const Sylabus = () => {
   );
 };
 
-export default Sylabus;
+export default Basiplcsylabus;
