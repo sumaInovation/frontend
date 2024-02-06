@@ -7,7 +7,7 @@ import im4 from '../Assets/im4.png'
 export default function Singup() {
     const { pathname } = useLocation()
     const [isComplete, setIsComplete] = useState(0)
-    const [isError,setIsError]=useState(0)
+    const [isError, setIsError] = useState(0)
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [pathname]);
@@ -22,10 +22,21 @@ export default function Singup() {
             .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
             .then(res => {
                 if (res.data === "verified") {
-                    Navigate('/loginuser', { state: { verification: "verified", userName: Email } })
+                    Navigate('/loginuser', {
+                        state:
+                        {
+                            verification: "verified",
+                            userName: Email,
+                        
+
+                        }
+                    })
                 }
                 if (res.data === "not verified") {
-                    Navigate('/loginuser', { state: { verification: "not verified", userName: Email } })
+                    Navigate('/loginuser', {
+                        state:
+                            { verification: "not verified", userName: Email }
+                    })
                 }
                 if (res.data === "Wrong Password") {
                     console.log('Wrong password')
@@ -107,7 +118,7 @@ export default function Singup() {
                                 >
                                     Sign in
                                 </button>
-                               {isError && <h1 className="text-center text-2xl text-rose-900">Password Wrong</h1>}
+                                {isError && <h1 className="text-center text-2xl text-rose-900">Password Wrong</h1>}
                             </div>
                         </form>
 
