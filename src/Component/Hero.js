@@ -18,7 +18,7 @@ const Hero = () => {
         <Typed
        
           className="font-bold md:text-4xl sm:text-2xl text-1xl md:py-6"
-          strings={["THE WORLD'S BEST ENGINNER"]}
+          strings={["THE WORLD'S BEST ENGINEER"]}
           typeSpeed={120}
           backSpeed={60}
           loop
