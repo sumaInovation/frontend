@@ -360,7 +360,9 @@ const Basiplcsylabus = () => {
           4.Stepper Motor Position Controlling.<br/>
           5.Encoder interfacing.<br/>
           6.DC Motor Speed controlling using PID.<br/>
-          7.Elevator Control System Using a PLC
+          7.PLC-Based Elevator Controller<br/>
+          8.Energy Saver System Using PLC<br/>
+      
         </motion.div>
          
 
@@ -376,9 +378,11 @@ const Basiplcsylabus = () => {
             Practicals Lessons
           </h2>
           1.Design a Conveyor System<br/>
-          2.Water Filling system usin Factory IO.<br/>
-          3.Web Control Home Automation System<br/>
-          4.PLC to VB.NET communication
+          2.PLC-Based Temperature Controller System<br/>
+          3.Water Filling system usin Factory IO.<br/>
+          4.Web Control Home Automation System<br/>
+          5.PLC to VB.NET communication<br/>
+          6.Industrial Timer Controller for Multiple Machines
          
         </motion.div>
 
