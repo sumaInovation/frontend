@@ -1,7 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import YouTube from 'react-youtube';
 const Advancerobotics = () => {
+  const opts = {
+    height: '390',
+    width: '100%',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+    },
+  };
+
   return (
     <>
       <motion.div
@@ -405,6 +414,9 @@ const Advancerobotics = () => {
           <br />
           18.1 Surface Temparature controlling<br/>
           <br/>
+          <YouTube className="  mt-5" videoId="xxLjUeVPYYk" opts={opts}  />;
+
+      
             
         </motion.div>
 
