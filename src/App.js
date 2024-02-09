@@ -13,6 +13,7 @@ import Registration from "./Pages/Registration";
 import Singup from "./Pages/Singin";
 import UserLoggingData from "./Pages/UserLoggingData"
 import Notfound from "./Pages/Notfound";
+import Kids from "./Pages/Kidsrobotics"
      
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
           <Route path='/registration' element={<Registration/>}/>
           <Route path='/singin' element={<Singup/>}/>
           <Route path="/loginuser" element={<UserLoggingData/>}/>
+          <Route path="/kids" element={<Kids/>}/>
           <Route path="/*" element={<Notfound/>}/>
         </Routes>
         <Footer />

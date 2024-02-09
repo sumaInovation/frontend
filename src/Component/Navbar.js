@@ -31,6 +31,9 @@ const Navbar = () => {
             <Link to="/plc">PLC </Link>{" "}
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
+            <Link to="/kids">KIDS ROBORTICS </Link>{" "}
+          </li>
+          <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/workshop">Workshop</Link>{" "}
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
@@ -64,7 +67,7 @@ const Navbar = () => {
               : "fixed hidden"
           }
         >
-          <ul className="p-20 uppercase text-[#3939FF]">
+          <ul className="p-20 uppercase text-[#c90c0cbf] font-bold">
             <li className="p-4 border-b border-b-gray-600">
               <Link to="/" onClick={handlNavbar}>
                 HOME
@@ -86,6 +89,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="p-4 border-b border-b-gray-600">
+              <Link to="/kids" onClick={handlNavbar}>
+                Kid Robotics{" "}
+              </Link>
+            </li>
+            <li className="p-4 border-b border-b-gray-600">
               <Link to="/workshop" onClick={handlNavbar}>
                 Workshop
               </Link>{" "}
@@ -103,7 +111,7 @@ const Navbar = () => {
                 SING IN
               </Link>
             </li>
-            <li className="p-4">
+            <li className="p-4  ">
               <Link to="/contact" onClick={handlNavbar}>
                 Contact
               </Link>

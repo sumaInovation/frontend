@@ -4,7 +4,7 @@ import { Navigate } from "react-router-dom";
 import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
 import Advancerobotics from "./Advancerobotics";
-import Kidsrobotics from "./Kidsrobotics";
+import BasicRobotics from "./BasicRobotics";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -43,7 +43,7 @@ const Cprogramming = () => {
             
           
             <h2 className="py-8 text-2xl font-bold text-center bg-[#2476D8] md:text-3xl text-white">
-              KIDS ROBOTICS
+              BASIC ROBOTICS
             </h2>
             <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
               Duration:4 Months
@@ -108,7 +108,7 @@ const Cprogramming = () => {
               class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white"
               aria-current="page"
             >
-              KIDS ROBOTICS
+              BASIC ROBOTICS
             </button>
           </li>
           <li class="w-full">
@@ -135,7 +135,7 @@ const Cprogramming = () => {
       </div>
 
       {/* Content */}
-      {isTab === 1 && <Kidsrobotics/>}
+      {isTab === 1 && <BasicRobotics/>}
       {isTab === 2 && <Advancerobotics/>}
       {isTab === 3 && <div className="text-white"> Hello3</div>}
     </div>
