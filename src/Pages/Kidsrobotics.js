@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react"
 import { useLocation, Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
-import background from "../Assets/Kidsrobotic1.jpg";
+import background from "../Assets/online1.jpg";
 const Online = () => {
   const [isTab, setIsTab] = useState(0);
   const { pathname } = useLocation();

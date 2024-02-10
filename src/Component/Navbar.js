@@ -1,7 +1,9 @@
+
+import { Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from '../Assets/im1.png'
+import logo from '../Assets/logo5.svg'
 const Navbar = () => {
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
@@ -10,11 +12,11 @@ const Navbar = () => {
 
   return (
     <div className="">
+       
 
-
-      <div className=" text-white flex    items-center h-24 max-w-[1240px] mx-auto p-4 ">
+      <div className=" text-white flex    items-center h-40 max-w-[1240px] mx-auto p-4 align-middle ">
         {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
-        <img src={logo} alt="userimg" className='w-[250px] md:mx-auto md:w-[300px] lg:w-[500px] ' />
+        <img src={logo} alt="userimg" className='w-[250px] md:mx-auto md:w-[250px] lg:w-[400px]  h-[240px]  mt-16 mb-2' />
         {/* </h> */}
 
         <ul className="hidden md:flex ">
