@@ -24,10 +24,10 @@ const Navbar = () => {
             <Link to="/">HOME</Link>
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/cpro">Robotics</Link>
+            <Link to="/cpro">ROBORTICS</Link>
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/online">Online </Link>
+            <Link to="/online">ONLINE </Link>
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/plc">PLC </Link>{" "}
@@ -36,16 +36,16 @@ const Navbar = () => {
             <Link to="/kids">KIDS ROBORTICS </Link>{" "}
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/workshop">Workshop</Link>{" "}
+            <Link to="/workshop">WORKSHOP</Link>{" "}
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">CONTACT</Link>
           </li>
           {/* <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/about">About</Link>
           </li> */}
           <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/registration">Register</Link>
+            <Link to="/registration">REGISTER</Link>
           </li>
          <li className="p-4">
             <Link to="/singin" >
