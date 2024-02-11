@@ -51,12 +51,6 @@ const Workshop = () => {
 
         
         <h2 className="py-8 text-2xl font-bold text-center text-[#26d223d5] md:text-5xl">
-          {/* <Typed
-            strings={["C/C++  PROGRAMMING"]}
-            typeSpeed={120}
-            backSpeed={60}
-            loop
-          /> */}
          The Pioneer Of Your Engineering Dream 
         </h2>
         <motion.button  
@@ -80,7 +74,7 @@ const Workshop = () => {
               class="inline-block w-full p-4 text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white"
               aria-current="page"
             >
-              Basic Workshop
+              BASIC WORKSHOP
             </button>
           </li>
           <li class="w-full">
@@ -90,7 +84,7 @@ const Workshop = () => {
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              Communication Workshop
+              COMMUNICATION WORKSHOP
             </button>
           </li>
           <li class="w-full">
@@ -100,7 +94,7 @@ const Workshop = () => {
               }}
               class="inline-block w-full p-4 bg-white border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700"
             >
-              Motor Controlling
+              MOTOR WORKSHOP
             </button>
           </li>
         </ul>
