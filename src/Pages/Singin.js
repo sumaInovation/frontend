@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 import { useEffect } from "react";
 import React, { useState } from "react";
 import axios from "axios";
-import im4 from '../Assets/im4.png'
+import logo from '../Assets/Nav_Logo.svg'
+
 export default function Singup() {
     const { pathname } = useLocation()
     const [isComplete, setIsComplete] = useState(0)
@@ -62,9 +63,9 @@ export default function Singup() {
                 <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <img
-                            className="w-auto  mx-auto h-36"
+                            className="w-auto mx-auto h-36"
                             // src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                            src={im4}
+                            src={logo}
                             alt="Your Company"
                         />
                         <h2 className="mt-5 text-2xl font-bold leading-9 tracking-tight text-center text-[#ebf4eb]">
@@ -122,7 +123,7 @@ export default function Singup() {
                                 >
                                     Sign in
                                 </button>
-                                {isError && <h1 className="text-center text-2xl text-rose-900">Password Wrong</h1>}
+                                {isError && <h1 className="text-2xl text-center text-rose-900">Password Wrong</h1>}
                             </div>
                         </form>
 
