@@ -14,13 +14,13 @@ const Navbar = () => {
     <div className="">
        
 
-      <div className=" text-white flex    items-center h-40 max-w-[1240px] mx-auto p-4 align-middle ">
+      <div className=" text-white flex    items-center h-[120px] max-w-[1240px] mx-auto p-4 mt-1">
         {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
-        <img src={logo} alt="userimg" className='w-[250px] md:mx-auto md:w-[250px] lg:w-[400px]  h-[200px]   mb-2' />
+        <img src={logo} alt="userimg" className=' w-[250px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[200px]   mb-2' />
         {/* </h> */}
 
-        <ul className="hidden md:flex ">
-          <li className="p-4 rounded-md hover:bg-sky-700">
+        <ul className="hidden  lg:flex text-[15px]">
+        <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/">HOME</Link>
           </li>
           <li className="p-4 rounded-md hover:bg-sky-700">
@@ -41,15 +41,15 @@ const Navbar = () => {
           <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          {/* <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/about">About</Link>
-          </li>
+          </li> */}
           <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/registration">Register</Link>
           </li>
          <li className="p-4">
             <Link to="/singin" >
-              Singin
+              SING IN
             </Link>
 
           </li>
@@ -57,7 +57,7 @@ const Navbar = () => {
 
         <div
           onClick={handlNavbar}
-          className="text-[#00df9a] fixed right-0 block md:hidden "
+          className="text-[#00df9a] fixed right-0 block lg:hidden "
         >
           {!nav ? <AiOutlineMenu size={40} /> : <AiOutlineClose size={40} />}
         </div>
