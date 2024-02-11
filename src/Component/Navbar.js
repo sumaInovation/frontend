@@ -3,7 +3,7 @@ import { Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from '../Assets/logo5.svg'
+import logo from '../Assets/logo7.svg'
 const Navbar = () => {
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
@@ -113,7 +113,7 @@ const Navbar = () => {
                 SING IN
               </Link>
             </li>
-            <li className="p-4  ">
+            <li className="p-4 ">
               <Link to="/contact" onClick={handlNavbar}>
                 Contact
               </Link>
