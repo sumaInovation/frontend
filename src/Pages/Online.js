@@ -1,14 +1,11 @@
-import React, { useState,useEffect } from "react"
-import { useLocation, Navigate } from "react-router-dom";
+import React, { useState } from "react"
+import {Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
 import background from "../Assets/online1.jpg";
 const Online = () => {
   const [isTab, setIsTab] = useState(0);
-  const { pathname } = useLocation();
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [pathname]);
+  
   return (
     <div>
       <Navigate t="/cpro" />

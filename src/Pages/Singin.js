@@ -1,17 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
-import { useEffect } from "react";
 import React, { useState } from "react";
 import axios from "axios";
 import logo from '../Assets/Nav_Logo.svg'
 
 export default function Singup() {
-    const { pathname } = useLocation()
+    
     const [isComplete, setIsComplete] = useState(0)
     const [isError, setIsError] = useState(0)
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
+    
 
     const [Email, setEmail] = useState(null);
     const [Password, setPassword] = useState(0)

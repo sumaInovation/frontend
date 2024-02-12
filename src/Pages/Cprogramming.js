@@ -12,7 +12,7 @@ const Cprogramming = () => {
   const { pathname } = useLocation();
   const [isTab, setIsTab] = useState(0);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({top:0,behavior:"smooth"});
   }, [pathname]);
   return (
     <div>

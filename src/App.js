@@ -14,12 +14,14 @@ import Singup from "./Pages/Singin";
 import UserLoggingData from "./Pages/UserLoggingData"
 import Notfound from "./Pages/Notfound";
 import Kids from "./Pages/Kidsrobotics"
+import Scrolltop from "./Pages/Scrolltop";
      
 const App = () => {
   return (
     <>
        <BrowserRouter>
         <Navbar />
+        <Scrolltop/>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/plc" element={<Plc />} />

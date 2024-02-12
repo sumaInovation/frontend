@@ -1,17 +1,12 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link, Navigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import Typed from "react-typed";
 import background from "../Assets/worksop1.jpg";
 const Workshop = () => {
   const [isTab, setIsTab] = useState(0);
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+
   return (
     <div>
       <div
