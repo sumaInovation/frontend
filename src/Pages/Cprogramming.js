@@ -1,19 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Navigate } from "react-router-dom";
 import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
 import Advancerobotics from "./Advancerobotics";
 import BasicRobotics from "./BasicRobotics";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+
 
 const Cprogramming = () => {
-  const { pathname } = useLocation();
   const [isTab, setIsTab] = useState(2);
-  useEffect(() => {
-    window.scrollTo({top:0,behavior:"smooth"});
-  }, [pathname]);
+ 
   return (
     <div>
      
