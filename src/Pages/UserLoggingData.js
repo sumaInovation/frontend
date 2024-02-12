@@ -8,7 +8,7 @@ const UserLoggingData = (state) => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, ["/"]);
+  }, [pathname]);
   return (
     <div className='text-white'>
       <h1 className='  text-center text-3xl text-[#00df9a]'>Welcome to {location.state.userName}!!!</h1>
