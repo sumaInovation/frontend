@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 
 const Cprogramming = () => {
   const { pathname } = useLocation();
-  const [isTab, setIsTab] = useState(0);
+  const [isTab, setIsTab] = useState(2);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
