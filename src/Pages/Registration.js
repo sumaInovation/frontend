@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Registration = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  
   const [Name, setName] = useState();
   const [Course, setCourse] = useState();
   const [Email, setEmail] = useState();

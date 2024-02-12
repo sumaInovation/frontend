@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const Contact = () => {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({top:0,behavior:"smooth"});
   }, [pathname]);
   return (
     <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">

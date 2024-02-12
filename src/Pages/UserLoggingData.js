@@ -1,14 +1,9 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
 const UserLoggingData = (state) => {
   const location = useLocation();
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, ["/"]);
+  
   return (
     <div className='text-white'>
       <h1 className='  text-center text-3xl text-[#00df9a]'>Welcome to {location.state.userName}!!!</h1>
