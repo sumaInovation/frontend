@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Registration = () => {
   
   const [Name, setName] = useState();
@@ -163,7 +163,7 @@ const Registration = () => {
               Sign up
             </button>
             <p className="flex justify-between mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
-              Already registered?
+            <Link to="/singin">Already registered?</Link> 
             </p>
           </form>
         </div>
