@@ -67,10 +67,7 @@ const Online = () => {
       </div>
       
 
-     
-
-      
-    </div>
+ </div>
   );
 };
 
