@@ -3,7 +3,7 @@ import { Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from '../Assets/Nav_Logo.svg'
+import logo from '../Assets/MyLogo.svg'
 const Navbar = () => {
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
