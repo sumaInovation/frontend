@@ -18,7 +18,7 @@ const Card = () => {
         
         
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
-          <img src={plc} alt="card1" className="w-[500px] mx-auto mt-[-3rem] bg-white" />
+          <img src={plc} alt="card1" className="w-[500px] mx-auto mt-[1rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             PLC Programming
           </h2>
@@ -38,7 +38,7 @@ const Card = () => {
          whileInView={{opacity:1,scale:1}}
          transition={{duration:0.5}}
          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
-          <img src={mc} alt="card2" className="w-[500px] mx-auto mt-[-3rem] bg-white" />
+          <img src={mc} alt="card2" className="w-[500px] mx-auto mt-[1rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             C/C++ Programming
           </h2>
@@ -61,7 +61,7 @@ const Card = () => {
         
         
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
-          <img src={online}  alt="card3" className="w-[500px] mx-auto mt-[-3rem] bg-white" />
+          <img src={online}  alt="card3" className="w-[500px] mx-auto mt-[1rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             Online Courses
           </h2>
@@ -86,7 +86,7 @@ const Card = () => {
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img
             src={workshop} alt="card4"
-            className="w-[500px] mx-auto mt-[-3rem] bg-white"
+            className="w-[500px] mx-auto mt-[1rem] bg-white"
           />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
             Industrial Workshop
