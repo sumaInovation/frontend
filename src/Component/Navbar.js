@@ -20,34 +20,34 @@ const Navbar = () => {
         {/* </h> */}
 
         <ul className="hidden  lg:flex text-[15px]">
-        <li className="p-4 rounded-md hover:bg-sky-700">
+        <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/">HOME</Link>
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/cpro">ROBORTICS</Link>
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/online">ONLINE </Link>
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/plc">PLC </Link>{" "}
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/kids">KIDS ROBORTICS </Link>{" "}
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/workshop">WORKSHOP</Link>{" "}
           </li>
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/contact">CONTACT</Link>
           </li>
           {/* <li className="p-4 rounded-md hover:bg-sky-700">
             <Link to="/about">About</Link>
           </li> */}
-          <li className="p-4 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/registration">SING UP</Link>
           </li>
-         <li className="p-4">
+         <li className="p-2">
             <Link to="/singin" >
               SING IN
             </Link>
