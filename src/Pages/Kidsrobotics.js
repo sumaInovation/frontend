@@ -8,9 +8,9 @@ const Online = () => {
   
   return (
     <div>
-      <Navigate t="/cpro" />
+    
       <div
-        className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
+        className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen " 
         style={{ backgroundImage:`url(${background})`}}
         >
           <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#65eb6bc7]">
