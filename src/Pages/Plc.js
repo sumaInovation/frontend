@@ -18,7 +18,7 @@ const Plc = () => {
         >
           <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#18653caa]">
           <Typed
-            strings={["PLC1  PROGRAMMING"]}
+            strings={["PLC  PROGRAMMING"]}
             typeSpeed={120}
             backSpeed={60}
             loop
@@ -28,8 +28,8 @@ const Plc = () => {
       
         <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8 ">
           <motion.div
-            initial={{ x: "-20vh" }}
-            animate={{ x: 0 }}
+             initial={{ y: "-20vh" }}
+             animate={{ y: 0 }}
             transition={{ duration: 1 }}
            
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
@@ -52,9 +52,8 @@ const Plc = () => {
           </motion.div>
 
           <motion.div
-            initial={{ x: "200vh" }}
-            animate={{ x: 0 }}
-            
+           initial={{ y: "-20vh" }}
+           animate={{ y: 0 }}
             transition={{ duration: 2.5 }}
            
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
