@@ -20,7 +20,7 @@ const Plc = () => {
           <Typed
             strings={["PLC  PROGRAMMING"]}
             typeSpeed={120}
-            backSpeed={59}
+            backSpeed={60}
             loop
           />
         </h2>
@@ -31,7 +31,7 @@ const Plc = () => {
             initial={{ x: "-20vh" }}
             animate={{ x: 0 }}
             transition={{ duration: 1 }}
-            whileHover={{scale:1.2}}
+           
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
           >
             
@@ -56,7 +56,7 @@ const Plc = () => {
             animate={{ x: 0 }}
             
             transition={{ duration: 2.5 }}
-            whileHover={{scale:1.2}}
+           
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
           >
             

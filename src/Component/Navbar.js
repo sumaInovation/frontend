@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="">
        
 
-      <div className=" text-white flex    items-center h-[120px] max-w-[1240px] mx-auto p-4 mt-1">
+      <div className=" text-white flex    items-center h-[120px] max-w-[1240px] mx-auto p-4 ">
         {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
         <img src={logo} alt="userimg" className=' w-[150px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[200px]   mb-2' />
         {/* </h> */}
