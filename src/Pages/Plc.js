@@ -11,9 +11,9 @@ const Plc = () => {
   
   return (
     <div>
-      <Navigate t="/plc" />
+     
       <div
-        className="bg-white bg-no-repeat bg-contain md:h-screen center" 
+       className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
         >
           <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#18653caa]">
