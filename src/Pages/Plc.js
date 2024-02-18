@@ -20,7 +20,7 @@ const Plc = () => {
           <Typed
             strings={["PLC  PROGRAMMING"]}
             typeSpeed={120}
-            backSpeed={60}
+            backSpeed={59}
             loop
           />
         </h2>
