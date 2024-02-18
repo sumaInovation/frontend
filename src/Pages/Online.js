@@ -13,7 +13,7 @@ const Online = () => {
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
         >
-          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#65eb6bc7]">
+          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#33261D]">
           <Typed
             strings={["ONLINE  COURSES"]}
             typeSpeed={120}
@@ -34,10 +34,10 @@ const Online = () => {
             
             
           
-            <h2 className="py-8 text-2xl font-bold text-center bg-[#2476D8] md:text-3xl text-white">
+            <h2 className="py-8 text-2xl font-bold text-center bg-[#000080] md:text-3xl text-white">
                PLC COURSE
             </h2>
-            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
+            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-[#fefffe] ">
               Duration:4 Months
               <br />
               Date:Every Sunday 8.00AM-5.00PM
@@ -56,10 +56,10 @@ const Online = () => {
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
           >
             
-            <h2 className="py-8 text-2xl font-bold text-center bg-[#2476D8] md:text-3xl text-white">
+            <h2 className="py-8 text-2xl font-bold text-center bg-[#000080] md:text-3xl text-white">
              ROBOTICS COURSE
             </h2>
-            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
+            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-[#fefffe] ">
               Duration:4 Months
               <br />
               Date:Every Sunday 8.00AM-5.00PM

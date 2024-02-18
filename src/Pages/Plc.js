@@ -16,7 +16,7 @@ const Plc = () => {
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
         >
-          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#18653caa]">
+          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#011936]">
           <Typed
             strings={["PLC  PROGRAMMING"]}
             typeSpeed={120}
@@ -37,10 +37,10 @@ const Plc = () => {
             
             
           
-            <h2 className="py-8 text-2xl font-bold text-center bg-[#2476D8] md:text-3xl text-white">
+            <h2 className="py-8 text-2xl font-bold text-center bg-[#29ab87] md:text-3xl text-white">
               BEGINNER LEVEL
             </h2>
-            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-300 ">
+            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-[#f1fffa] ">
               Duration:4 Months
               <br />
               Date:Every Sunday 8.00AM-5.00PM
@@ -59,10 +59,10 @@ const Plc = () => {
             className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105 "
           >
             
-            <h2 className="py-8 text-2xl font-bold text-center bg-[#2476D8] md:text-3xl text-white">
+            <h2 className="py-8 text-2xl font-bold text-center bg-[#29ab87] md:text-3xl text-white">
              ADVANCE LEVEL
             </h2>
-            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-300 ">
+            <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-[#f1fffa] ">
               Duration:4 Months
               <br />
               Date:Every Sunday 8.00AM-5.00PM
