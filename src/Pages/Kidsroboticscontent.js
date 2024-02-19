@@ -103,7 +103,7 @@ const Kidsroboticscontent = () => {
     </div>
     }
   
-  {isTab==2 &&    <div className="flex-col w-full p-4 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
+  {isTab==2 &&    <div className="flex-col w-full p-20 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
       <h1 className='text-2xl text-center'>INTERMIDIATE LEVEL(Grade 6-8)</h1>
 
       <div className="gap-3 my-4 p-:20 mdw-full text-start lg:flex">
