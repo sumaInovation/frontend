@@ -16,7 +16,7 @@ const Cprogramming = () => {
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
         >
-          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#c8d2cdea]">
+          <h2 className="py-8 text-4xl font-bold text-center md:text-7xl text-[#9CAF88]">
           <Typed
             strings={["C/C++  PROGRAMMING"]}
             typeSpeed={120}
