@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Kidsroboticscontent = () => {
-    const [isTab,setIsTab]=useState(0);
+    const [isTab,setIsTab]=useState(1);
     
   return (
     <>
@@ -47,63 +47,63 @@ const Kidsroboticscontent = () => {
         
     </ul>
  </div>
-    
- 
-    
-     <div className=" w-full p-20 my-4  duration-75 bg-[#b1ddf1] rounded-lg shadow-xl 
-       text-center">
-        
-      <h1 className='text-2xl text-[#3acb21e4]'>BASIC LEVEL(Grade 4-5)</h1>
-
-      
-     <div className="gap-3 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
+    {isTab==1 && 
+    <div className=" w-full p-20 my-4  duration-75 bg-[#b1ddf1] rounded-lg shadow-xl 
+    text-center">
      
-     <ul>
-     <li className='text-xl'>Basic Electronics</li>
-        <li>Concept of Voltage & Current</li>
-        <li>Realation between Voltage Current & Resistance</li>
-        <li>Measuring Electricity</li>
-        <li>Uderstanding Electrical Connections</li>
-        <li>Function of Electrical Switch</li>
-       <li>Build Basic  Project by using SWITCH LED & BATTERY</li>
-       </ul>
-       
-       <ul>
-       <li className='text-xl'>Intro Programming</li>
-        <li>
-            What is a Program?
-        </li>
-        <li>Introduction to Arduino </li>
-        <li>LED Blinking using Arduino Program</li>
-        <li>Making simple LED patern using Arduino</li>
-        {/* <li>Push buttons interface to Arduino</li> */}
-        <li>LED intensity controlling</li>
-        <li>Rotate DC motor</li>
-       <li>Intro DC Motor Driver L293D</li>
-       <li>DC Motor Speed Controlling</li>
-       </ul>
-      
-       <ul>
-       <li className='text-xl'>Intro Seven Segment</li>
-        <li>
-            Connection of Seven Segment
-        </li>
-        <li>Seven Segment interface to Arduino</li>
-        <li>Display Number on Seven Segment</li>
-        <li>Implement Simple Timer</li>
-       </ul>
-       
-       <ul>
-       <li className='text-xl'>Intro LCD </li>
-       <li>Connection of LCD</li>
-       <li>LCD interface to Arduino</li>
-       <li>Print Message On LCD</li>
-     </ul>
-       <h1 className='text-xl'>Design engineering projects using Arduino. </h1>
-       <h1 className='text-xl'>Improving softskills. </h1>
-       </div>
-       </div>
-       <div className="flex-col w-full p-4 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
+   <h1 className='text-2xl text-[#3acb21e4]'>BASIC LEVEL(Grade 4-5)</h1>
+
+   
+  <div className="gap-3 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
+  
+  <ul>
+  <li className='text-xl'>Basic Electronics</li>
+     <li>Concept of Voltage & Current</li>
+     <li>Realation between Voltage Current & Resistance</li>
+     <li>Measuring Electricity</li>
+     <li>Uderstanding Electrical Connections</li>
+     <li>Function of Electrical Switch</li>
+    <li>Build Basic  Project by using SWITCH LED & BATTERY</li>
+    </ul>
+    
+    <ul>
+    <li className='text-xl'>Intro Programming</li>
+     <li>
+         What is a Program?
+     </li>
+     <li>Introduction to Arduino </li>
+     <li>LED Blinking using Arduino Program</li>
+     <li>Making simple LED patern using Arduino</li>
+     {/* <li>Push buttons interface to Arduino</li> */}
+     <li>LED intensity controlling</li>
+     <li>Rotate DC motor</li>
+    <li>Intro DC Motor Driver L293D</li>
+    <li>DC Motor Speed Controlling</li>
+    </ul>
+   
+    <ul>
+    <li className='text-xl'>Intro Seven Segment</li>
+     <li>
+         Connection of Seven Segment
+     </li>
+     <li>Seven Segment interface to Arduino</li>
+     <li>Display Number on Seven Segment</li>
+     <li>Implement Simple Timer</li>
+    </ul>
+    
+    <ul>
+    <li className='text-xl'>Intro LCD </li>
+    <li>Connection of LCD</li>
+    <li>LCD interface to Arduino</li>
+    <li>Print Message On LCD</li>
+  </ul>
+    <h1 className='text-xl'>Design engineering projects using Arduino. </h1>
+    <h1 className='text-xl'>Improving softskills. </h1>
+    </div>
+    </div>
+    }
+  
+  {isTab==2 &&    <div className="flex-col w-full p-4 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
       <h1 className='text-2xl text-center'>INTERMIDIATE LEVEL(Grade 6-8)</h1>
 
       <div className="gap-3 my-4 p-:20 mdw-full text-start lg:flex">
@@ -144,13 +144,21 @@ const Kidsroboticscontent = () => {
         <ul>
         <li className='text-xl'>Another Pactrical Lession</li>
             <li>
-              Desining  Simple Home Automation Sysytem
+              Desining  Simple Home Automation System
+            </li>
+            <li>
+              Desining  Simple Home Automation System
+            </li>
+            <li>
+              Desining  Simple Home Automation System
             </li>
            
         </ul>
         </div>
+  
  
  </div>
+}
  </>
   )
 }

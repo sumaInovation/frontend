@@ -40,7 +40,7 @@ const Online = () => {
             <p className="font-semibold text-center text-[1.5rem]   inline-block   bg-orange-100 ">
               Duration:4 Months
               <br />
-              Date:Every Sunday 8.00AM-5.00PM
+              Date:Sunday 8.30AM-10.30PM
               <br />
               Fees:5000LKR
               <p className="text-[0.75rem]">Can be pay on 4 months</p>
