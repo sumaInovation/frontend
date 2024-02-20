@@ -103,12 +103,12 @@ const Kidsroboticscontent = () => {
     }
   
   {isTab==2 &&    <div className="flex-col w-full p-20 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
-      <h1 className='text-2xl text-center'>INTERMIDIATE LEVEL(Grade 6-8)</h1>
+  <h1 className='text-3xl text-[#213bcbe4]  uppercase text-center'>Intermitiade level(Grade 6-8)</h1>
 
-      <div className="gap-3 my-4 p-:20 mdw-full text-start lg:flex">
+      <div className="gap-20 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
       
        <ul>
-       <li className='text-xl'>Desicion Making(IF condition)
+       <li className='text-xl text-[#291f58] uppercase'>Desicion Making(IF condition)
         & Logical Thinking</li>
         <li>push button interfacing</li>
         <li>IR Sensor Interfaceing</li>
@@ -119,7 +119,7 @@ const Kidsroboticscontent = () => {
        </ul>
    
        <ul>
-       <li className='text-xl'>Variables  & Mathamatic Operation</li>
+       <li className='text-xl text-[#291f58] uppercase'>Variables  & Mathamatic Operation</li>
         <li>Analog & Digital Signal</li>
         <li>Analog Input</li>
         <li>intro to PWM</li>
@@ -132,7 +132,7 @@ const Kidsroboticscontent = () => {
        </ul>
     
         <ul>
-        <li className='text-xl'>Desicion Making(IF,ELSE,ELSEIF)</li>
+        <li className='text-xl text-[#291f58] uppercase'>Desicion Making(IF,ELSE,ELSEIF)</li>
             <li>
                 Keypad Interfacing
             </li>
@@ -141,7 +141,7 @@ const Kidsroboticscontent = () => {
         </ul>
        
         <ul>
-        <li className='text-xl'>Another Pactrical Lession</li>
+        <li className='text-xl text-[#291f58] uppercase'>Another Pactrical Lession</li>
             <li>
               Desining  Simple Home Automation System
             </li>
