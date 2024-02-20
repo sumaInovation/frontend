@@ -19,7 +19,7 @@ const Navbar = () => {
         <img src={logo} alt="userimg" className=' w-[150px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[150px]' />
         {/* </h> */}
   
-        <ul className="hidden  lg:flex text-[15px]">
+        <ul className="hidden  lg:flex text-[15px] gap-3">
         <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/">HOME</Link>
           </li>

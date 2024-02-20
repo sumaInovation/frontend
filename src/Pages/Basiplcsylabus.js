@@ -44,12 +44,12 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Contactor Logic
           </h2>
-
-          Overwive of Contactor<br />
-          Desing Contactor Logic<br />
-          Realay ,Timer & Counter<br />
-          Desing contactor Logic System
-
+          <ul className="text-start">
+          <li>Overwive of Contactor</li>
+          <li>Desing Contactor Logic</li>
+          <li>Realay ,Timer & Counter</li>
+          <li>Desing contactor Logic System</li>
+           </ul>
 
 
         </motion.div>
@@ -64,12 +64,14 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Introduction to PLC
           </h2>
-          PLC Scan Cycle<br />
-          Basic Logic Element<br />
-          Implement logic system using LADER<br />
-          I/O on PLC<br />
-          Sensors and actuaters interfacing
+          <ul className="text-start">
 
+          <li>PLC Scan Cycle</li>
+          <li>Basic Logic Element</li>
+          <li>Implement logic system using LADER</li>
+          <li>I/O on PLC</li>
+          <li>Sensors and actuaters interfacing</li>
+          </ul>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -82,15 +84,18 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Timers & Counters
           </h2>
-          Introduction to Timer<br />
-          SIMATIC Timer Instructions <br />
-          IEC Timer <br />
-          Interval Timers <br />
-          Usage of different Timer<br />
-          Introduction to Counter<br />
-          SIMATIC Counter Instructions<br />
-          IEC Counter Instructions<br />
-          Usage of different counters
+          <ul className="text-start">
+
+          <li>Introduction to Timer</li>
+          <li>SIMATIC Timer Instructions </li>
+          <li>IEC Timer </li>
+          <li>Interval Timers </li>
+          <li>Usage of different Timer</li>
+          <li>Introduction to Counter</li>
+          <li>SIMATIC Counter Instructions</li>
+          <li>IEC Counter Instructions</li>
+          <li>Usage of different counters</li>
+          </ul>
 
 
         </motion.div>
@@ -105,10 +110,11 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             MOVE Instruction
           </h2>
-          Move Byte, Word, Double Word, or Real<br />
-          Move Byte Immediate <br />
-          Block Move Instructions<br />
-
+          <ul className="text-start">
+         <li>Move Byte, Word, Double Word, or Real</li>
+          <li>Move Byte Immediate </li>
+          <li>Block Move Instructions</li>
+            </ul>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -121,8 +127,11 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Compare Instructions
           </h2>
-          Comparing Numerical Values<br />
-          Compare String
+          <ul className="text-start">
+
+          <li>Comparing Numerical Values</li>
+          <li>Compare String</li>
+          </ul>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -135,10 +144,13 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Shift and Rotate Instructions
           </h2>
-          Shift Right and Shift Left Instructions<br />
-          Rotate Right and Rotate Left Instructions <br />
-          Shift Register Bit Instruction<br />
-          Swap Bytes Instruction
+          <ul className="text-start">
+
+          <li>Shift Right and Shift Left Instructions</li>
+          <li>Rotate Right and Rotate Left Instructions </li>
+          <li>Shift Register Bit Instruction</li>
+          <li>Swap Bytes Instruction</li>
+          </ul>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -151,11 +163,13 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Math Instructions
           </h2>
-          Add, Subtract, Multiply, and Divide Instructions <br />
-          Multiply Int to Double Int and Divide Int with Remainder <br />
-          Numeric Functions Instructions<br />
-          Increment and Decrement Instructions
+         < ul className="text-start">
 
+          <li>Add, Subtract, Multiply, and Divide Instructions </li>
+          <li>Multiply Int to Double Int and Divide Int with Remainder </li>
+          <li>Numeric Functions Instructions</li>
+          <li>Increment and Decrement Instructions</li>
+              </ul>
 
         </motion.div>
         <motion.div
@@ -169,9 +183,10 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Logical Operations Instructions
           </h2>
-          Invert Instructions <br />
-          AND, OR, and Exclusive OR Instructions
-
+          < ul className="text-start">
+         <li> Invert Instructions</li>
+          <li>AND, OR, and Exclusive OR Instructions</li>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -185,11 +200,12 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             String & Table Instructions
           </h2>
-          Add To Table <br />
-          First-In-First-Out and Last-In-First-Out<br />
-          Memory Fill<br />
-          Table Find
-
+          <ul className="text-start">
+          <li>Add To Table </li>
+          <li>First-In-First-Out and Last-In-First-Out</li>
+          <li>Memory Fill</li>
+          <li>Table Find</li>
+              </ul>
         </motion.div>
 
         <motion.div
@@ -203,11 +219,12 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Conversion Instructions
           </h2>
-          Standard Conversion Instructions<br />
-          ASCII Conversion Instructions<br />
-          String Conversion Instructions<br />
-          Encode and Decode Instructions
-
+          <ul className="text-start">
+          <li>Standard Conversion Instructions</li>
+          <li>ASCII Conversion Instructions</li>
+          <li>String Conversion Instructions</li>
+          <li>Encode and Decode Instructions</li>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -221,11 +238,12 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Subroutine & Interrupts
           </h2>
-          Externel Interrupts<br />
-          Timer Interrupts<br />
-          Timed Interrupts<br />
-          Communication Interrupts
-
+          < ul className="text-start">
+          <li>Externel Interrupts</li>
+          <li>Timer Interrupts</li>
+          <li>Timed Interrupts</li>
+          <li>Communication Interrupts</li>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -239,13 +257,15 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Communications Instructions
           </h2>
-          RS 232 Communication<br />
-          Network Read and Network Write <br />
-          Freeport Communication<br />
-          Get Port Address and Set Port Address<br />
-          PLC to PLC Communication<br />
-          PLC to Microcontroller Communication
+          <ul className="text-start">
 
+          <li>RS 232 Communication</li>
+          <li>Network Read and Network Write </li>
+          <li>Freeport Communication</li>
+          <li>Get Port Address and Set Port Address</li>
+          <li>PLC to PLC Communication</li>
+          <li>PLC to Microcontroller Communication</li>
+</ul>
 
         </motion.div>
 
@@ -260,10 +280,11 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             High-Speed Counter
           </h2>
-          Introduction to HSC<br />
-          Function  of HSC<br />
-          Usage of HSC
-
+          <ul className="text-start">
+          <li>Introduction to HSC</li>
+          <li>Function  of HSC</li>
+          <li>Usage of HSC</li>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -277,12 +298,14 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             PWM & PTO Instruction
           </h2>
-          1.Introduction to PWM/PTO.<br />
-          2.Speed controlling in stepper motor using PWM.<br />
-          3.Position control in stepper motor using PTO<br/>
-          4.Basic Information for Open Loop Position Control Using Steppers or Servos.<br />
-          5.Instructions Created by the Position Control Wizard<br />
+          <ul className="text-start">
 
+          <li>1.Introduction to PWM/PTO.</li>
+          <li>2.Speed controlling in stepper motor using PWM.</li>
+          <li>3.Position control in stepper motor using PT</li>
+          <li>4.Basic Information for Open Loop Position Control Using Steppers or Servos.</li>
+          <li>5.Instructions Created by the Position Control Wizard</li>
+          </ul>
 
         </motion.div>
 
@@ -297,11 +320,13 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Analog I/O 
           </h2>
-          1.Introduction to Analog.<br/>
-          2.Analog Input Module interfacing.<br/>
-          3.Analog Output Module interfacing.<br/>
-          4.ADC.<br/>
-          5.DAC
+          <ul className="text-start">
+          <li>1.Introduction to Analog</li>
+          <li>2.Analog Input Module interfacing</li>
+          <li>3.Analog Output Module interfacing</li>
+          <li>4.ADC.</li>
+          <li>5.DAC</li>
+          </ul>
         </motion.div>
 
         <motion.div
@@ -315,10 +340,11 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             HMI & Touch Screen interfacing
           </h2>
-          1.Basic HMI Operations.<br/>
-          2.Desining HMI Project.<br/>
-          3.Communication HMI with PLC
-
+          <ul className="text-start">
+          <li>1.Basic HMI Operations.</li>
+          <li>2.Desining HMI Project.</li>
+          <li>3.Communication HMI with PLC</li>
+          </ul>
 
         </motion.div>
 
@@ -333,13 +359,14 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals Lessons
           </h2>
-          1.PushButton & Sensors interfacing.<br/>
-          2.DC Motor Speed controlling.<br/>
-          3.Stepper Motor Speed Controlling.<br/>
-          4.Stepper Motor Position Controlling.<br/>
-          5.Encoder interfacing.<br/>
-          6.DC Motor Speed controlling using PID.<br/>
-       
+          <ul className="text-start">
+          <li>1.PushButton & Sensors interfacing.</li>
+          <li>2.DC Motor Speed controlling.</li>
+          <li>3.Stepper Motor Speed Controlling.</li>
+          <li>4.Stepper Motor Position Controlling.</li>
+          <li>5.Encoder interfacing.</li>
+          <li>6.DC Motor Speed controlling using PID.</li>
+           </ul>
         </motion.div>
         
 
@@ -354,15 +381,17 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals Lessons
           </h2>
-          1.PushButton & Sensors interfacing.<br/>
-          2.DC Motor Speed controlling.<br/>
-          3.Stepper Motor Speed Controlling.<br/>
-          4.Stepper Motor Position Controlling.<br/>
-          5.Encoder interfacing.<br/>
-          6.DC Motor Speed controlling using PID.<br/>
-          7.PLC-Based Elevator Controller<br/>
-          8.Energy Saver System Using PLC<br/>
-      
+          <ul className="text-start">
+
+          <li>1.PushButton & Sensors interfacing.</li>
+          <li>2.DC Motor Speed controlling.</li>
+          <li>3.Stepper Motor Speed Controlling.</li>
+          <li>4.Stepper Motor Position Controlling.</li>
+          <li>5.Encoder interfacing.</li>
+          <li>6.DC Motor Speed controlling using PID.</li>
+          <li>7.PLC-Based Elevator Controller</li>
+          <li>8.Energy Saver System Using PLC</li>
+          </ul>
         </motion.div>
          
 
@@ -377,12 +406,14 @@ const Basiplcsylabus = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals Lessons
           </h2>
-          1.Design a Conveyor System<br/>
-          2.PLC-Based Temperature Controller System<br/>
-          3.Water Filling system usin Factory IO.<br/>
-          4.Web Control Home Automation System<br/>
-          5.PLC to VB.NET communication<br/>
-          6.Industrial Timer Controller for Multiple Machines
+          <ul className="text-start">
+          <li>1.Design a Conveyor System</li>
+          <li>2.PLC-Based Temperature Controller System</li>
+          <li>3.Water Filling system usin Factory IO.</li>
+          <li>4.Web Control Home Automation System</li>
+          <li>5.PLC to VB.NET communication</li>
+          <li>6.Industrial Timer Controller for Multiple Machines</li>
+          </ul>
          
         </motion.div>
 
