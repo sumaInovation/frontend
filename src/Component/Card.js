@@ -5,6 +5,7 @@ import workshop from "../Assets/workshop.jpg";
 import online from "../Assets/online.jpg";
 import { Link } from "react-router-dom";
 import {motion} from 'framer-motion'
+import kidscard from '../Assets/kidscard.svg'
 const Card = () => {
   return (
     <div className="w-full py-[10rem] bg-stone-200">
@@ -14,7 +15,7 @@ const Card = () => {
         <motion.div 
         initial={{opacity:0,scale:0}}
         whileInView={{opacity:1,scale:1}}
-        transition={{duration:0.5}}
+        transition={{duration:0.4}}
         
         
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
@@ -36,7 +37,7 @@ const Card = () => {
         <motion.div 
          initial={{opacity:0,scale:0}}
          whileInView={{opacity:1,scale:1}}
-         transition={{duration:0.5}}
+         transition={{duration:0.4}}
          className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img src={mc} alt="card2" className="w-[500px] mx-auto mt-[1rem] bg-white" />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
@@ -56,7 +57,7 @@ const Card = () => {
         <motion.div
          initial={{opacity:0,scale:0}}
          whileInView={{opacity:1,scale:1}}
-         transition={{duration:0.5}}
+         transition={{duration:0.4}}
          
         
         
@@ -80,7 +81,7 @@ const Card = () => {
         
         initial={{opacity:0,scale:0}}
         whileInView={{opacity:1,scale:1}}
-        transition={{duration:0.5}}
+        transition={{duration:0.4}}
         
         
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
@@ -107,12 +108,12 @@ const Card = () => {
         
         initial={{opacity:0,scale:0}}
         whileInView={{opacity:1,scale:1}}
-        transition={{duration:0.5}}
+        transition={{duration:0.4}}
         
         
         className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
           <img
-            src={workshop} alt="card4"
+            src={kidscard} alt="card4"
             className="w-[500px] mx-auto mt-[1rem] bg-white"
           />
           <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
