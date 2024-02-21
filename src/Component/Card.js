@@ -102,6 +102,33 @@ const Card = () => {
             <Link to="/workshop">More</Link>
           </button>
         </motion.div>
+
+        <motion.div 
+        
+        initial={{opacity:0,scale:0}}
+        whileInView={{opacity:1,scale:1}}
+        transition={{duration:0.5}}
+        
+        
+        className="flex flex-col w-full p-4 my-4 duration-75 rounded-lg shadow-xl hover:scale-105">
+          <img
+            src={workshop} alt="card4"
+            className="w-[500px] mx-auto mt-[1rem] bg-white"
+          />
+          <h2 className="py-8 text-2xl font-bold text-center md:text-5xl">
+            KIDS ROBOTICS
+          </h2>
+          <p className="text-center ">
+            Duration:4months
+            <br />
+            Fess:5000LKR
+          </p>
+
+          <button className="bg-[#00df9a] w-[200px] rounded-md mx-auto my-6 py-3">
+            {" "}
+            <Link to="/kids">More</Link>
+          </button>
+        </motion.div>
       </div>
     </div>
   );
