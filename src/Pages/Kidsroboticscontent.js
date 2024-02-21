@@ -57,7 +57,7 @@ const Kidsroboticscontent = () => {
   <div className="gap-20 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
   
   <ul>
-  <li className='text-xl text-[#291f58] uppercase'>Basic Electronics</li>
+  <li className='text-xl text-[#291f58] uppercase font-mono ...'>Basic Electronics</li>
      <li>Concept of Voltage & Current</li>
      <li>Realation between Voltage Current & Resistance</li>
      <li>Measuring Electricity</li>
@@ -111,6 +111,7 @@ const Kidsroboticscontent = () => {
        <li className='text-xl text-[#291f58] uppercase'>Desicion Making(IF condition)
         & Logical Thinking</li>
         <li>push button interfacing</li>
+        <li>Intro to relay switch</li>
         <li>IR Sensor Interfaceing</li>
         <li>Proximity Sensor Interfacing</li>
         <li>Water Level Sensor Interfacing</li>
@@ -143,13 +144,13 @@ const Kidsroboticscontent = () => {
         <ul>
         <li className='text-xl text-[#291f58] uppercase'>Another Pactrical Lession</li>
             <li>
-              Desining  Simple Home Automation System
+              Home Automation System
             </li>
             <li>
-              Desining  Simple Home Automation System
+            Home Automation System 
             </li>
             <li>
-              Desining  Simple Home Automation System
+            Home Automation System
             </li>
            
         </ul>

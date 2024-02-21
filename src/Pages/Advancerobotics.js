@@ -370,12 +370,13 @@ const Advancerobotics = () => {
             Practicals
           </h2>
           <ul className="text-start">
+
           <h3 className="font-bold">STM32 Base Project</h3>
-          16.0 DC Motor Speed & Direction control via WIFI
-          <br />
-          16.1 Factory data monitoring through WIFI<br/>
-          <br/>
-          16.2 Real time data monitoring via WIFI
+          <li>16.0 DC Motor Speed & Direction control via WIFI</li>
+          
+          <li>16.1 Factory data monitoring through WIFI</li>
+          
+          <li>16.2 Real time data monitoring via WIFI</li>
             </ul>
         </motion.div>
       
@@ -418,7 +419,7 @@ const Advancerobotics = () => {
           <li>18.1 Surface Temparature controlling</li>
           
           </ul>
-          <YouTube className="  mt-5" videoId="xxLjUeVPYYk" opts={opts}  />;
+         
 
       
             
