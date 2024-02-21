@@ -390,13 +390,15 @@ const Advancerobotics = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals
           </h2>
-          <h3 className="font-bold">Arduino Base Project</h3>
-          17.0 Line following robot controll
+         < ul className="text-start">
+
+         <li> <h3 className="font-bold">Arduino Base Project</h3></li>
+          <li>17.0 Line following robot controll</li>
         
-          17.1 Obstacle Avoiding Robot
+          <li>17.1 Obstacle Avoiding Robot</li>
          
-          17.2 Arduino-Controlled Model Elevator
-            
+          <li>17.2 Arduino-Controlled Model Elevator</li>
+            </ul>
         </motion.div>
 
         <motion.div
@@ -410,11 +412,12 @@ const Advancerobotics = () => {
           <h2 className="py-8 text-base font-bold text-center md:text-3xl">
             Practicals
           </h2>
-          <h3 className="font-bold">PID Controlling</h3>
-          18.0 DC motor speed controlling via PID
-          <br />
-          18.1 Surface Temparature controlling<br/>
-          <br/>
+      < ul className="text-start">
+          <li><h3 className="font-bold">PID Controlling</h3></li>
+          <li>18.0 DC motor speed controlling via PID</li>
+          <li>18.1 Surface Temparature controlling</li>
+          
+          </ul>
           <YouTube className="  mt-5" videoId="xxLjUeVPYYk" opts={opts}  />;
 
       
