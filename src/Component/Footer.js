@@ -56,11 +56,17 @@ const Footer = () => {
                 Online
               </Link>
             </p>
-            <p>
+            <p className="mb-4">
             <Link to="/workshop" className="text-white">
-                Workshop
+                Workshop  
               </Link>
             </p>
+            <p>
+            <Link to="/kids" className="text-white">
+                Kisd Robotics
+              </Link>
+            </p>
+            
           </div>
 
           <div className="">

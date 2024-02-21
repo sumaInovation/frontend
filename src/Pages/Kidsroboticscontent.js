@@ -51,7 +51,7 @@ const Kidsroboticscontent = () => {
     <div className=" w-full p-20 my-4  duration-75 bg-[#b1ddf1] rounded-lg shadow-xl 
     text-center">
      
-   <h1 className='text-2xl text-[#213bcbe4]  uppercase'>BASIC LEVEL(Grade 4-5)</h1>
+   <h1 className='text-2xl text-[#213bcbe4]  uppercase'>BEGINNER LEVEL(Grade 4-5)</h1>
 
    
   <div className="gap-20 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
