@@ -6,10 +6,13 @@ const UserLoggingData = (state) => {
   
   return (
     <div className='text-white'>
-      <h1 className='  text-center text-3xl text-[#00df9a]'>Welcome to {location.state.userName}!!!</h1>
+     {(location.state.verification === "not verified" || location.state.verification==="verified") && <h1 className='  text-center text-3xl text-[#00df9a]'>Welcome to {location.state.userName}!!!</h1>}
       {location.state.verification === "not verified" &&
         <h1 className='  text-4xl text-center'>Your Account Not Veryfied!
           <br />Please log your email and verfied account</h1>}
+          {location.state.verification === "invalid" &&
+        <h1 className='  text-4xl text-center'>Not Found This Account!
+          <br />Try again!</h1>}
       {location.state.verification === "verified" && <div className='text-white'>
         <div className="max-w-[1240px] mx-auto grid  md:grid-cols-2 gap-8">
 

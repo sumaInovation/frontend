@@ -18,6 +18,7 @@ export default function Singup() {
         axios
             .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
             .then(res => {
+                console.log(res.data.Email)
                 if (res.data.Verification) {
                     Navigate('/loginuser', {
                         state:
@@ -34,10 +35,19 @@ export default function Singup() {
                     })
                 }
                 if (!res.data.Verification) {
-                    Navigate('/loginuser', {
-                        state:
-                            { verification: "not verified", userName: Email }
-                    })
+                    if(res.data.Email){
+                        Navigate('/loginuser', {
+                            state:
+                                { verification: "not verified", userName: res.data.Email }
+                        })
+                    }else{
+                        Navigate('/loginuser', {
+                            state:
+                                { verification: "invalid", userName: "Invalid Email Login" }
+                        })
+
+                    }
+                   
                 }
                 if (res.data === "Wrong Password") {
                     console.log('Wrong password')
