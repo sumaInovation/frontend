@@ -4,11 +4,8 @@ import axios from "axios";
 import logo from '../Assets/Nav_Logo.svg'
 
 export default function Singup() {
-    
     const [isComplete, setIsComplete] = useState(0)
     const [isError, setIsError] = useState(0)
-    
-
     const [Email, setEmail] = useState(null);
     const [Password, setPassword] = useState(0)
     const Navigate = useNavigate()
@@ -18,12 +15,11 @@ export default function Singup() {
         axios
             .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
             .then(res => {
-                console.log(res.data.Email)
+               if(!res.data.status){
                 if (res.data.Verification) {
                     Navigate('/loginuser', {
                         state:
                         {
-                            
                             verification: "verified",
                             userName: res.data.Email,
                             Name:res.data.Name,
@@ -31,28 +27,34 @@ export default function Singup() {
                             Course:res.data.Course,
                             StartDate:res.data.StartDate,
                             EndDate:res.data.EndDate
-                            }
+                        }
                     })
                 }
-                if (!res.data.Verification) {
+             if (!res.data.Verification) {
                     if(res.data.Email){
                         Navigate('/loginuser', {
                             state:
                                 { verification: "not verified", userName: res.data.Email }
                         })
-                    }else{
-                        Navigate('/loginuser', {
-                            state:
-                                { verification: "invalid", userName: "Invalid Email Login" }
-                        })
-
                     }
                    
                 }
-                if (res.data === "Wrong Password") {
-                    console.log('Wrong password')
-                    setIsError(1)
-                }
+
+
+            }
+            else{
+                if (res.data.status === "Wrong Password") {
+                    console.log("Wrong Password")
+                    
+                 }
+                 if(res.data.status=="Error"){
+                    console.log("Invalid User Name");
+                 }
+
+               
+
+            }
+             
                 setIsComplete(0);
 
             })
