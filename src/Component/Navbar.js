@@ -1,9 +1,7 @@
-
-import { Select, Option } from "@material-tailwind/react";
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import logo from '../Assets/logo10.svg'
+import logo from "../Assets/logo10.svg";
 const Navbar = () => {
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
@@ -12,15 +10,14 @@ const Navbar = () => {
 
   return (
     <div className="">
-       
-
       <div className=" text-white flex    items-center h-[120px] max-w-[1240px] mx-auto p-4 ">
-        {/* <h className=" w-full text-6xl font-bold text-[#00df9a] m-4"> */}
-        <img src={logo} alt="userimg" className=' w-[150px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[150px]' />
-        {/* </h> */}
-  
+        <img
+          src={logo}
+          alt="userimg"
+          className=" w-[150px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[150px]"
+        />
         <ul className="hidden  lg:flex text-[15px] gap-3">
-        <li className="p-2 rounded-md hover:bg-sky-700">
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/">HOME</Link>
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
@@ -41,19 +38,14 @@ const Navbar = () => {
           <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/contact">CONTACT</Link>
           </li>
-          {/* <li className="p-4 rounded-md hover:bg-sky-700">
-            <Link to="/about">About</Link>
-          </li> */}
+        
           <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/registration">SING UP</Link>
           </li>
-         <li className="p-2">
-            <Link to="/singin" >
-              SING IN
-            </Link>
-
+          <li className="p-2">
+            <Link to="/singin">SING IN</Link>
           </li>
-          </ul>
+        </ul>
 
         <div
           onClick={handlNavbar}
@@ -69,7 +61,6 @@ const Navbar = () => {
               : "fixed hidden"
           }
         >
-          
           <ul className="p-20 uppercase text-[#0c0c0cbf] font-bold">
             <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">
               <Link to="/" onClick={handlNavbar}>
@@ -107,7 +98,9 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">
-              <Link to="/registration" onClick={handlNavbar}>Register</Link>
+              <Link to="/registration" onClick={handlNavbar}>
+                Register
+              </Link>
             </li>
             <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
               <Link to="/singin" onClick={handlNavbar}>
@@ -115,8 +108,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
-            <Link to="/registration" onClick={handlNavbar}>SING UP</Link>
-          </li>
+              <Link to="/registration" onClick={handlNavbar}>
+                SING UP
+              </Link>
+            </li>
             <li className="p-4 hover:bg-sky-700">
               <Link to="/contact" onClick={handlNavbar}>
                 Contact
