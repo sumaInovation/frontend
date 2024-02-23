@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import logo from '../Assets/Nav_Logo.svg'
-
+import Navbar from "../Component/Navbar";
 export default function Singup() {
     const [isComplete, setIsComplete] = useState(0)
     const [isError, setIsError] = useState(0)
@@ -11,6 +11,7 @@ export default function Singup() {
     const [isCorrectPassword,setIsPasswordCorrect]=useState(0)
     const [invalidUserName,setInvalidUserName]=useState(0)
     const Navigate = useNavigate()
+
     const Handlesubmit = (e) => {
         setIsComplete(1);
         e.preventDefault();
@@ -18,32 +19,34 @@ export default function Singup() {
             .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
             .then(res => {
                if(!res.data.status){
-                if (res.data.Verification) {
-                    Navigate('/loginuser', {
-                        state:
-                        {
-                            verification: "verified",
-                            userName: res.data.Email,
-                            Name:res.data.Name,
-                            Number:res.data.Number,
-                            Course:res.data.Course,
-                            StartDate:res.data.StartDate,
-                            EndDate:res.data.EndDate
-                        }
-                    })
+                window.localStorage.setItem("IsLogged", true);
+                window.localStorage.setItem("Email",Email);
+                window.localStorage.setItem("Password",Password);
+                window.localStorage.setItem("UserName",res.data.Name)
+                 Navigate("/loginuser")
+                // if (res.data.Verification) {
+                  
+                //     Navigate('/loginuser', {
+                //         state:
+                //         {
+                //             verification: "verified",
+                //             userName: res.data.Email,
+                //             Name:res.data.Name,
+                //             Number:res.data.Number,
+                //             Course:res.data.Course,
+                //             StartDate:res.data.StartDate,
+                //             EndDate:res.data.EndDate
+                //         }
+                //     })
+                // }
+            //  if (!res.data.Verification) {
+            //         if(res.data.Email){
+            //             Navigate('/loginuser', {
+            //                 state:
+            //                     { verification: "not verified", userName: res.data.Email }
+            //             })
+            //         }}
                 }
-             if (!res.data.Verification) {
-                    if(res.data.Email){
-                        Navigate('/loginuser', {
-                            state:
-                                { verification: "not verified", userName: res.data.Email }
-                        })
-                    }
-                   
-                }
-
-
-            }
             else{
                 if (res.data.status === "Wrong Password") {
                     console.log("Wrong Password")
@@ -53,13 +56,8 @@ export default function Singup() {
                  if(res.data.status=="Error"){
                     console.log("Invalid User Name");
                     setInvalidUserName(1)
-                 }
-
-               
-
-            }
-             
-                setIsComplete(0);
+                 }}
+             setIsComplete(0);
 
             })
             .catch(() => {
@@ -71,7 +69,7 @@ export default function Singup() {
     if (!isComplete) {
         return (
             <>
-
+                   <Navbar />
                 <div className="flex flex-col justify-center flex-1 min-h-full px-6 py-12 lg:px-8">
                     <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                         <img
@@ -140,13 +138,6 @@ export default function Singup() {
                                 {isError && <h1 className="text-2xl text-center text-rose-900">Password Wrong</h1>}
                             </div>
                         </form>
-
-                        {/* <p className="mt-10 text-sm text-center text-gray-500">
-                        Not a member?{' '}
-                        <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                            Start a 14 day free trial
-                        </a>
-                    </p> */}
                     </div>
                 </div>
 

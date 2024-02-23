@@ -1,12 +1,15 @@
 import React from "react";
 import {useLocation} from 'react-router-dom';
 import { useEffect } from "react";
+import Navbar from "../Component/Navbar";
 const Contact = () => {
   const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo({top:0,behavior:"smooth"});
   }, [pathname]);
   return (
+    <>
+    <Navbar/>
     <div class="relative flex items-top justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
       <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div class="mt-8 overflow-hidden">
@@ -164,6 +167,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

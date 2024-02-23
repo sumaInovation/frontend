@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Navbar from "../Component/Navbar";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 const Registration = () => {
@@ -46,6 +46,9 @@ const Registration = () => {
 
   if (reqdata === 0) {
     return (
+      <>
+    
+      <Navbar/>
       <div className="grid min-h-screen bg-white place-items-center">
         <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
           <h1 className="text-xl font-semibold text-center md:text-2xl">
@@ -168,13 +171,14 @@ const Registration = () => {
           </form>
         </div>
       </div>
+      </>
     )
   }
   if (reqdata === 1) {
 
     return (
       <>
-
+            <Navbar/>
         <div class="flex h-screen w-screen items-center justify-center">
           <button type="button" class="flex items-center rounded-lg bg-green-700 px-4 py-2 text-white" disabled>
             <svg class="mr-3 h-5 w-5 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

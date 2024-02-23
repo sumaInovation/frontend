@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Navbar from "../Component/Navbar";
 import { motion } from "framer-motion";
 import Basiplcsylabus from "./Basiplcsylabus";
 import { Navigate } from "react-router-dom";
@@ -10,8 +10,8 @@ const Plc = () => {
   const [isTab, setIsTab] = useState(0);
   
   return (
-    <div>
-     
+    <>
+     <Navbar/>
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
@@ -118,7 +118,7 @@ const Plc = () => {
       {isTab === 1 && <Basiplcsylabus />}
       {isTab === 2 && <Advanceplc />}
       {isTab === 3 && <div className="text-white"> Hello3</div>}
-    </div>
+    </>
   );
 };
 

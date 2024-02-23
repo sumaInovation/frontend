@@ -4,14 +4,14 @@ import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
 import Advancerobotics from "./Advancerobotics";
 import BasicRobotics from "./BasicRobotics";
-
+import Navbar from "../Component/Navbar";
 
 const Cprogramming = () => {
   const [isTab, setIsTab] = useState(2);
  
   return (
-    <div>
-     
+    <>
+     <Navbar/>
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}
@@ -133,7 +133,7 @@ const Cprogramming = () => {
       {isTab === 1 && <BasicRobotics/>}
       {isTab === 2 && <Advancerobotics/>}
       {isTab === 3 && <div className="text-white"> Hello3</div>}
-    </div>
+    </>
   );
 };
 

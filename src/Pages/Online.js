@@ -2,12 +2,14 @@ import React, { useState } from "react"
 import {Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
+import Navbar from "../Component/Navbar";
 import background from "../Assets/online1.jpg";
 const Online = () => {
   const [isTab, setIsTab] = useState(0);
   
   return (
-    <div>
+    <>
+      <Navbar/>
       <Navigate t="/cpro" />
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
@@ -141,7 +143,7 @@ const Online = () => {
       {isTab === 2 && <div className="text-white"> PLC ADVANCE LEVEL</div>}
       {isTab === 3 && <div className="text-white">ROBORTICS BEGINER LEVEL</div>}
       {isTab === 4 && <div className="text-white"> ROBORTICS ADVANCE LEVEL </div>}
-    </div>
+    </>
   );
 };
 
