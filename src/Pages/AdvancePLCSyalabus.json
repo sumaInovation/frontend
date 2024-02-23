@@ -111,7 +111,7 @@
     {
         "ID":"12",
         "TITLE":"Practicals",
-        "DTATA":[".AC Servo motor PID Controlling",
+        "DTATA":["1.AC Servo motor PID Controlling",
         "2.AC induction Motor PID Controlling",
         "3.DC Motor PID Controlling",
         "4.HMI Controll Automation System",
