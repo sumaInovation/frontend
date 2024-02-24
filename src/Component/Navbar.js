@@ -3,18 +3,17 @@ import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo10.svg";
 const Navbar = () => {
-  const isLog=window.localStorage.getItem("IsLogged")
+  const isLog = window.localStorage.getItem("IsLogged");
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
     setNavbar(!nav);
   };
-  const isLogged=window.localStorage.getItem("IsLogged")
-  const logout=()=>{
+  const isLogged = window.localStorage.getItem("IsLogged");
+  const logout = () => {
     window.localStorage.removeItem("IsLogged");
     window.localStorage.removeItem("Email");
     window.localStorage.removeItem("Password");
-    
-  }
+  };
   return (
     <div className="">
       <div className=" text-white flex items-center h-[120px] max-w-[1240px] mx-auto p-4 ">
@@ -45,18 +44,28 @@ const Navbar = () => {
           <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/contact">CONTACT</Link>
           </li>
-        
+
           <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/registration">SING UP</Link>
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
-            {!isLog?<Link to="/singin">SING IN</Link>:<Link to="/" onClick={logout}>SING OUT</Link>}
-            
+            {!isLog ? (
+              <Link to="/singin">SING IN</Link>
+            ) : (
+              <Link to="/" onClick={logout}>
+                SING OUT
+              </Link>
+            )}
           </li>
-          {isLog?<li className="p-2 rounded-md hover:bg-sky-700">
-            <Link to="/loginuser" >
-              {window.localStorage.getItem("UserName")}
-              </Link></li>:""}
+          {isLog ? (
+            <li className="p-2 rounded-md hover:bg-sky-700">
+              <Link to="/loginuser">
+                {window.localStorage.getItem("UserName")}
+              </Link>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
 
         <div
@@ -114,30 +123,36 @@ const Navbar = () => {
                 Register
               </Link>
             </li>
-            <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
-              <Link to="/singin" onClick={handlNavbar}>
-                SING IN
-              </Link>
-            </li>
+
             <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
               <Link to="/registration" onClick={handlNavbar}>
                 SING UP
               </Link>
             </li>
-            <li className="p-2 rounded-md hover:bg-sky-700">
-            {!isLog?<Link to="/singin">SING IN</Link>:<Link to="/" onClick={logout}>SING OUT</Link>}
-            
-          </li>
-          {isLog?<li className="p-2 rounded-md hover:bg-sky-700">
-            <Link to="/loginuser" >
-              {window.localStorage.getItem("UserName")}
-              </Link></li>:""}
-
-
-
-
-
-            
+            <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
+              {!isLog ? (
+                <Link to="/singin" className="p-2 rounded-md hover:bg-sky-700 ">
+                  SING IN
+                </Link>
+              ) : (
+                <Link
+                  to="/"
+                  onClick={logout}
+                  className="p-2 rounded-md hover:bg-sky-700"
+                >
+                  SING OUT
+                </Link>
+              )}
+            </li>
+            {isLog ? (
+              <li className="p-2 border-b rounded-md hover:bg-sky-700 border-b-gray-600">
+                <Link to="/loginuser">
+                  {window.localStorage.getItem("UserName")}
+                </Link>
+              </li>
+            ) : (
+              ""
+            )}
             <li className="p-4 hover:bg-sky-700">
               <Link to="/contact" onClick={handlNavbar}>
                 Contact
