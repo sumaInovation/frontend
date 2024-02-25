@@ -4,14 +4,14 @@ import Typed from "react-typed";
 import background from "../Assets/mc3.jpg";
 import Advancerobotics from "./Advancerobotics";
 import BasicRobotics from "./BasicRobotics";
-import Navbar from "../Component/Navbar";
+
 
 const Cprogramming = () => {
   const [isTab, setIsTab] = useState(2);
  
   return (
     <>
-     <Navbar/>
+
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}

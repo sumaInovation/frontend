@@ -2,7 +2,7 @@ import React, { useState} from "react"
 import {Navigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import Typed from "react-typed";
-import Navbar from "../Component/Navbar";
+
 import background from "../Assets/online1.jpg";
 import Kidsroboticscontent from "./Kidsroboticscontent";
 const Online = () => {
@@ -10,7 +10,7 @@ const Online = () => {
   
   return (
     <>
-    <Navbar/>
+
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen " 
         style={{ backgroundImage:`url(${background})`}}

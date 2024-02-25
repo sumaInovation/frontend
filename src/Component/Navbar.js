@@ -46,7 +46,7 @@ const Navbar = () => {
           </li>
 
           <li className="p-2 rounded-md hover:bg-sky-700">
-            <Link to="/registration">SING UP</Link>
+            {!isLogged?<Link to="/registration">SING UP</Link>:""}
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
             {!isLog ? (
@@ -145,7 +145,7 @@ const Navbar = () => {
               )}
             </li>
             {isLog ? (
-              <li className="p-2 border-b rounded-md hover:bg-sky-700 border-b-gray-600">
+              <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
                 <Link to="/loginuser">
                   {window.localStorage.getItem("UserName")}
                 </Link>

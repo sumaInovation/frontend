@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Component/Navbar";
+
 import { motion } from "framer-motion";
 import Basiplcsylabus from "./Basiplcsylabus";
 import { Navigate } from "react-router-dom";
@@ -11,7 +11,7 @@ const Plc = () => {
   
   return (
     <>
-     <Navbar/>
+
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen" 
         style={{ backgroundImage:`url(${background})`}}

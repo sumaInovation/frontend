@@ -20,7 +20,7 @@ const App = () => {
   return (
     <>
        <BrowserRouter>
-       
+       <Navbar/>
         <Scrolltop/>
         <Routes>
           <Route path="/" element={<Main />} />

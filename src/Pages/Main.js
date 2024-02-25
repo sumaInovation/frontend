@@ -3,13 +3,13 @@ import Hero from "../Component/Hero";
 import Content from "../Component/Content";
 import Card from "../Component/Card";
 import Navbar from "../Component/Navbar";
+import { signInWithGoogle } from "../Firebase"
 const Main = () => {
  
 return (
     <>
-    <Navbar/>
       <Hero />
-      <Content />
+     <Content />
       <Card />
      
     </>

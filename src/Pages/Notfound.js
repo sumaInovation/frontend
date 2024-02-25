@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Navbar from "../Component/Navbar";
+
 export default function Notfound() {
     return (
       <>
@@ -11,7 +11,7 @@ export default function Notfound() {
           <body class="h-full">
           ```
         */}
-        <Navbar/>
+     
         <main className="grid min-h-full px-6 py-24 bg-white place-items-center sm:py-32 lg:px-8">
           <div className="text-center">
             <p className="text-base font-semibold text-indigo-600">404</p>

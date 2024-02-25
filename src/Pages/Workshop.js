@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link} from "react-router-dom";
-import Navbar from "../Component/Navbar";
+
 import Typed from "react-typed";
 import background from "../Assets/worksop1.jpg";
 const Workshop = () => {
@@ -9,7 +9,7 @@ const Workshop = () => {
 
   return (
     <div>
-      <Navbar/>
+
       <div
         className="flex flex-col items-center bg-white bg-center bg-no-repeat bg-cover md:h-screen"
         style={{ backgroundImage: `url(${background})` }}

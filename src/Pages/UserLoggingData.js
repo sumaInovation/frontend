@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { useLocation,useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
 import axios from "axios";
-import Navbar from "../Component/Navbar";
+
 const UserLoggingData = (state) => {
   const location = useLocation();
   const user=window.localStorage.getItem("IsLogged")
-  const Email=window.localStorage.getItem("Email");
-  const Password=window.localStorage.getItem("Password");
+  const Email=window.localStorage.getItem("email");
+  const ProfURL=window.localStorage.getItem("profilePic");
+  const name=window.localStorage.getItem("name")
   const [Name,setNAme]=useState("");
   const [course,setCourse]=useState("")
   const [userData,setUserData]=useState({})
@@ -15,7 +16,7 @@ const UserLoggingData = (state) => {
   useEffect(()=>{
     
     axios
-    .post("https://http-server-r3wc.onrender.com/login", { Email, Password })
+    .post("https://http-server-r3wc.onrender.com/fetchdata", { Email})
     .then(res => {
       
        setNAme(res.data.Name);
@@ -30,8 +31,7 @@ const UserLoggingData = (state) => {
   if(window.localStorage.getItem("IsLogged")){
     return (
       <>
-    
-      <Navbar/>
+
       <div className='text-white'>
      <pre>{JSON.stringify(userData, null, 2)}</pre>
     
