@@ -144,21 +144,18 @@ export default function Singup() {
         axios
         .post("https://http-server-r3wc.onrender.com/googlesign", {email})
         .then((res) => {
-           if(res.data=="OK"){
+           if(res.data==="OK"){
             
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
         localStorage.setItem("profilePic", profilePic);
         window.localStorage.setItem("IsLogged", true);
-        console.log(profilePic)
-        // window.location.reload()
-        console.log(decoded);
-            //Navigate("/loginuser");
-            console.log(res.data)
-            
-           }  else{
+         Navigate("/");
+        window.location.reload()
+
+            }  else{
             setIsComplete(0);
-            console.log(res)
+           alert("INVALID USER NAME")
             
            }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo10.svg";
+import Dropdwon from '../Component/Dropdwon.js'
 const Navbar = () => {
   const isLog = window.localStorage.getItem("IsLogged");
   const [nav, setNavbar] = useState(false);
@@ -10,9 +11,10 @@ const Navbar = () => {
   };
   const isLogged = window.localStorage.getItem("IsLogged");
   const logout = () => {
-    window.localStorage.removeItem("IsLogged");
-    window.localStorage.removeItem("Email");
-    window.localStorage.removeItem("Password");
+    // window.localStorage.removeItem("IsLogged");
+    // window.localStorage.removeItem("Email");
+    // window.localStorage.removeItem("Password");
+    // window.location.reload()
   };
   return (
     <div className="">
@@ -48,15 +50,18 @@ const Navbar = () => {
           <li className="p-2 rounded-md hover:bg-sky-700">
             {!isLogged?<Link to="/registration">SING UP</Link>:""}
           </li>
-          <li className="p-2 rounded-md hover:bg-sky-700">
+         
             {!isLog ? (
-              <Link to="/singin">SING IN</Link>
+            <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700">SING IN</Link>
             ) : (
-              <Link to="/" onClick={logout}>
-                SING OUT
-              </Link>
+              <div className="flex gap-2">
+                <img src={localStorage.getItem("profilePic")} className="rounded-full w-[50px]   items-center    inline-block"/>
+              <Dropdwon/>
+              
+              </div>
+            
             )}
-          </li>
+        
           {isLog ? (
             <li className="p-2 rounded-md hover:bg-sky-700">
               <Link to="/loginuser">
@@ -129,21 +134,18 @@ const Navbar = () => {
                 SING UP
               </Link>
             </li>
-            <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
-              {!isLog ? (
-                <Link to="/singin" className="p-2 rounded-md hover:bg-sky-700 ">
-                  SING IN
-                </Link>
-              ) : (
-                <Link
-                  to="/"
-                  onClick={logout}
-                  className="p-2 rounded-md hover:bg-sky-700"
-                >
-                  SING OUT
-                </Link>
-              )}
-            </li>
+           
+            {!isLog ? (
+            <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700">SING IN</Link>
+            ) : (
+              <div className="flex gap-4">
+                <img src={localStorage.getItem("profilePic")} className="rounded-full w-[150px]   items-center    inline-block"/>
+              <Dropdwon/>
+              
+              </div>
+            
+            )}
+        
             {isLog ? (
               <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
                 <Link to="/loginuser">
