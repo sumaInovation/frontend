@@ -136,7 +136,9 @@ const Navbar = () => {
             </li>
            
             {!isLog ? (
-            <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700"  onClick={handlNavbar}>SING IN</Link>
+              <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
+            <Link to="/singin"   onClick={handlNavbar}>SING IN</Link>
+            </li>
             ) : (
               <div className="flex gap-4">
                 <img src={localStorage.getItem("profilePic")} className="rounded-full w-[150px]   items-center    inline-block"/>
