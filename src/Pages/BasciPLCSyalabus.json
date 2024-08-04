@@ -1,9 +1,26 @@
 [
   {
     "ID": "1",
-    "TITLE": "Contactor Logic",
+    "TITLE": "What is a PLC?",
     "DTATA": [
-        "Overwive of Contactor",
+        "Components of a PLC",
+        "Understanding PLC Hardwere",
+        "Introduction to PLC Programming",
+        "Ladder Logic (LD):",
+        "Functional Block Daigram(FBD)",
+        "Instruction List(IL):",
+        "Sequential Function Charts (SFC):",
+        "Number System & Digital Logic"
+      
+    ]
+  },
+  {
+    "ID": "1",
+    "TITLE": "Basic Ladder Logic for Contactor",
+    "DTATA": [
+        "AND/OR Logic in Ladder Diagrams",
+        "Combining AND/OR Logic",
+        "Contactor Overwive",
         "Desing Contactor Logic",
         "Realay ,Timer & Counter",
         "Desing contactor Logic System"
@@ -11,13 +28,15 @@
   },
   {
     "ID": "2",
-    "TITLE": "Introduction to PLC",
+    "TITLE": "Introduction to Ladder Programming",
     "DTATA": [
         "PLC Scan Cycle",
-        "Basic Logic Element",
-        "Implement logic system using LADER",
-        "I/O on PLC",
-        "Sensors and actuaters interfacing"
+        "PLC Memory (Input/output/Internal Registers)",
+        "Basic Ladder elements(NO, NC, Output)",
+        "Positive transition, Negative transition",
+        "Immediate Input / Outputs",
+        "Set / Reset Coils",
+        "implement ladder for a given Logic system(Techniques)"
 
     ]
   },
@@ -86,10 +105,16 @@
     "ID": "9",
     "TITLE":"String & Table Instructions",
     "DTATA":[
-        "Add To Table",
-        "First-In-First-Out and Last-In-First-Out",
+        "1.Add To Table",
+        "2.First-In-First-Out and Last-In-First-Out",
         "Memory Fill",
-        "Table Find"
+        "3.Table Find",
+        "1.String Length",
+        "2.Concatenate String",
+        "3.Copy string",
+        "4.Copy Substring from String",
+        "5.Find String Within String",
+        "6.Find First Character Within String"
     ]
   },
   {
@@ -106,10 +131,12 @@
     "ID": "11",
     "TITLE":"Subroutine & Interrupts",
     "DTATA":[
-        "Externel Interrupts",
-        "Timer Interrupts",
-        "Timed Interrupts",
-        "Communication Interrupts"
+"Why We use subroutines",
+"Local variables and global variables",
+"Using subroutines in our programs",
+"Why we use interrupts?",
+"IO / Timer and Timed interrupts",
+"Use interrupts in our programs"
     ]
   },
   {
@@ -161,7 +188,8 @@
     "DTATA":[
         "1.Basic HMI Operations.",
         "2.Desining HMI Project.",
-        "3.Communication HMI with PLC"
+        "3.Communication HMI with PLC",
+        "Touch HMI Programming"
     ]
   },
   {
