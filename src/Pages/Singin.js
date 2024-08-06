@@ -5,7 +5,20 @@ import logo from "../Assets/Nav_Logo.svg";
 // Login throgh google 
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
+export default function Singup() {
+  return(
+<GoogleLogin
+  onSuccess={credentialResponse => {
+    console.log(credentialResponse);
+  }}
+  onError={() => {
+    console.log('Login Failed');
+  }}
+/>
 
+  );
+}
+/*
 export default function Singup() {
   const [isComplete, setIsComplete] = useState(0);
   const [isError, setIsError] = useState(0);
@@ -215,3 +228,4 @@ export default function Singup() {
     );
   }
 }
+*/
