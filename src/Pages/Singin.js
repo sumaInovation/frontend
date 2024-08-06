@@ -134,7 +134,7 @@ export default function Singup() {
               </div>
             </form>
             
-   <GoogleOAuthProvider clientId="648059852227-24lnanli1vbb68ctgv4rruin974kgeek.apps.googleusercontent.com">
+   <GoogleOAuthProvider clientId="924025179828-cgrqcm6piomllg1u5tihimsa42cfkbi6.apps.googleusercontent.com">
     <GoogleLogin  
       onSuccess={(credentialResponse) => {
         const decoded = jwtDecode(credentialResponse?.credential);
