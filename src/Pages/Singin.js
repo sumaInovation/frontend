@@ -5,17 +5,42 @@ import logo from "../Assets/Nav_Logo.svg";
 // Login throgh google 
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
+
+
+
 export default function Singup() {
+  const [user,setUser]=useState(null);
+  function handleSingout(event){
+    setUser(null);
+    document.getElementById("singIn").hidden=false;
+
+  }
   return(
-<GoogleLogin
+    <>
+   <div id="singIn">
+    
+<GoogleLogin 
   onSuccess={credentialResponse => {
-    console.log(credentialResponse);
+    console.log(credentialResponse.credential);
+    const userObject=jwtDecode(credentialResponse.credential);
+    console.log(userObject);
+    setUser(userObject);
+    document.getElementById("singIn").hidden=true;
   }}
   onError={() => {
     console.log('Login Failed');
   }}
+  
 />
+</div> 
+{
+user && <div className="text-white">
+<img src={user.picture} class="w-32 h-32 rounded-full object-cover"></img>
+<button onClick={handleSingout}>sing out</button>
+</div>
+}
 
+</>
   );
 }
 /*
