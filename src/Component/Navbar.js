@@ -25,6 +25,7 @@ const Navbar = () => {
           className=" w-[150px] lg:mx-auto md:w-[250px] lg:w-[400px]  h-[150px]"
         />
         <ul className="hidden  lg:flex text-[15px] gap-3">
+          
           <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/">HOME</Link>
           </li>
@@ -79,7 +80,8 @@ const Navbar = () => {
         >
           {!nav ? <AiOutlineMenu size={40} /> : <AiOutlineClose size={40} />}
         </div>
-
+        
+          
         <div
           className={
             nav
@@ -87,6 +89,7 @@ const Navbar = () => {
               : "fixed hidden"
           }
         >
+          
           <ul className="p-20 uppercase text-[#0c0c0cbf] font-bold">
             <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">
               <Link to="/" onClick={handlNavbar}>
