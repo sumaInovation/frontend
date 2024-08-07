@@ -129,6 +129,7 @@ const Navbar = () => {
               </Link>
             </li>
              {
+              !isLog &&
             <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
               <Link to="/registration" onClick={handlNavbar}>
                 SING UP
