@@ -57,7 +57,7 @@ const Navbar = () => {
             ) : (
               <div className="flex gap-2">
                 <img src={localStorage.getItem("profilePic")} className="rounded-full w-[50px]   items-center    inline-block"/>
-              <Dropdwon/>
+            <Dropdwon/>
               
               </div>
             
