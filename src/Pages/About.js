@@ -6,6 +6,6 @@ const About = () => {
       <img src={logo} alt="userimg" className='w-[250px] md:mx-auto md:w-[250px] lg:w-[400px]  h-full   mb-2' />
     </div>
   )
-}
+}  
 
 export default About
