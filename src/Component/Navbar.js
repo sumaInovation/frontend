@@ -24,6 +24,9 @@ const Navbar = () => {
             <Link to="/">HOME</Link>
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
+            <Link to="/abc">HOME1</Link>
+          </li>
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/cpro">ROBORTICS</Link>
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
@@ -45,13 +48,8 @@ const Navbar = () => {
           <li className="p-2 rounded-md hover:bg-sky-700">
           <Link to="/registration">SING UP</Link>
           </li>
-         
-           
-            <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700">SING IN</Link>
-           
-        
-         
-            <li className="p-2 rounded-md hover:bg-sky-700">
+           <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700">SING IN</Link>
+           <li className="p-2 rounded-md hover:bg-sky-700">
               <Link to="/loginuser">
                 {window.localStorage.getItem("UserName")}
               </Link>

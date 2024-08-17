@@ -15,6 +15,7 @@ import UserLoggingData from "./Pages/UserLoggingData"
 import Notfound from "./Pages/Notfound";
 import Kids from "./Pages/Kidsrobotics"
 import Scrolltop from "./Pages/Scrolltop";
+import Googlelogin from "./Pages/Googlelogin"
      
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/singin' element={<Singup/>}/>
           <Route path="/loginuser" element={<UserLoggingData/>}/>
           <Route path="/kids" element={<Kids/>}/>
+          <Route path="/abc" element={<Googlelogin/>}/>
           <Route path="/*" element={<Notfound/>}/>
         </Routes>
         <Footer />
