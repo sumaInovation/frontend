@@ -1,12 +1,12 @@
-import React, { useState} from "react"
-import {Navigate } from "react-router-dom";
+import React from "react"
+
 import { motion } from "framer-motion";
 import Typed from "react-typed";
 
 import background from "../Assets/online1.jpg";
 import Kidsroboticscontent from "./Kidsroboticscontent";
 const Online = () => {
-  const [isTab, setIsTab] = useState(0);
+
   
   return (
     <>

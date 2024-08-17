@@ -1,15 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import YouTube from 'react-youtube';
+
 const Advancerobotics = () => {
-  const opts = {
-    height: '390',
-    width: '100%',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-    },
-  };
+ 
+
 
   return (
     <>

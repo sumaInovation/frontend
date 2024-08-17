@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import Basiplcsylabus from "./Basiplcsylabus";
-import { Navigate } from "react-router-dom";
+
 import Advanceplc from "./Advanceplc";
 import Typed from "react-typed";
 import background from "../Assets/plc3.png";

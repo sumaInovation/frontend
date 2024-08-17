@@ -1,6 +1,5 @@
 import React from 'react'
 import logo from '../Assets/logo7.svg'
-import Navbar from "../Component/Navbar";
 const About = () => {
   return (
     <div className='text-white'>

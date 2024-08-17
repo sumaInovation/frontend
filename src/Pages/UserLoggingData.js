@@ -1,51 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { useLocation,useNavigate } from 'react-router-dom';
-import {motion} from 'framer-motion'
-import axios from "axios";
+import React from 'react'
 
-const UserLoggingData = (state) => {
-  const location = useLocation();
-  const user=window.localStorage.getItem("IsLogged")
-  const Email=window.localStorage.getItem("email");
-  const ProfURL=window.localStorage.getItem("profilePic");
-  const name=window.localStorage.getItem("name")
-  const [Name,setNAme]=useState("");
-  const [course,setCourse]=useState("")
-  const [userData,setUserData]=useState({})
-  const Navigate=useNavigate()
-  useEffect(()=>{
-    
-    axios
-    .post("https://http-server-r3wc.onrender.com/fetchdata", { Email})
-    .then(res => {
+function UserLoggingData() {
+  return (
+    <div>
       
-       setNAme(res.data.Name);
-       setCourse(res.data.Course)
-       setUserData(res.data)
-      
-    })
-   
-  })
-  
-  
-  if(window.localStorage.getItem("IsLogged")){
-    return (
-      <>
-
-      <div className='text-white'>
-     <pre>{JSON.stringify(userData, null, 2)}</pre>
-    
-      </div>
-      </>
-
-     
- 
- )
-  }
-  else{
-    Navigate("/*")
-  }
-
+    </div>
+  )
 }
 
 export default UserLoggingData

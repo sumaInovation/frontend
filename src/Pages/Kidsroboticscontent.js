@@ -47,7 +47,7 @@ const Kidsroboticscontent = () => {
         
     </ul>
  </div>
-    {isTab==1 && 
+    {isTab===1 && 
     <div className=" w-full p-20 my-4  duration-75 bg-[#b1ddf1] rounded-lg shadow-xl 
     text-center">
      
@@ -102,7 +102,7 @@ const Kidsroboticscontent = () => {
     </div>
     }
   
-  {isTab==2 &&    <div className="flex-col w-full p-20 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
+  {isTab===2 &&    <div className="flex-col w-full p-20 my-4  duration-75 rounded-lg shadow-xl  bg-[#ffecd1]">
   <h1 className='text-3xl text-[#213bcbe4]  uppercase text-center'>Intermitiade level(Grade 6-8)</h1>
 
       <div className="gap-20 mx-2 my-4 p-:20 mdw-full text-start lg:flex">
