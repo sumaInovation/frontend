@@ -1,21 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import logo from "../Assets/logo10.svg";
-import Dropdwon from '../Component/Dropdwon.js'
+
 const Navbar = () => {
-  const isLog = window.localStorage.getItem("IsLogged");
+ 
   const [nav, setNavbar] = useState(false);
   const handlNavbar = () => {
     setNavbar(!nav);
   };
-  const isLogged = window.localStorage.getItem("IsLogged");
-  const logout = () => {
-    // window.localStorage.removeItem("IsLogged");
-    // window.localStorage.removeItem("Email");
-    // window.localStorage.removeItem("Password");
-    // window.location.reload()
-  };
+ 
   return (
     <div className="">
       <div className=" text-white flex items-center h-[120px] max-w-[1240px] mx-auto p-4 ">
@@ -49,29 +43,20 @@ const Navbar = () => {
           </li>
 
           <li className="p-2 rounded-md hover:bg-sky-700">
-            {!isLogged?<Link to="/registration">SING UP</Link>:""}
+          <Link to="/registration">SING UP</Link>
           </li>
          
-            {!isLog ? (
+           
             <Link to="/singin" className="items-center p-2 rounded-md hover:bg-sky-700">SING IN</Link>
-            ) : (
-              <div className="flex gap-2">
-                <img src={localStorage.getItem("profilePic")} className="rounded-full w-[50px]   items-center    inline-block"/>
-            <Dropdwon/>
-              
-              </div>
-            
-            )}
+           
         
-          {isLog ? (
+         
             <li className="p-2 rounded-md hover:bg-sky-700">
               <Link to="/loginuser">
                 {window.localStorage.getItem("UserName")}
               </Link>
             </li>
-          ) : (
-            ""
-          )}
+        
         </ul>
 
         <div
@@ -131,36 +116,20 @@ const Navbar = () => {
                 Register
               </Link>
             </li>
-             {
-              !isLog &&
+             
             <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
               <Link to="/registration" onClick={handlNavbar}>
                 SING UP
               </Link>
             </li>
-               }
-            {!isLog ? (
+               
+            
               <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
             <Link to="/singin"   onClick={handlNavbar}>SING IN</Link>
             </li>
-            ) : (
-              <div className="flex gap-4">
-                <img src={localStorage.getItem("profilePic")} className="rounded-full w-[150px]   items-center    inline-block"/>
-              <Dropdwon/>
-              
-              </div>
-            
-            )}
+           
         
-            {isLog ? (
-              <li className="p-4 border-b hover:bg-sky-700 border-b-gray-600">
-                <Link to="/loginuser">
-                  {window.localStorage.getItem("UserName")}
-                </Link>
-              </li>
-            ) : (
-              ""
-            )}
+          
             <li className="p-4 hover:bg-sky-700">
               <Link to="/contact" onClick={handlNavbar}>
                 Contact
