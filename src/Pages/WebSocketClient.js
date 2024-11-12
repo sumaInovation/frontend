@@ -12,7 +12,7 @@ const Test = () => {
 
   return (
     <div>
-      <h1 className="py-8 text-4xl font-bold text-center text-white md:text-7xl ">WEBSOCKET CLIENT</h1>
+      <h1 className="py-8 text-4xl font-bold text-center text-white md:text-7xl ">DATA MONITORING SYSTEM</h1>
       <p>Status: {isConnected ? "Connected" : "Disconnected"}</p>
 
       <div className="  text-lg text-white text-center">
