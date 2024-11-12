@@ -42,6 +42,9 @@ const Navbar = () => {
             <Link to="/workshop">WORKSHOP</Link>{" "}
           </li>
           <li className="p-2 rounded-md hover:bg-sky-700">
+            <Link to="/test">WebsocketClient</Link>{" "}
+          </li>
+          <li className="p-2 rounded-md hover:bg-sky-700">
             <Link to="/contact">CONTACT</Link>
           </li>
 
@@ -102,6 +105,11 @@ const Navbar = () => {
             <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">
               <Link to="/workshop" onClick={handlNavbar}>
                 Workshop
+              </Link>{" "}
+            </li>
+            <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">
+              <Link to="/test" onClick={handlNavbar}>
+                WEBSOCKETCLIENT
               </Link>{" "}
             </li>
             <li className="p-4 border-b border-b-gray-600 hover:bg-sky-700">

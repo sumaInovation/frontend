@@ -16,6 +16,7 @@ import Notfound from "./Pages/Notfound";
 import Kids from "./Pages/Kidsrobotics"
 import Scrolltop from "./Pages/Scrolltop";
 import Googlelogin from "./Pages/Googlelogin"
+import Test from "./Pages/WebSocketClient";
      
 const App = () => {
   return (
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/loginuser" element={<UserLoggingData/>}/>
           <Route path="/kids" element={<Kids/>}/>
           <Route path="/abc" element={<Googlelogin/>}/>
+          <Route path="/test" element={<Test/>}/>
           <Route path="/*" element={<Notfound/>}/>
         </Routes>
         <Footer />
