@@ -53,8 +53,13 @@ const WebSocketClient = () => {
      "Sheet":"Sheet1"
      }
     const result = await axios.post("https://googlesheet-yuetcisb.b4a.run/serchdata", data);
+    const parsedValue=parseInt(result.data.Length,10)
+    if(isNaN(parsedValue)){
+
+    }else{
+      setRuningtime(parsedValue);
+    }
     
-    setRuningtime(parseInt(result.data.Length,10));
   
     
    }catch(err){
@@ -73,7 +78,14 @@ const WebSocketClient = () => {
       "Sheet":"Sheet2"
       }
      const result = await axios.post("https://googlesheet-yuetcisb.b4a.run//serchdata", data);
-     setBreakingtime(parseInt(result.data.Length));
+     
+     const parsedValue=parseInt(result.data.Length,10);
+     if(isNaN(parsedValue)){
+
+     }else{
+      setBreakingtime(parsedValue);
+     }
+     
      
      
     }catch(err){
