@@ -30,7 +30,7 @@ const WebSocketClient = () => {
     return `${hours} hours ${minutes} minutes ${remainingSeconds} seconds`;
   }
 
-  var todayrunningtime=100//parseInt(runnintime,10)+parseInt(currentrunningtime,10)
+  var todayrunningtime=convertSecondsToHMSS(parseInt(runnintime,10)+parseInt(currentrunningtime,10))
   var todaybreakingtime=parseInt(breakingtime,10)+parseInt(currentbreaketime,10)
   // Get the current date
   const currentDate = new Date();
