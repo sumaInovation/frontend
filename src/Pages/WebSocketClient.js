@@ -31,7 +31,7 @@ const WebSocketClient = () => {
   }
 
   var todayrunningtime=convertSecondsToHMSS(parseInt(runnintime,10)+parseInt(currentrunningtime,10))
-  var todaybreakingtime=parseInt(breakingtime,10)+parseInt(currentbreaketime,10)
+  var todaybreakingtime=convertSecondsToHMSS(parseInt(breakingtime,10)+parseInt(currentbreaketime,10));
   // Get the current date
   const currentDate = new Date();
 
@@ -53,7 +53,8 @@ const WebSocketClient = () => {
      "Sheet":"Sheet1"
      }
     const result = await axios.post("https://googlesheet-yuetcisb.b4a.run/serchdata", data);
-    setRuningtime(result.data.Length);
+    
+    setRuningtime(parseInt(result.data.Length,10));
   
     
    }catch(err){
@@ -72,7 +73,7 @@ const WebSocketClient = () => {
       "Sheet":"Sheet2"
       }
      const result = await axios.post("https://googlesheet-yuetcisb.b4a.run//serchdata", data);
-     setBreakingtime(result.data.Length);
+     setBreakingtime(parseInt(result.data.Length));
      
      
     }catch(err){
