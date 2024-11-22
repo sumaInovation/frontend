@@ -6,8 +6,10 @@ const WebSocketClient = () => {
   const { messages, sendMessage, isConnected } = useWebSocket("wss://googlesheet-yuetcisb.b4a.run/");
   const [inputMessage, setInputMessage] = useState("");
   const [runnintime,setRuningtime]=useState(0);
-  const [breakingtime,setBreakingtime]=useState(0)
-
+  const [breakingtime,setBreakingtime]=useState(0);
+  const[todayrunningtime,setTodayrunnintime]=useState(0);
+  const[todaybreakingtime,setTodaybreakingtime]=useState(0);
+    
   
    var m=String(messages[messages.length-1]);
    var machinestate=m.split(',')[0];
@@ -19,6 +21,15 @@ const WebSocketClient = () => {
    }else{
     currentbreaketime=currenttime;
    }
+
+   //Conver to second hours.minutes.seconds format
+  function convertSecondsToHMSS(seconds) {
+    const hours = Math.floor(seconds / 3600);  // Get the number of hours
+    const minutes = Math.floor((seconds % 3600) / 60);  // Get the number of minutes
+    const remainingSeconds = seconds % 60;  // Get the remaining seconds
+
+    return `${hours} hours ${minutes} minutes ${remainingSeconds} seconds`;
+  }
   // Get the current date
   const currentDate = new Date();
 
@@ -29,7 +40,7 @@ const WebSocketClient = () => {
 
   // Format the date as yyyy/mm/dd
   const startformattedDate = `${year}/${month}/${day}`;
-  const endtformattedDate = `${year}/${month}/${day+1}`;
+  
   
   const autoreadrunninglength=async(e)=>{
     
@@ -78,8 +89,9 @@ const WebSocketClient = () => {
     // setRuningtime(Math.floor(Math.random() * 1000));
     // setBreakingtime(Math.floor(Math.random() * 10))
     autoreadrunninglength();
-    autoreadbreakinglength()
-
+    autoreadbreakinglength();
+    setTodayrunnintime(convertSecondsToHMSS(parseInt(runnintime,10)+parseInt(currentrunningtime,10)))
+    setTodaybreakingtime(convertSecondsToHMSS(parseInt(breakingtime,10)+parseInt(currentbreaketime,10)))
     
     
     },5000)
@@ -101,13 +113,13 @@ const WebSocketClient = () => {
         {/* Card 2: Orders */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold text-gray-700">Today {startformattedDate} Running Hours</h2>
-          <p className="mt-2 text-2xl font-bold text-green-500">{parseInt(runnintime,10)+parseInt(currentrunningtime,10)}</p>
+          <p className="mt-2 text-2xl font-bold text-green-500">{todayrunningtime}</p>
         </div>
 
         {/* Card 3: Revenue */}
         <div className="bg-white p-6 rounded-lg shadow-lg">
           <h2 className="text-xl font-semibold text-gray-700">Today {startformattedDate} Breakdown Hours</h2>
-          <p className="mt-2 text-2xl font-bold text-yellow-500">{parseInt(breakingtime,10)+parseInt(currentbreaketime,10)}</p>
+          <p className="mt-2 text-2xl font-bold text-yellow-500">{todaybreakingtime}</p>
         </div>
       </div>
 
