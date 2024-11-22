@@ -7,8 +7,7 @@ const WebSocketClient = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [runnintime,setRuningtime]=useState(0);
   const [breakingtime,setBreakingtime]=useState(0);
-  const[todayrunningtime,setTodayrunnintime]=useState(0);
-  const[todaybreakingtime,setTodaybreakingtime]=useState(0);
+  
     
   
    var m=String(messages[messages.length-1]);
@@ -30,6 +29,9 @@ const WebSocketClient = () => {
 
     return `${hours} hours ${minutes} minutes ${remainingSeconds} seconds`;
   }
+
+  var todayrunningtime=100//parseInt(runnintime,10)+parseInt(currentrunningtime,10)
+  var todaybreakingtime=parseInt(breakingtime,10)+parseInt(currentbreaketime,10)
   // Get the current date
   const currentDate = new Date();
 
@@ -90,8 +92,8 @@ const WebSocketClient = () => {
     // setBreakingtime(Math.floor(Math.random() * 10))
     autoreadrunninglength();
     autoreadbreakinglength();
-    setTodayrunnintime(convertSecondsToHMSS(parseInt(runnintime,10)+parseInt(currentrunningtime,10)))
-    setTodaybreakingtime(convertSecondsToHMSS(parseInt(breakingtime,10)+parseInt(currentbreaketime,10)))
+  
+
     
     
     },5000)
