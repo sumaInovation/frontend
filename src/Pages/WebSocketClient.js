@@ -39,7 +39,7 @@ const WebSocketClient = () => {
      "endDate":startformattedDate,
      "Sheet":"Sheet1"
      }
-    const result = await axios.post("http://localhost:3000/serchdata", data);
+    const result = await axios.post("https://googlesheet-yuetcisb.b4a.run/serchdata", data);
     setRuningtime(result.data.Length);
   
     
@@ -58,7 +58,7 @@ const WebSocketClient = () => {
       "endDate":startformattedDate,
       "Sheet":"Sheet2"
       }
-     const result = await axios.post("http://localhost:3000/serchdata", data);
+     const result = await axios.post("https://googlesheet-yuetcisb.b4a.run//serchdata", data);
      setBreakingtime(result.data.Length);
      
      
