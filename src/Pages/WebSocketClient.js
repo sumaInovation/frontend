@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+
 import { useState } from 'react';
 import useWebSocket from 'react-use-websocket';
 
@@ -8,20 +8,24 @@ const WebSocketClient = () => {
 
   // Using the `useWebSocket` hook
  
-  const [todayrun,setTodayrun]=useState(0);
-  const [todaybreake,setTodaybreake]=useState(0);
-  const[machinestate,setMachinestate]=useState(0);
-  const[currenttime,setCurrenttime]=useState(0);
   const[length,setLenght]=useState("hello");
 
-  const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl);
-    useEffect(() => {
-      if (lastMessage !== null) {
-          const {current_breaking_time}=lastMessage.data;
-           setLenght(current_breaking_time)
-           console.log(lastMessage)
+  const { sendMessage, lastMessage, readyState } = useWebSocket(socketUrl, {
+    onOpen: () => console.log('WebSocket connection opened'),
+    onClose: () => console.log('WebSocket connection closed'),
+    onError: (error) => console.error('WebSocket error: ', error),
+    onMessage: (message) => {
+      // Parse the incoming JSON data and update state
+      try{
+        const data = JSON.parse(message.data);
+        const {current_breaking_time}=data;
+        setLenght(current_breaking_time)
+      }catch{
+
       }
-    }, [lastMessage]);
+      
+    }
+  });
  
  
     function convertSecondsToHMSS(seconds) {
