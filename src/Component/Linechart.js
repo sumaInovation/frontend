@@ -53,7 +53,7 @@ const LineChartExample = () => {
   };
 
   return (
-    <div>
+    <div className='bg-slate-600'>
       <h2>Sales Data Over Time</h2>
       <Line data={data} options={options} />
     </div>

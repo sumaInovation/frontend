@@ -13,13 +13,13 @@ import {
 // Register Chart.js components
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale);
 
-const PieChart = ({Title}) => {
+const PieChart = (prop) => {
   // Data for the Pie Chart
   const data = {
     labels: ['RUN', 'STRING BREAKE', 'TAYPE DETECT', 'OTHERS'], // Labels for each section
     datasets: [
       {
-        data: [300, 50, 100, 200], // The actual data values for the pie slices
+        data: prop.incommingdata,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0'], // Colors for each section
         hoverBackgroundColor: ['#FF3B2D', '#2C8ECF', '#FFB71B', '#36A88E'], // Hover color
       },
@@ -41,10 +41,10 @@ const PieChart = ({Title}) => {
   };
 
   return (
-    <div className='w-60 h-45 '>
-      <h2 text-xl font-bold mb-4 text-center>{Title}</h2>
+    <div className='w-60 h-auto '>
+      <h2 text-xl font-bold mb-4 text-center >{prop.Title}</h2>
       <Pie data={data} options={options} />
-    </div>
+    </div> 
   );
 };
 
