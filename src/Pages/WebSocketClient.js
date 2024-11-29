@@ -58,8 +58,22 @@ const WebSocketClient = () => {
     };
 
     return (
-       <></> 
+       <>
+       <div   className='test-white'>
+        
+       
+       </div>
+       </> 
     );
 };
 
 export default WebSocketClient;
+/*
+run_value,
+        breake_value,
+        current_running_time,
+        current_breaking_time
+
+        todatTotalBreake,todayTotalRun,thismontTotalBreake,thismontTotalRun };
+
+*/
