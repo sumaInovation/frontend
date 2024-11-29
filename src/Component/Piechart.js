@@ -14,6 +14,7 @@ import {
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale);
 
 const PieChart = (prop) => {
+  
   // Data for the Pie Chart
   const data = {
     labels: ['RUN', 'STRING BREAKE', 'TAYPE DETECT', 'OTHERS'], // Labels for each section
