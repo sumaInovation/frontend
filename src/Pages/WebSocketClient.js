@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-
 import DynamicPieChart from './tes'
-import { PieChart } from 'recharts';
+
+
 // Register necessary Chart.js components
 ChartJS.register(
   CategoryScale,
@@ -143,7 +143,7 @@ const RealTimeLineChart = () => {
     responsive: true,
     plugins: {
       title: {
-        display: false,
+        display: true,
         text: 'Cable Production',  // Title of the chart
         
       },
@@ -177,59 +177,60 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-    <div className="p-6 bg-gray-100">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
-        
-        {/* Running Time Card */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-          <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
-          <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
-          <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
-        </div>
+    <div  className='flex justify-center items-center w-full'>
 
-        {/* Machine State Card */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-          <h2 className="text-xl font-semibold text-gray-800">Machine State</h2>
-          <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-yellow-600"}`}>
-            {machinestate==1?"Machine is Running":"Machine Stop"}
-          </p>
-          <p className="text-sm text-gray-600">Current machine status</p>
-        </div>
 
-        {/* Breakdown Status Card */}
-        <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-          <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
-          <p className={`text-4xl font-bold text-green-600`}>
-            {_current_running_time} M
-          </p>
-          <p className="text-sm text-gray-600">Today Cable Production</p>
-        </div>
-
-      </div>
+<div>
+<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+    
+    {/* Running Time Card */}
+    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+      <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
+      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
+      <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
     </div>
-     
-    <br/>
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
-      {/* Column 1 */}
-      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-bold">Column 1</h3>
-        <Line data={chartData} options={options}/>
-      </div>
 
-      {/* Column 2 */}
-      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-bold">Column 2</h3>
-        <RealTimeLineChart/>
-      </div>
-
-      {/* Column 3 */}
-      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-        <h3 className="text-xl font-bold">Column 3</h3>
-        <p>Content for the third column.</p>
-      </div>
+    {/* Machine State Card */}
+    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+      <h2 className="text-xl font-semibold text-gray-800">Machine State</h2>
+      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-yellow-600"}`}>
+        {machinestate==1?"Machine is Running":"Machine Stop"}
+      </p>
+      <p className="text-sm text-gray-600">Current machine status</p>
     </div>
+
+    {/* Breakdown Status Card */}
+    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+      <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
+      <p className={`text-4xl font-bold text-green-600`}>
+        {_current_running_time} M
+      </p>
+      <p className="text-sm text-gray-600">Today Cable Production</p>
+    </div>
+
+  </div>
+
+ 
+
+<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
+<div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
+  
+   <DynamicPieChart ruunigvalue={_todayTotalRun}
+   breakingvalue={_todayTotalBreake}
+   />
+   </div>
+   <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
+   <Line data={chartData} options={options}/>
+   </div>
+   </div>
    
-       
+
+ 
+ 
+   </div>
+   </div>
+    
+   
      
      
     
