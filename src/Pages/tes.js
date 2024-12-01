@@ -10,7 +10,7 @@ const DynamicPieChart = (prop) => {
   
 
   const data = {
-    labels: ['Red', 'Blue', 'Yellow'],
+    labels: ['BROKEN', 'RUN', 'OTHERS'],
     datasets: [
       {
         data: dataValues,  // Use dynamic data from state
@@ -20,23 +20,30 @@ const DynamicPieChart = (prop) => {
     ],
   };
 
+  
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
-      tooltip: {
-        enabled: true,
-      },
       legend: {
         position: 'top',
+        labels: {
+          padding: 30,  // Adjust this to reduce the space between the legend and chart
+        },
       },
     },
-  };
+    // Set radius to reduce the outer radius of the pie chart
+    radius: '70%', // Adjust this value to reduce the outer radius
+    cutout:'50%',
+    // Adjust offset to reduce the space between chart slices and the labels
+    offset: 1, // Adjust this value to change the label's distance from the chart
+  }
 
   return (
    <>
    {/* Pie Chart */}
 
-          <Pie data={data} options={options}/>
+          <Pie data={data} options={options} className='bg-white'/>
     
    
    </>

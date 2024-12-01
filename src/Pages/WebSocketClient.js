@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 
 import DynamicPieChart from './tes'
+import { PieChart } from 'recharts';
 // Register necessary Chart.js components
 ChartJS.register(
   CategoryScale,
@@ -34,7 +35,7 @@ const RealTimeLineChart = () => {
     datasets: [
       {
         label: '',
-        data: [0,0,0,0,0,0],
+        data: [0,20,45,5,0,60],
         fill: true,
         borderColor: 'blue',
         tension: 0.1,
@@ -207,16 +208,14 @@ const RealTimeLineChart = () => {
       </div>
     </div>
      
-    
-
-      <div className='bg-slate-100 flex'>
-      <div className="flex justify-center items-center w-1/4 h-80 bg-green-400">
-        <Line data={chartData} options={options} />
-      </div>
-      <div className="flex justify-center items-center w-1/4 h-80">
-      < DynamicPieChart/>
-      </div>
-      </div>
+    <br/>
+    <div className='w-1/3 flex gap-4'>
+    <DynamicPieChart ruunigvalue={_todayTotalRun} breakingvalue={_todayTotalBreake} />
+    <Line data={chartData} options={options} className='bg-white'/>
+    </div>
+   
+       
+     
      
     
     
