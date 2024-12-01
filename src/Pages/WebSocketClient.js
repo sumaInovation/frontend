@@ -209,9 +209,24 @@ const RealTimeLineChart = () => {
     </div>
      
     <br/>
-    <div className='w-1/3 flex gap-4'>
-    <DynamicPieChart ruunigvalue={_todayTotalRun} breakingvalue={_todayTotalBreake} />
-    <Line data={chartData} options={options} className='bg-white'/>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+      {/* Column 1 */}
+      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold">Column 1</h3>
+        <Line data={chartData} options={options}/>
+      </div>
+
+      {/* Column 2 */}
+      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold">Column 2</h3>
+        <RealTimeLineChart/>
+      </div>
+
+      {/* Column 3 */}
+      <div className="bg-gray-200 p-6 rounded-lg shadow-md">
+        <h3 className="text-xl font-bold">Column 3</h3>
+        <p>Content for the third column.</p>
+      </div>
     </div>
    
        
