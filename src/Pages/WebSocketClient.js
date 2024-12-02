@@ -156,7 +156,7 @@ const RealTimeLineChart = () => {
       x: {
         title: {
           display: true,
-          text: 'Months',
+          text: 'TIME',
         },
         ticks: {
           padding: 5,
@@ -164,7 +164,8 @@ const RealTimeLineChart = () => {
       },
       y: {
         title: {
-          display: false,  // Disable Y-axis title if not necessary
+          display: true,  // Disable Y-axis title if not necessary
+          text:"Feed Rate(M per Minute)"
         },
         beginAtZero: true,
         ticks: {
