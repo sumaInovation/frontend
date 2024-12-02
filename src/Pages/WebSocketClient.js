@@ -179,7 +179,7 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-    <div  className='flex justify-center items-center w-full border-l-indigo-700'>
+    <div  className='flex justify-center items-center w-full border-l-indigo-700 bg-teal-500'>
     <div>
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
     
