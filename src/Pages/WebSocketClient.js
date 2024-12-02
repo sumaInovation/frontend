@@ -29,7 +29,7 @@ const RealTimeLineChart = () => {
     const [clientId, setClientId] = useState('');
     const [machinestate, setMachinestate] = useState(0);
   // Set up initial chart data state
-  const value=[25,50,70]
+  
   const [chartData, setChartData] = useState({
     labels: ['00:00', '00:10', '00:20', '00:30', '00:40', '00:50'],
     datasets: [
@@ -49,7 +49,7 @@ const RealTimeLineChart = () => {
 
   useEffect(() => {
     // WebSocket URL - replace with your WebSocket server URL
-    const websocket = new WebSocket('ws://localhost:5000');
+    const websocket = new WebSocket('https://googlesheet-yuetcisb.b4a.run/');
     websocket.onopen = () => {
         console.log('WebSocket is connected');
         // Generate a unique client ID
@@ -62,6 +62,7 @@ const RealTimeLineChart = () => {
         try{
         
       const newData = JSON.parse(event.data); // Assume the WebSocket message contains the data as JSON
+      console.log(newData)
       const {
         run_value,
         breake_value,
@@ -177,11 +178,9 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-    <div  className='flex justify-center items-center w-full'>
-
-
-<div>
-<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+    <div  className='flex justify-center items-center w-full border-l-indigo-700'>
+    <div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
     
     {/* Running Time Card */}
     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
@@ -230,12 +229,7 @@ const RealTimeLineChart = () => {
    </div>
    </div>
     
-   
-     
-     
-    
-    
-    </>
+  </>
   );
 };
 
