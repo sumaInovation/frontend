@@ -177,61 +177,103 @@ const RealTimeLineChart = () => {
 
  
 
-  return (
-    <>
-    <div  className='flex justify-center items-center w-full border-l-indigo-700 bg-teal-500'>
-    <div>
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
+//   return (
+//     <>
+//     <div  className='flex justify-center items-center w-full border-l-indigo-700 bg-teal-500'>
+//     <div>
+//     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
     
-    {/* Running Time Card */}
-    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-      <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
-      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
-      <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
-    </div>
+//     {/* Running Time Card */}
+//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+//       <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
+//       <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
+//       <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
+//     </div>
 
-    {/* Machine State Card */}
-    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-      <h2 className="text-xl font-semibold text-gray-800">Machine State</h2>
-      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-yellow-600"}`}>
-        {machinestate==1?"Machine is Running":"Machine Stop"}
-      </p>
-      <p className="text-sm text-gray-600">Current machine status</p>
-    </div>
+//     {/* Machine State Card */}
+//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+//       
+//       <p className="text-sm text-gray-600">Current machine status</p>
+//     </div>
 
-    {/* Breakdown Status Card */}
-    <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-      <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
-      <p className={`text-4xl font-bold text-green-600`}>
-        {_current_running_time} M
-      </p>
-      <p className="text-sm text-gray-600">Today Cable Production</p>
-    </div>
+//     {/* Breakdown Status Card */}
+//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
+//       <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
+//       <p className={`text-4xl font-bold text-green-600`}>
+//         {_current_running_time} M
+//       </p>
+//       <p className="text-sm text-gray-600">Today Cable Production</p>
+//     </div>
 
-  </div>
+//   </div>
 
  
 
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
-<div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
+// <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
+// <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
   
-   <DynamicPieChart ruunigvalue={_todayTotalRun}
-   breakingvalue={_todayTotalBreake}
-   />
-   </div>
-   <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
-   <Line data={chartData} options={options}/>
-   </div>
-   </div>
+//    <DynamicPieChart ruunigvalue={_todayTotalRun}
+//    breakingvalue={_todayTotalBreake}
+//    />
+//    </div>
+//    <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
+//    <Line data={chartData} options={options}/>
+//    </div>
+//    </div>
    
 
  
  
-   </div>
-   </div>
+//    </div>
+//    </div>
     
-  </>
-  );
+//   </>
+//   );
+
+ return(
+<>
+<div className="lg:grid grid-cols-12 grid-rows-12 gap-1 bg-gray-900">
+  {/* Sidebar */}
+  <div className="m-4 bg-orange-200 text-white p-4 lg:col-span-2 lg:row-span-12 lg:block hi">
+    <h1 className="text-center">First Column</h1>
+  </div>
+
+  {/* Running time or breakdown time */}
+  <div className="m-4 bg-green-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+       <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
+      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
+      <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
+  </div>
+
+  {/*Machinestste*/}
+  <div className="m-4 bg-yellow-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+    <h2 className=' text-xl font-semibold text-gray-800'>MACHINE STATE</h2>
+    <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?"Machine is Runnign":"Machine Stop"}</p>
+  <p className="text-sm text-gray-600">Current machine status</p>
+  </div>
+
+  {/* production quntirt */}
+  <div className="m-4 bg-purple-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+  <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
+     <p className={`text-4xl font-bold text-green-600`}>
+       {_current_running_time} M
+      </p>
+  </div>
+     {/* 1st card */}
+  <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[100px]">
+  <DynamicPieChart ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake}/>
+  </div>
+  <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[100px]
+  flex justify-center items-center
+  ">
+  <Line data={chartData} options={options}/>
+  </div>
+
+ 
+</div>
+
+</>
+);
 };
 
 export default RealTimeLineChart;
