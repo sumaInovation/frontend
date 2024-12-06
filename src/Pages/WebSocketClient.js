@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import DynamicPieChart from './tes'
-
-
+import {ArrowDownIcon, HomeIcon,DocumentReportIcon,DocumentTextIcon } from '@heroicons/react/solid'; // For solid icons
+import Example  from '../Component/Dropdown'
 // Register necessary Chart.js components
 ChartJS.register(
   CategoryScale,
@@ -232,28 +232,58 @@ const RealTimeLineChart = () => {
 
  return(
 <>
-<div className="lg:grid grid-cols-12 grid-rows-12 gap-1 bg-gray-900">
-  {/* Sidebar */}
-  <div className="m-4 bg-orange-200 text-white p-4 lg:col-span-2 lg:row-span-12 lg:block hi">
-    <h1 className="text-center">First Column</h1>
+<div className="lg:grid grid-cols-12 grid-rows-12 gap-1 bg-blue-950">
+  {/* Sidebar  for large screen*/}
+  <div className="m-4  text-white p-4 lg:col-span-2 lg:row-span-12 lg:block  hidden">
+  <div className="flex items-center space-x-2 p-5">
+  <HomeIcon className="h-6 w-6 text-blue-500" />
+  <span className="text-[17px] text-white">Home</span>
+  </div>
+  <div className="flex items-center space-x-2  p-5">
+   <ArrowDownIcon className="h-6 w-6 text-blue-500"/>
+  <span className="text-[17px] text-white">Download</span>
+  </div>
+  <div className="flex items-center space-x-2  p-5">
+ <DocumentReportIcon className="h-6 w-6 text-blue-500"/>
+  <span className="text-[17px] text-white">Monthly Prodcution</span>
+  </div>
+  <div className="flex items-center space-x-2  p-5">
+  <DocumentTextIcon className="h-6 w-6 text-blue-500" />
+  <span className="text-[17px] text-white">Daily Prodcution</span>
+  </div>
   </div>
 
+  {/* Sidebar  for small screen screen*/}
+  <div className=" flex m-4  text-white p-4  overflow-hidden  lg:hidden justify-around">
+  <div className="flex items-center space-x-2 p-5">
+  <HomeIcon className="h-6 w-6 text-blue-500" />
+  <span className="text-[17px] text-white">Home</span>
+  </div>
+  <div className="flex items-center space-x-2  p-5">
+   <ArrowDownIcon className="h-6 w-6 text-blue-500"/>
+  <span className="text-[17px] text-white">Download</span>
+  </div>
+  <div className="flex items-center space-x-2  p-5">
+  <Example/>
+  </div>
+   </div>
+
   {/* Running time or breakdown time */}
-  <div className="m-4 bg-green-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
        <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
       <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
       <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
   </div>
 
   {/*Machinestste*/}
-  <div className="m-4 bg-yellow-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
     <h2 className=' text-xl font-semibold text-gray-800'>MACHINE STATE</h2>
     <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?"Machine is Runnign":"Machine Stop"}</p>
   <p className="text-sm text-gray-600">Current machine status</p>
   </div>
 
   {/* production quntirt */}
-  <div className="m-4 bg-purple-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
   <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
      <p className={`text-4xl font-bold text-green-600`}>
        {_current_running_time} M
@@ -277,3 +307,7 @@ const RealTimeLineChart = () => {
 };
 
 export default RealTimeLineChart;
+
+
+
+
