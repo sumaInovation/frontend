@@ -2,8 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import DynamicPieChart from './tes'
-import {ArrowDownIcon, HomeIcon,DocumentReportIcon,DocumentTextIcon } from '@heroicons/react/solid'; // For solid icons
-import Example  from '../Component/Dropdown'
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import HouseIcon from '@mui/icons-material/House';
+import Example  from '../Component/Dropdown';
+import AssessmentIcon from '@mui/icons-material/Assessment';
+import ArticleIcon from '@mui/icons-material/Article';
+
 // Register necessary Chart.js components
 ChartJS.register(
   CategoryScale,
@@ -235,36 +239,47 @@ const RealTimeLineChart = () => {
 <div className="lg:grid grid-cols-12 grid-rows-12 gap-1 bg-blue-950">
   {/* Sidebar  for large screen*/}
   <div className="m-4  text-white p-4 lg:col-span-2 lg:row-span-12 lg:block  hidden">
-  <div className="flex items-center space-x-2 p-5">
-  <HomeIcon className="h-6 w-6 text-blue-500" />
-  <span className="text-[17px] text-white">Home</span>
+    
+  <div className="flex items-center space-x-2  p-5">
+  <HouseIcon/>
+  <button>HOME</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
-   <ArrowDownIcon className="h-6 w-6 text-blue-500"/>
-  <span className="text-[17px] text-white">Download</span>
+  <ArrowDownwardIcon/>
+  <button>Dwonload</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
- <DocumentReportIcon className="h-6 w-6 text-blue-500"/>
-  <span className="text-[17px] text-white">Monthly Prodcution</span>
+  <AssessmentIcon/>
+  <button>Monthly Production</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
-  <DocumentTextIcon className="h-6 w-6 text-blue-500" />
-  <span className="text-[17px] text-white">Daily Prodcution</span>
+  <ArticleIcon/>
+  <button>Daily Production</button>
   </div>
+
+
+
+
+
   </div>
 
   {/* Sidebar  for small screen screen*/}
   <div className=" flex m-4  text-white p-4  overflow-hidden  lg:hidden justify-around">
-  <div className="flex items-center space-x-2 p-5">
-  <HomeIcon className="h-6 w-6 text-blue-500" />
-  <span className="text-[17px] text-white">Home</span>
+  <div className="flex items-center space-x-2  p-5">
+  <HouseIcon/>
+  <button>HOME</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
-   <ArrowDownIcon className="h-6 w-6 text-blue-500"/>
-  <span className="text-[17px] text-white">Download</span>
+  <ArrowDownwardIcon/>
+  <button className=''>Dwonload</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
   <Example/>
+  </div>
+ 
+
+  <div>
+    
   </div>
    </div>
 

@@ -1,53 +1,37 @@
-import React, { useState, useEffect, useRef } from 'react';
-import {DocumentReportIcon,DocumentTextIcon } from '@heroicons/react/solid'; // For solid icons
-const DropdownMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+import { Menu } from '@headlessui/react';
 
-  // Close the dropdown if clicked outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
 
+const Dropdown=()=> {
   return (
-    <div className="dropdown" ref={dropdownRef}>
-      <button onClick={toggleDropdown} className='bg-sky-500 rounded-lg p-3'>
-        Production
-      </button>
-
-      {isOpen && (
-        <ul className="dropdown-list">
-          <li className="dropdown-item">
-          <div className="flex items-center space-x-2 pt-3 ">
-          <DocumentTextIcon className="h-6 w-6 text-blue-500"/>
-  <span className="text-[17px] text-white">Monthly</span>
-  </div>
-          </li>
-          <li className="dropdown-item">
-          <div className="flex items-center space-x-2 pt-3 ">
-          <DocumentReportIcon className="h-6 w-6 text-blue-500"/>
-  <span className="text-[17px] text-white">Daily</span>
-  </div>
-          </li>
-          
-          
-        
-        </ul>
-      )}
-    </div>
+    <Menu as="div">
+      <Menu.Button className="p-2 bg-blue-500 text-white rounded-md">PRODUCTION</Menu.Button>
+      <Menu.Items className="absolute right-0 w-48 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Item>
+          {({ active }) => (
+            <button
+              className={`${
+                active ? 'bg-blue-500 text-white' : 'text-gray-900'
+              } group flex rounded-md items-center w-full p-2 text-sm`}
+            >
+              DAILY
+            </button>
+          )}
+        </Menu.Item>
+        <Menu.Item>
+          {({ active }) => (
+            <button
+              className={`${
+                active ? 'bg-blue-500 text-white' : 'text-gray-900'
+              } group flex rounded-md items-center w-full p-2 text-sm`}
+            >
+             MONTHLY
+            </button>
+          )}
+        </Menu.Item>
+      </Menu.Items>
+    </Menu>
   );
-};
+}
 
-export default DropdownMenu;
+export default Dropdown
