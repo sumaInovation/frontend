@@ -5,8 +5,8 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend,Title } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend,Title);
 
 const DynamicPieChart = (prop) => {
-  const {ruunigvalue,breakingvalue}=prop;
-   const dataValues=[ruunigvalue,breakingvalue,100]
+  const {ruunigvalue,breakingvalue,titiename}=prop;
+  const dataValues=[ruunigvalue,breakingvalue,100]
   
 
   const data = {
@@ -29,7 +29,7 @@ const DynamicPieChart = (prop) => {
     plugins: {
       title: {
         display: true, // Make sure the title is displayed
-        text: 'Daily Production', // The title text
+        text: titiename, // The title text
         font: {
           size: 20, // Customize the title font size
           family: 'Arial', // Customize the title font family

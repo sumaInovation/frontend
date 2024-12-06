@@ -4,9 +4,9 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import DynamicPieChart from './tes'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import HouseIcon from '@mui/icons-material/House';
-import Example  from '../Component/Dropdown';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ArticleIcon from '@mui/icons-material/Article';
+import { Menu } from '@headlessui/react';
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -32,6 +32,7 @@ const RealTimeLineChart = () => {
     const [message, setMessage] = useState('');
     const [clientId, setClientId] = useState('');
     const [machinestate, setMachinestate] = useState(0);
+    const [titiename,setTitlename]=useState("Daily Production1")
   // Set up initial chart data state
   
   const [chartData, setChartData] = useState({
@@ -181,58 +182,7 @@ const RealTimeLineChart = () => {
 
  
 
-//   return (
-//     <>
-//     <div  className='flex justify-center items-center w-full border-l-indigo-700 bg-teal-500'>
-//     <div>
-//     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 p-4">
-    
-//     {/* Running Time Card */}
-//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-//       <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
-//       <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
-//       <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
-//     </div>
 
-//     {/* Machine State Card */}
-//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-//       
-//       <p className="text-sm text-gray-600">Current machine status</p>
-//     </div>
-
-//     {/* Breakdown Status Card */}
-//     <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center justify-between">
-//       <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
-//       <p className={`text-4xl font-bold text-green-600`}>
-//         {_current_running_time} M
-//       </p>
-//       <p className="text-sm text-gray-600">Today Cable Production</p>
-//     </div>
-
-//   </div>
-
- 
-
-// <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
-// <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
-  
-//    <DynamicPieChart ruunigvalue={_todayTotalRun}
-//    breakingvalue={_todayTotalBreake}
-//    />
-//    </div>
-//    <div className="bg-gray-200 p-6 rounded-lg shadow-md  flex justify-center items-center w-full h-96">
-//    <Line data={chartData} options={options}/>
-//    </div>
-//    </div>
-   
-
- 
- 
-//    </div>
-//    </div>
-    
-//   </>
-//   );
 
  return(
 <>
@@ -274,7 +224,33 @@ const RealTimeLineChart = () => {
   <button className=''>Dwonload</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
-  <Example/>
+  <Menu as="div">
+      <Menu.Button className="p-2 bg-blue-500 text-white rounded-md">PRODUCTION</Menu.Button>
+      <Menu.Items className="absolute right-0 w-48 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Item>
+          {({ active }) => (
+            <button
+              className={`${
+                active ? 'bg-blue-500 text-white' : 'text-gray-900'
+              } group flex rounded-md items-center w-full p-2 text-sm`}
+                 onClick={()=>{setTitlename("Daily Production")}}>
+              DAILY
+            </button>
+          )}
+        </Menu.Item>
+        <Menu.Item>
+          {({ active }) => (
+            <button
+              className={`${
+                active ? 'bg-blue-500 text-white' : 'text-gray-900'
+              } group flex rounded-md items-center w-full p-2 text-sm`}
+            onClick={()=>setTitlename("Monthly Production")}>
+             MONTHLY
+            </button>
+          )}
+        </Menu.Item>
+      </Menu.Items>
+    </Menu>
   </div>
  
 
@@ -306,7 +282,7 @@ const RealTimeLineChart = () => {
   </div>
      {/* 1st card */}
   <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[400px]">
-  <DynamicPieChart ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake}/>
+  <DynamicPieChart ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake} titiename={titiename} />
   </div>
   <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[400px]
   flex justify-center items-center
