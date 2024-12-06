@@ -239,7 +239,7 @@ const RealTimeLineChart = () => {
   </div>
 
   {/* Running time or breakdown time */}
-  <div className="m-4 bg-green-500 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
+  <div className="m-4 bg-green-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
        <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
       <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
       <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
@@ -260,10 +260,10 @@ const RealTimeLineChart = () => {
       </p>
   </div>
      {/* 1st card */}
-  <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[100px]">
+  <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[400px]">
   <DynamicPieChart ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake}/>
   </div>
-  <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[100px]
+  <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[400px]
   flex justify-center items-center
   ">
   <Line data={chartData} options={options}/>
