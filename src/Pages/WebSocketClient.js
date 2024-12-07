@@ -7,6 +7,7 @@ import HouseIcon from '@mui/icons-material/House';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ArticleIcon from '@mui/icons-material/Article';
 import { Menu } from '@headlessui/react';
+import { use } from 'react';
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -32,7 +33,8 @@ const RealTimeLineChart = () => {
     const [message, setMessage] = useState('');
     const [clientId, setClientId] = useState('');
     const [machinestate, setMachinestate] = useState(0);
-    const [titiename,setTitlename]=useState("Daily Production1")
+    const [isDaily,setIsaDaily]=useState(0);
+
   // Set up initial chart data state
   
   const [chartData, setChartData] = useState({
@@ -200,11 +202,13 @@ const RealTimeLineChart = () => {
   </div>
   <div className="flex items-center space-x-2  p-5">
   <AssessmentIcon/>
-  <button>Monthly Production</button>
+  <button onClick={()=>{setIsaDaily(1)}} className='bg-slate-700 rounded-lg'>Monthly Production</button>
   </div>
   <div className="flex items-center space-x-2  p-5">
   <ArticleIcon/>
-  <button>Daily Production</button>
+  <button onClick={()=>{
+    setIsaDaily(0);
+  }}>Daily Production</button>
   </div>
 
 
@@ -233,7 +237,7 @@ const RealTimeLineChart = () => {
               className={`${
                 active ? 'bg-blue-500 text-white' : 'text-gray-900'
               } group flex rounded-md items-center w-full p-2 text-sm`}
-                 onClick={()=>{setTitlename("Daily Production")}}>
+                 onClick={()=>{setIsaDaily(0)}}>
               DAILY
             </button>
           )}
@@ -244,7 +248,7 @@ const RealTimeLineChart = () => {
               className={`${
                 active ? 'bg-blue-500 text-white' : 'text-gray-900'
               } group flex rounded-md items-center w-full p-2 text-sm`}
-            onClick={()=>setTitlename("Monthly Production")}>
+            onClick={()=>setIsaDaily(1)}>
              MONTHLY
             </button>
           )}
@@ -282,7 +286,10 @@ const RealTimeLineChart = () => {
   </div>
      {/* 1st card */}
   <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[400px]">
-  <DynamicPieChart ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake} titiename={titiename} />
+  {isDaily==0?<DynamicPieChart ruunigvalue={parseInt(_todayTotalRun,10)+parseInt(_current_running_time,10)}breakingvalue={parseInt(_todayTotalBreake,10)+parseInt(_current_breaking_time,10)} titiename={"Daily Production"} />:
+  <DynamicPieChart ruunigvalue={_thismontTotalRun}breakingvalue={_thismontTotalBreake} titiename={"Monthly Prpduction"} />}
+  
+
   </div>
   <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[400px]
   flex justify-center items-center
