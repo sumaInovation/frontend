@@ -8,6 +8,8 @@ import AssessmentIcon from '@mui/icons-material/Assessment';
 import ArticleIcon from '@mui/icons-material/Article';
 import { Menu } from '@headlessui/react';
 
+import Navbar from '../Component/Sidebar'
+
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -188,117 +190,7 @@ const RealTimeLineChart = () => {
 
  return(
 <>
-<div className="lg:grid grid-cols-12 grid-rows-12 gap-1 bg-blue-950">
-  {/* Sidebar  for large screen*/}
-  <div className="m-4  text-white p-4 lg:col-span-2 lg:row-span-12 lg:block  hidden">
-    
-  <div className="flex items-center space-x-2  p-5">
-  <HouseIcon/>
-  <button>HOME</button>
-  </div>
-  <div className="flex items-center space-x-2  p-5">
-  <ArrowDownwardIcon/>
-  <button>Dwonload</button>
-  </div>
-  <div className="flex items-center space-x-2  p-5">
-  <AssessmentIcon/>
-  <button onClick={()=>{setIsaDaily(1)}} className='bg-slate-700 rounded-lg'>Monthly Production</button>
-  </div>
-  <div className="flex items-center space-x-2  p-5">
-  <ArticleIcon/>
-  <button onClick={()=>{
-    setIsaDaily(0);
-  }}>Daily Production</button>
-  </div>
-
-
-
-
-
-  </div>
-
-  {/* Sidebar  for small screen screen*/}
-  <div className=" flex m-4  text-white p-4  overflow-hidden  lg:hidden justify-around">
-  <div className="flex items-center space-x-2  p-5">
-  <HouseIcon/>
-  <button>HOME</button>
-  </div>
-  <div className="flex items-center space-x-2  p-5">
-  <ArrowDownwardIcon/>
-  <button className=''>Dwonload</button>
-  </div>
-  <div className="flex items-center space-x-2  p-5">
-  <Menu as="div">
-      <Menu.Button className="p-2 bg-blue-500 text-white rounded-md">PRODUCTION</Menu.Button>
-      <Menu.Items className="absolute right-0 w-48 mt-2 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-        <Menu.Item>
-          {({ active }) => (
-            <button
-              className={`${
-                active ? 'bg-blue-500 text-white' : 'text-gray-900'
-              } group flex rounded-md items-center w-full p-2 text-sm`}
-                 onClick={()=>{setIsaDaily(0)}}>
-              DAILY
-            </button>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <button
-              className={`${
-                active ? 'bg-blue-500 text-white' : 'text-gray-900'
-              } group flex rounded-md items-center w-full p-2 text-sm`}
-            onClick={()=>setIsaDaily(1)}>
-             MONTHLY
-            </button>
-          )}
-        </Menu.Item>
-      </Menu.Items>
-    </Menu>
-  </div>
- 
-
-  <div>
-    
-  </div>
-   </div>
-
-  {/* Running time or breakdown time */}
-  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
-       <h2 className="text-xl font-semibold text-gray-800">{machinestate==1?"Running Time":"Breakdown Time"}</h2>
-      <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?_current_running_time:_current_breaking_time} min</p>
-      <p className="text-sm text-gray-600">{machinestate==1?"Time Since Last Restart":"Time since Last Breakdown"}</p>
-  </div>
-
-  {/*Machinestste*/}
-  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
-    <h2 className=' text-xl font-semibold text-gray-800'>MACHINE STATE</h2>
-    <p className={`text-4xl font-bold ${machinestate ===1 ? "text-green-600" : "text-red-600"}`}>{machinestate==1?"Machine is Runnign":"Machine Stop"}</p>
-  <p className="text-sm text-gray-600">Current machine status</p>
-  </div>
-
-  {/* production quntirt */}
-  <div className="m-4 bg-stone-300 text-white p-4 col-span-3 row-span-3 rounded-lg shadow">
-  <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
-     <p className={`text-4xl font-bold text-green-600`}>
-       {_current_running_time} M
-      </p>
-  </div>
-     {/* 1st card */}
-  <div className="m-4 bg-gray-800  text-white p-4 col-span-5 row-span-9 rounded-lg shadow min-h-[400px]">
-  {isDaily==0?<DynamicPieChart ruunigvalue={parseInt(_todayTotalRun,10)+parseInt(_current_running_time,10)}breakingvalue={parseInt(_todayTotalBreake,10)+parseInt(_current_breaking_time,10)} titiename={"Daily Production"} />:
-  <DynamicPieChart ruunigvalue={_thismontTotalRun}breakingvalue={_thismontTotalBreake} titiename={"Monthly Prpduction"} />}
-  
-
-  </div>
-  <div className="m-4 bg-gray-800  text-white p-4 col-span-4 row-span-9 rounded-lg shadow min-h-[400px]
-  flex justify-center items-center
-  ">
-  <Line data={chartData} options={options}/>
-  </div>
-
- 
-</div>
+<Navbar/>
 
 </>
 );
