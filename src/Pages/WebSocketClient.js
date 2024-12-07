@@ -185,62 +185,7 @@ const RealTimeLineChart = () => {
   return (
     <>
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 ">
-        <div class="bg-gray-900  col-span-12 row-span-1">
-          <div class="flex  items-center  justify-between  lg:justify-evenly">
-          <div>
-          <img
-          src={logo}
-          alt="userimg"
-          className=" w-[100px] lg:w-[400px]  h-36"
-        />
-        </div> 
-        <div>
         
-        <div className=' gap-10 hidden lg:flex  '>
-        <button className='text-white text-2xl'>HOME</button>
-        <button className='text-white text-2xl'>PLC</button>
-        <button className='text-white text-2xl'>ROBORTICS</button>
-        <button className='text-white text-2xl'>WORKSHOP</button>
-        <button className='text-white text-2xl'>KIDS ROBORTICS</button>
-        
-        
-        </div>
-        </div>
-       
-          
-            {/* Warpping serch box and serch icon usong div */}
-            <div className='flex text-white'>
-              <input class="mx-4 w-1/8 border rounded-md px-4 py-2 bg-slate-900" type="text" placeholder="Search" />
-              <svg width="40px" height="40px" viewBox="0 0 24 24">
-                <g
-                  fill="none"
-                  fillRule="evenodd"
-                  stroke="white"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M13.5 8.5 A5 5 0 0 1 8.5 13.5 A5 5 0 0 1 3.5 8.5 A5 5 0 0 1 13.5 8.5 z" />
-                  <path d="M17.571 17.5L12 12" />
-                </g>
-              </svg>
-               
-              <button className='text-white text-2xl mr-5'>Singup</button>
-              <button className='text-white text-2xl mr-5'>Siging</button>
-
-              <button class="text-gray-500 focus:outline-none focus:text-gray-700 lg:hidden " >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            
-            </div>
-
-
-          </div>
-        </div>
-
 
         <div class="bg-green-500 p-4 row-span-10 col-span-1 hidden lg:block ">Item 2</div>
         <div class="bg-red-500 p-4 row-span-10 col-span-11">Item 3</div>
