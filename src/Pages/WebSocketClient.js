@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import DynamicPieChart from './tes'
+import sideNavBar from '../Component/Sidebar'
+import logo from "../Assets/logo10.svg";
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -182,77 +184,33 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-
-      <div class="flex h-screen bg-gray-900">
-
-        {/* <!-- sidebar --> */}
-        <div class="hidden lg:flex flex-col w-64 bg-gray-800">
-          <div class="flex items-center justify-center h-16 bg-gray-900">
-            <span class="text-white font-bold uppercase">Sidebar</span>
-          </div>
-          <div class="flex flex-col flex-1 overflow-y-auto">
-            <nav class="flex-1 px-2 py-4 bg-gray-800">
-
-              <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                <svg width="40px" height="40px" viewBox="0 0 24 24">
-                  <g
-                    fill="none"
-                    fillRule="evenodd"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M6.5 10.5l4 4.232 4-4.191M10.5 3.5v11M4.5 17.5h12" />
-                  </g>
-                </svg>
-                Report Download
-              </a>
-              <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                <svg width="40px" height="40px" viewBox="0 0 24 24">
-                  <g
-                    fill="none"
-                    fillRule="evenodd"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M7.5 4.5c-.441 0-1.039-.004-1.998-.005a1 1 0 00-.995.881l-.007.12v10.997c0 .552.448 1 1 1l10 .006a1 1 0 00.994-.882l.006-.117v-11a1 1 0 00-1-1h-2" />
-                    <path d="M8.5 3.5h4a1 1 0 110 2h-4a1 1 0 110-2zM6.5 8.5h5M6.5 10.5h7M6.5 12.5h3M6.5 14.5h6" />
-                  </g>
-                </svg>
-                <h1 className="p-2">Daily Production</h1>
-              </a>
-              <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-                <svg width="40px" height="40px" viewBox="0 0 24 24">
-                  <g
-                    fill="none"
-                    fillRule="evenodd"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M7.5 4.5h-2a1 1 0 00-1 1v11a1 1 0 001 1h10a1 1 0 001-1v-11a1 1 0 00-1-1h-2" />
-                    <path d="M8.5 3.5h4a1 1 0 110 2h-4a1 1 0 110-2zM9.5 8.5h5M9.5 11.5h5M9.5 14.5h5M6.5 8.5h1M6.5 11.5h1M6.5 14.5h1" />
-                  </g>
-                </svg>
-                <h1 className="p-2">Monthly Production</h1>
-              </a>
-            </nav>
-          </div>
+      <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 ">
+        <div class="bg-gray-900  col-span-12 row-span-1">
+          <div class="flex  items-center  justify-between  lg:justify-evenly">
+          <div>
+          <img
+          src={logo}
+          alt="userimg"
+          className=" w-[100px] lg:w-[400px]  h-36"
+        />
+        </div> 
+        <div>
+        
+        <div className=' gap-10 hidden lg:flex  '>
+        <button className='text-white text-2xl'>HOME</button>
+        <button className='text-white text-2xl'>PLC</button>
+        <button className='text-white text-2xl'>ROBORTICS</button>
+        <button className='text-white text-2xl'>WORKSHOP</button>
+        <button className='text-white text-2xl'>KIDS ROBORTICS</button>
+        
+        
         </div>
-
-        {/* <!-- Main content --> */}
-        <div class="flex flex-col flex-1 overflow-y-auto">
-          <div class="flex items-center justify-between h-16  border-b border-gray-200 bg-gray-900">
-            <div class="flex items-center px-4 ">
-              <button class="text-gray-500 focus:outline-none focus:text-gray-700 lg:hidden " >
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              </button>
-              <input class="mx-4 w-full border rounded-md px-4 py-2 bg-slate-900" type="text" placeholder="Search" />
+        </div>
+       
+          
+            {/* Warpping serch box and serch icon usong div */}
+            <div className='flex text-white'>
+              <input class="mx-4 w-1/8 border rounded-md px-4 py-2 bg-slate-900" type="text" placeholder="Search" />
               <svg width="40px" height="40px" viewBox="0 0 24 24">
                 <g
                   fill="none"
@@ -265,49 +223,29 @@ const RealTimeLineChart = () => {
                   <path d="M17.571 17.5L12 12" />
                 </g>
               </svg>
+               
+              <button className='text-white text-2xl mr-5'>Singup</button>
+              <button className='text-white text-2xl mr-5'>Siging</button>
 
+              <button class="text-gray-500 focus:outline-none focus:text-gray-700 lg:hidden " >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            
             </div>
-            <div class="flex items-center pr-4">
 
-              <button
-                class="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 19l-7-7 7-7m5 14l7-7-7-7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="p-4">
-            <h1 class=" text-2xl lg:text-5xl font-bold text-white text-center">Realtime Data Monitoring System</h1>
-            <div className='grid lg:grid-cols-12'>
-              <div className="m-4 bg-stone-300 text-white p-4 col-span-4 row-span-3 rounded-lg shadow">
-                <h2 className="text-xl font-semibold text-gray-800">{machinestate == 1 ? "Running Time" : "Breakdown Time"}</h2>
-                <p className={`text-4xl font-bold ${machinestate === 1 ? "text-green-600" : "text-red-600"}`}>{machinestate == 1 ? _current_running_time : _current_breaking_time} min</p>
-                <p className="text-sm text-gray-600">{machinestate == 1 ? "Time Since Last Restart" : "Time since Last Breakdown"}</p>
-
-              </div>
-              <div className="m-4 bg-stone-300 text-white p-4 col-span-4 row-span-3 rounded-lg shadow">
-                <h2 className=' text-xl font-semibold text-gray-800'>MACHINE STATE</h2>
-                <p className={`text-4xl font-bold ${machinestate === 1 ? "text-green-600" : "text-red-600"}`}>{machinestate == 1 ? "Machine is Runnign" : "Machine Stop"}</p>
-                <p className="text-sm text-gray-600">Current machine status</p>
-
-              </div>
-              <div className="m-4 bg-stone-300 text-white p-4 col-span-4 row-span-3 rounded-lg shadow">
-                <h2 className="text-xl font-semibold text-gray-800">Production Quantity</h2>
-                <p className={`text-4xl font-bold text-green-600`}>
-                  {_current_running_time} M
-                </p>
-
-              </div>
-            </div>
 
           </div>
         </div>
 
-      </div>
 
+        <div class="bg-green-500 p-4 row-span-10 col-span-1 hidden lg:block ">Item 2</div>
+        <div class="bg-red-500 p-4 row-span-10 col-span-11">Item 3</div>
+
+      </div>
 
 
 
