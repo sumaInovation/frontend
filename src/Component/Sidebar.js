@@ -35,16 +35,16 @@ const Navbar=()=>{
 
     {/* <!-- Main content --> */}
     <div class="flex flex-col flex-1 overflow-y-auto">
-        <div class="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-            <div class="flex items-center px-4">
-                <button class="text-gray-500 focus:outline-none focus:text-gray-700 lg:hidden">
+        <div class="flex items-center justify-between h-16  border-b border-gray-200 bg-gray-900">
+            <div class="flex items-center px-4 ">
+                <button class="text-gray-500 focus:outline-none focus:text-gray-700 lg:hidden " >
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-                <input class="mx-4 w-full border rounded-md px-4 py-2" type="text" placeholder="Search"/>
+                <input class="mx-4 w-full border rounded-md px-4 py-2 bg-slate-900" type="text" placeholder="Search"/>
             </div>
             <div class="flex items-center pr-4">
 
@@ -59,8 +59,8 @@ const Navbar=()=>{
             </div>
         </div>
         <div class="p-4">
-            <h1 class="text-2xl font-bold">Welcome to my dashboard!</h1>
-            <p class="mt-2 text-gray-600">This is an example dashboard using Tailwind CSS.</p>
+            <h1 class=" text-2xl lg:text-5xl font-bold text-white text-center">Realtime Data Monitoring System</h1>
+            
         </div>
     </div>
     
