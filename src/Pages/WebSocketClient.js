@@ -7,7 +7,7 @@ import HouseIcon from '@mui/icons-material/House';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import ArticleIcon from '@mui/icons-material/Article';
 import { Menu } from '@headlessui/react';
-import { use } from 'react';
+
 
 // Register necessary Chart.js components
 ChartJS.register(
