@@ -4,7 +4,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 export default function Example(prop) {
     const {option,items}=prop
   return (
-    <Menu as="div" className="relative inline-block text-left lg:m-2 ">
+    <Menu as="div" className="relative inline-block text-left lg:m-2  right-0">
       <div>
         <MenuButton className=" text-white inline-flex w-full justify-center gap-x-1.5 rounded-md  px-3 py-2 text-sm font-semibold  shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-slate-500">
           {option}
@@ -27,7 +27,8 @@ export default function Example(prop) {
           </MenuItem>
         ))}
           
-         </div>
+         
+</div>
       </MenuItems>
     </Menu>
   )
