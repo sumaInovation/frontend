@@ -6,9 +6,12 @@ import Card from "../Component/Card";
 const Main = () => {
  return (
     <>
-      <Hero />
+    <div className="pt-9">
+    <Hero />
      <Content />
       <Card />
+    </div>
+     
      
     </>
   );
