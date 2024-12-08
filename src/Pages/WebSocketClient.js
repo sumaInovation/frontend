@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import DynamicPieChart from './tes'
-import sideNavBar from '../Component/Sidebar'
-import logo from "../Assets/logo10.svg";
-import Dropdown from '../Component/Dropwon';
+import DynamicPieChart from './DynamicPiechart'
+import RealTimeLineChart1 from '../Component/Linechart'
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -41,10 +39,10 @@ const RealTimeLineChart = () => {
         label: '',
         data: [0, 20, 45, 5, 0, 60],
         fill: true,
-        borderColor: 'blue',
-        tension: 0.1,
+        borderColor: 'green',
+        tension: 0.5,
         pointRadius: 0,
-        pointBackgroundColor: 'white',
+        pointBackgroundColor: 'gray',
       },
     ],
   });
@@ -186,19 +184,84 @@ const RealTimeLineChart = () => {
   return (
     <>
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-        
 
-        <div class="bg-green-500 p-4 row-span-10 col-span-1 hidden lg:block ">Item 2</div>
-        <div class="bg-red-500 p-4 row-span-10 col-span-11">Item 3</div>
-        
+
+        <div class="bg-green-500 p-4 row-span-10 col-span-1   hidden lg:block ">Item 2</div>
+        <div class="bg-gray-700 p-4 row-span-10 col-span-11 min-h-screen">
+          <div className="container mx-auto p-4">
+            {/* 3-Column Grid */}
+            <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
+              {/* Column 1 */}
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <div className="p-6">
+                  <h2 className="text-xl font-semibold text-gray-900 mb-4">Machine Status</h2>
+
+                  {/* Displaying machine data */}
+                  <div className="space-y-4">
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">Runnign Time:</span>
+                      <span className="text-gray-800 text-lg">{''}Hrs</span>
+                    </div>
+
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">Broken Time:</span>
+                      <span className="text-gray-800 text-lg">{''} Hrs</span>
+                    </div>
+
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">Status</span>
+                      <span
+                        className={`text-lg font-semibold ${machinestate === "Running" ? "text-green-600" : "text-red-600"
+                          }`}
+                      >
+                        {machinestate ? "Running" : "Stop"}
+                      </span>
+                    </div>
+
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">Last Update</span>
+                      <span className="text-gray-800 text-sm">{''}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Column 2 */}
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-2">Column 2</h3>
+                <p className="text-gray-600">This is some content for the second column.</p>
+              </div>
+
+              {/* Column 3 */}
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-2">Column 3</h3>
+                <p className="text-gray-600">This is some content for the third column.</p>
+              </div>
+                            {/* Row2 Column1  */}
+                            <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
+                             <DynamicPieChart title={"Daily Prodcution"} 
+                             ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake}/>
+                           </div>
+                            {/*Row2  Column 2 */}
+                            <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
+                            <Line data={chartData} className='mt-36 '/>
+                            </div>
+                           
+                            {/*Row2  Column 3 */}
+                            <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold mb-2">Column 3</h3>
+                <p className="text-gray-600">This is some content for the third column.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    
+    
+
       </div>
-
-
-
-
-
-
-    </>
+      </>
   );
 };
 
