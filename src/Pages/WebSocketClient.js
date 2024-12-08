@@ -200,12 +200,14 @@ const RealTimeLineChart = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between text-gray-600">
                       <span className="font-medium">Runnign Time:</span>
-                      <span className="text-gray-800 text-lg">{''}Hrs</span>
+                      <span className="text-gray-800 text-lg">{parseInt(_current_running_time)+
+                        parseInt(_todayTotalRun)}Hrs</span>
                     </div>
 
                     <div className="flex justify-between text-gray-600">
                       <span className="font-medium">Broken Time:</span>
-                      <span className="text-gray-800 text-lg">{''} Hrs</span>
+                      <span className="text-gray-800 text-lg">{parseInt(_current_breaking_time)+
+                        parseInt(_todayTotalBreake)} Hrs</span>
                     </div>
 
                     <div className="flex justify-between text-gray-600">
