@@ -242,7 +242,8 @@ const RealTimeLineChart = () => {
                             {/* Row2 Column1  */}
                             <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
                              <DynamicPieChart title={"Daily Prodcution"} 
-                             ruunigvalue={_todayTotalRun}breakingvalue={_todayTotalBreake}/>
+                             ruunigvalue={parseInt(_todayTotalRun,10)+parseInt(_current_running_time)}
+                             breakingvalue={parseInt(_todayTotalBreake,10)+parseInt(_current_breaking_time,10)}/>
                            </div>
                             {/*Row2  Column 2 */}
                             <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
