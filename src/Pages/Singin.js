@@ -2,7 +2,7 @@ import React from 'react'
 
 function Singin() {
   return (
-    <div>
+    <div className='pt-24'>
       Sigin
     </div>
   )

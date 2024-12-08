@@ -6,7 +6,7 @@ import Card from "../Component/Card";
 const Main = () => {
  return (
     <>
-    <div className="pt-9">
+    <div className="pt-24">
     <Hero />
      <Content />
       <Card />

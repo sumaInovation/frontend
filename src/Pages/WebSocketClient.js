@@ -4,6 +4,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import DynamicPieChart from './tes'
 import sideNavBar from '../Component/Sidebar'
 import logo from "../Assets/logo10.svg";
+import Dropdown from '../Component/Dropwon';
 
 // Register necessary Chart.js components
 ChartJS.register(
@@ -184,12 +185,12 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-      <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 ">
+      <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
         
 
         <div class="bg-green-500 p-4 row-span-10 col-span-1 hidden lg:block ">Item 2</div>
         <div class="bg-red-500 p-4 row-span-10 col-span-11">Item 3</div>
-
+        
       </div>
 
 

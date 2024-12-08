@@ -25,7 +25,7 @@ const App = () => {
        <BrowserRouter>
        <Navbar/>
         <Scrolltop/>
-        <Routes>
+        <Routes >
           <Route path="/" element={<Main />} />
           <Route path="/plc" element={<Plc />} />
           <Route path="/cpro" element={<Cprogramming />} />

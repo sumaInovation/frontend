@@ -2,7 +2,7 @@ import React from 'react'
 
 function Registration() {
   return (
-    <div>
+    <div className='pt-24'>
       
     </div>
   )

@@ -300,46 +300,104 @@
 // export default Navbar;
 
 import logo from "../Assets/logo10.svg";
+import Dropdown from '../Component/Dropwon'
 
 const Navbarr = () => {
   return (<>
 
-
-
-    <nav class="bg-white ">
       <div class="bg-gray-900  flex flex-wrap items-center justify-between   fixed top-0 left-0  w-full z-50 ">
+        {/* LOGO */}
+        
+        <div>
         <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src={logo} alt="userimg" className=" w-[100px]  h-auto"
           />
 
         </a>
-        <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+        </div>
+        <div>
+             {/* Serch box */}
+             <div className="relative mb-4 flex w-full flex-wrap items-stretch ">
+                  <input
+                    type="search"
+                    className="relative m-0 block flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-neutral-700 outline-none transition duration-200 ease-in-out focus:z-[3] focus:border-primary focus:text-neutral-700 focus:shadow-[inset_0_0_0_1px_rgb(59,113,202)] focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200 dark:focus:border-primary"
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="button-addon2" />
+                  
+                  {/* <!--Search icon--> */}
+                  <span
+                    className="input-group-text flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-neutral-700 dark:text-neutral-200"
+                    id="basic-addon2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-5 w-5">
+                      <path
+                        fillRule="evenodd"
+                        d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                        clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  </div>
+        </div>
+       
+        {/* Mobile navbar */}
+        <div>
+        <button data-collapse-toggle="navbar-default" type="button" class=" items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul class="flex gap-3">
-
-          <li>
-              <button class="px-6 py-3 bg-green-500 text-white rounded-3xl text-lg leading-tight whitespace-nowrap">
-               Sing Up
+        </div>
+        
+        {/* Large screen navbar */}
+        <div className="hidden lg:flex  ">
+          <ul>
+           
+          <button class="px-6 py-3  text-white  text-lg leading-tight whitespace-nowrap">
+                <a href="/">
+                HOME
+                  </a>
+          </button>
+          
+            
+              <button class="px-6 py-3  text-white  text-lg leading-tight whitespace-nowrap">
+                <a href="/plc">
+                PLC
+                </a>
               </button>
-            </li>
+            
+              <button class="px-6 py-3  text-white  text-lg leading-tight whitespace-nowrap">
+                <a href="/test">
+               API
+                  </a>
+              </button>
+          
+              <Dropdown option={"ROBOTICS"} item1={"Advance Robotics"} item2={"Kids Robotics"}
+              path1={"/cpro"} path2={"/kids"}/>
+         
 
-            <li>
-              <button class="px-6 py-3 bg-lime-900 text-white rounded-3xl text-lg leading-tight whitespace-nowrap">
+              <Dropdown option={"More"} item1={"ONLINE COURSE"} item2={"WORKSHOP"} path1={"/online"}
+                path2={"/workshop"} />
+
+               {/* Sing UP */}
+              <button class="m-2 px-6 py-3 bg-green-500 text-white rounded-3xl text-lg leading-tight whitespace-nowrap">
+                Sing Up
+              </button>
+               {/* Sing In */}
+              <button class="m-2 px-6 py-3 bg-lime-900 text-white rounded-3xl text-lg leading-tight whitespace-nowrap">
                 Log in
               </button>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </nav>
+              </ul>
+              </div>
+              
 
 
+
+  </div>
   </>)
 
 
