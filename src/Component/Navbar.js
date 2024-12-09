@@ -15,6 +15,15 @@ const dropdownItems1 = [
 
 const Navbarr = () => {
 
+  // Function to scroll the page to the top
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // This makes the scroll smooth
+    });
+  }
+  
+
   const [isOpen, setIsOpen] = useState(0);
   return (<>
     <nav className="flex items-center justify-between relative gap-10 ">
@@ -64,6 +73,7 @@ const Navbarr = () => {
             } else {
               setIsOpen(0);
             }
+            scrollToTop();
 
           }}>
             <span class="sr-only">Open main menu</span>
@@ -124,13 +134,13 @@ const Navbarr = () => {
      justify-around`}  onClick={()=>{setIsOpen(0)}}
     >
 
-      <a href="/" className="block px-4 py-2">Home</a>
-      <a href="/" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">HOME</a>
-      <a href="/cpro" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Advance Robotics</a>
-      <a href="/kids" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Kids Robotics</a>
-      <a href="/plc" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">PLC</a>
-      <a href="/online" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Online Course</a>
-      <a href="/workshop" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Workshop</a>
+      <a href="/" className="block px-4 py-2 "onClick={scrollToTop}>Home</a>
+      <a href="/" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>HOME</a>
+      <a href="/cpro" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Advance Robotics</a>
+      <a href="/kids" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Kids Robotics</a>
+      <a href="/plc" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>PLC</a>
+      <a href="/online" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Online Course</a>
+      <a href="/workshop" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Workshop</a>
       <a href="/Test" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">API</a>
       <a href="/contact" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Contact</a>
 

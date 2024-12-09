@@ -7,6 +7,9 @@ import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, CategoryScale, Li
 ChartJS.register(Title, Tooltip, Legend, ArcElement, CategoryScale, LinearScale);
 
 const PieChartCard = (prop) => {
+
+
+    
   
     const {title,ruunigvalue,breakingvalue}=prop;
   const dataValues=[ruunigvalue,breakingvalue,100]

@@ -30,6 +30,9 @@ const RealTimeLineChart = () => {
   const [machinestate, setMachinestate] = useState(0);
   const [isDaily, setIsaDaily] = useState(0);
 
+
+
+
   // Set up initial chart data state
 
   const [chartData, setChartData] = useState({
@@ -186,8 +189,30 @@ const RealTimeLineChart = () => {
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
 
 
-        <div class="bg-green-500 p-4 row-span-10 col-span-1   hidden lg:block ">Item 2</div>
-        <div class="bg-gray-700 p-4 row-span-10 col-span-11 min-h-screen">
+        <div class="bg-gray-800 p-4 row-span-10 col-span-2   hidden lg:block ">
+
+          <ul className='m-4 text-white'>
+            <li className='  text-center'>MENUE</li>
+            <li className='p-2'>
+              <span class="material-icons text-white">
+                description
+              </span>
+              Daily Production</li>
+            <li className='p-2'>
+            <span class="material-icons text-white">
+                description
+              </span>
+              Monthly Production</li>
+            <li className='p-2'>
+            <span class=" text-3xl material-icons">
+             download
+             </span>
+              
+              Report Download</li>
+          </ul>
+
+        </div>
+        <div class="bg-gray-700 p-4 row-span-10 col-span-10 min-h-screen">
           <div className="container mx-auto p-4">
             {/* 3-Column Grid */}
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
@@ -200,13 +225,13 @@ const RealTimeLineChart = () => {
                   <div className="space-y-4">
                     <div className="flex justify-between text-gray-600">
                       <span className="font-medium">Runnign Time:</span>
-                      <span className="text-gray-800 text-lg">{parseInt(_current_running_time)+
+                      <span className="text-gray-800 text-lg">{parseInt(_current_running_time) +
                         parseInt(_todayTotalRun)}Hrs</span>
                     </div>
 
                     <div className="flex justify-between text-gray-600">
                       <span className="font-medium">Broken Time:</span>
-                      <span className="text-gray-800 text-lg">{parseInt(_current_breaking_time)+
+                      <span className="text-gray-800 text-lg">{parseInt(_current_breaking_time) +
                         parseInt(_todayTotalBreake)} Hrs</span>
                     </div>
 
@@ -239,19 +264,19 @@ const RealTimeLineChart = () => {
                 <h3 className="text-xl font-semibold mb-2">Column 3</h3>
                 <p className="text-gray-600">This is some content for the third column.</p>
               </div>
-                            {/* Row2 Column1  */}
-                            <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
-                             <DynamicPieChart title={"Daily Prodcution"} 
-                             ruunigvalue={parseInt(_todayTotalRun,10)+parseInt(_current_running_time)}
-                             breakingvalue={parseInt(_todayTotalBreake,10)+parseInt(_current_breaking_time,10)}/>
-                           </div>
-                            {/*Row2  Column 2 */}
-                            <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
-                            <Line data={chartData} options={options} className='mt-36 '/>
-                            </div>
-                           
-                            {/*Row2  Column 3 */}
-                            <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+              {/* Row2 Column1  */}
+              <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
+                <DynamicPieChart title={"Daily Prodcution"}
+                  ruunigvalue={parseInt(_todayTotalRun, 10) + parseInt(_current_running_time)}
+                  breakingvalue={parseInt(_todayTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />
+              </div>
+              {/*Row2  Column 2 */}
+              <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
+                <Line data={chartData} options={options} className='mt-36 ' />
+              </div>
+
+              {/*Row2  Column 3 */}
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
                 <h3 className="text-xl font-semibold mb-2">Column 3</h3>
                 <p className="text-gray-600">This is some content for the third column.</p>
               </div>
@@ -260,11 +285,11 @@ const RealTimeLineChart = () => {
 
         </div>
 
-    
-    
+
+
 
       </div>
-      </>
+    </>
   );
 };
 
