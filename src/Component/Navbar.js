@@ -45,9 +45,10 @@ const Navbarr = () => {
             <input
               type="text"
               value={''}
-              onChange={''}
+              onChange={()=>{}}
               className="px-4 py-2 bg-gray-800 text-white rounded-full focus:outline-none"
               placeholder="Search..."
+              id='serch box'
             />
             <svg
               xmlns="http://www.w3.org/2000/svg"
