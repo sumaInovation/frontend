@@ -313,12 +313,7 @@ const RealTimeLineChart = () => {
               </span>
               <button onClick={() => setIsaDaily(1)}> Monthly Production</button>
             </div>
-             <div>
-             <span class="material-icons">
-                download
-              </span>
-              <button>Report Download</button>
-             </div>
+            
               
 
 
