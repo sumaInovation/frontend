@@ -298,10 +298,9 @@ const RealTimeLineChart = () => {
      
       
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-        <div className='col-span-12 h-9 bg-gray-900 text-white items-center flex
-         justify-around lg:hidden'>
+      <div class=" bg-gray-700  flex flex-wrap items-center  justify-evenly   fixed left-0  w-full z-50   ">
            <div className='bg-emerald-400 rounded-lg'>
-          <span class="material-icons text-white">
+          <span class="material-icons text-white">n
                 description
               </span>
               <button onClick={() => setIsaDaily(0)}>Daily Production</button>
