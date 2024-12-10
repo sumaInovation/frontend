@@ -1,112 +1,79 @@
-import React, { useState, useEffect } from "react";
-import { Line } from "react-chartjs-2";
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  LineElement,
-  CategoryScale,
-  LinearScale,
-  PointElement,
-} from "chart.js";
+import React, { useState, useEffect } from 'react';
+import ApexCharts from 'react-apexcharts';
 
-// Registering chart components
-ChartJS.register(
-  Title,
-  Tooltip,
-  Legend,
-  LineElement,
-  CategoryScale,
-  LinearScale,
-  PointElement
-);
-
-const RealTimeLineChart = () => {
-  const [chartData, setChartData] = useState({
-    labels: [],
-    datasets: [
-      {
-        label: "Real-Time Data",
-        data: [],
-        borderColor: "#42a5f5", // Line color
-        backgroundColor: "rgba(66, 165, 245, 0.2)", // Area fill color
-        borderWidth: 2,
-        pointRadius: 3,
-        pointBackgroundColor: "#42a5f5",
-        fill: true,
+const RealTimeProductionChart = () => {
+  const [options, setOptions] = useState({
+    chart: {
+      id: 'real-time-production',
+      type: 'line',
+      height: 350,
+      animations: {
+      enabled: false, // Disable animations for real-time updates
       },
-    ],
+      toolbar: {
+        show: false, // Disable the chart toolbar (including zoom and reset buttons)
+      },
+    },
+    title: {
+      text: 'Machine Production Rate',
+      align: 'center',
+    },
+    xaxis: {
+      type: 'datetime',  // Use datetime for x-axis
+      labels: {
+        format: 'HH:mm:ss', // Format the x-axis as HH:mm:ss (local time)
+      },
+    },
+    yaxis: {
+      title: {
+        text: 'Production Rate (units/hour)',
+      },
+    },
   });
+
+  const [series, setSeries] = useState([
+    {
+      name: 'Production Rate',
+      data: [],
+    },
+  ]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Simulating real-time data (random numbers for this example)
-      const newData = Math.random() * 100;
+      // Get the current local time (milliseconds)
+      const currentTime = new Date();
+      const localMillis = currentTime.getTime();  // Get time in milliseconds (local time)
 
-      // Get the current time for x-axis labels
-      const currentTime = new Date().toLocaleTimeString();
+      // Adjust for the time zone offset (in milliseconds)
+      const timezoneOffsetMillis = currentTime.getTimezoneOffset() * 60 * 1000;  // Convert minutes to milliseconds
+      const adjustedTimeMillis = localMillis - timezoneOffsetMillis;  // Adjust the time by the time zone offset
 
-      setChartData((prevData) => {
-        const updatedLabels = [...prevData.labels, currentTime];
-        const updatedData = [...prevData.datasets[0].data, newData];
+      // Simulate production rate
+      const productionRate = Math.floor(Math.random() * 100); 
 
-        // Limit the number of data points (e.g., last 20 data points)
-        if (updatedLabels.length > 20) {
-          updatedLabels.shift();
-          updatedData.shift();
+      // Add new data point with adjusted time
+      setSeries((prevSeries) => {
+        const newData = [...prevSeries[0].data, [adjustedTimeMillis, productionRate]];
+
+        // Limit to the last 10 data points
+        if (newData.length > 10) {
+          newData.shift(); // Remove the oldest data point
         }
 
-        return {
-          ...prevData,
-          labels: updatedLabels,
-          datasets: [
-            {
-              ...prevData.datasets[0],
-              data: updatedData,
-            },
-          ],
-        };
+        return [{ ...prevSeries[0], data: newData }];
       });
-    }, 1000); // Update every 1 second
+    }, 1000); // Update every second
 
-    // Cleanup interval on unmount
+    // Clean up the interval when the component is unmounted
     return () => clearInterval(interval);
   }, []);
 
-  // Chart options
-  const options = {
-    responsive: true,
-    plugins: {
-      tooltip: {
-        callbacks: {
-          label: (tooltipItem) => `Value: ${tooltipItem.raw.toFixed(2)}`,
-        },
-      },
-    },
-    scales: {
-      x: {
-        type: "category",
-        ticks: {
-          maxRotation: 0,
-          minRotation: 0,
-        },
-      },
-      y: {
-        beginAtZero: true,
-        max: 120,
-      },
-    },
-  };
-
   return (
-    <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-      <h3 className="text-xl font-semibold text-gray-900 mb-4 text-center">
-        Real-Time Line Graph
-      </h3>
-      <Line data={chartData} options={options} />
+    <div>
+      
+      <ApexCharts options={options} series={series} type="line" height={350} />
     </div>
   );
 };
 
-export default RealTimeLineChart;
+export default RealTimeProductionChart;

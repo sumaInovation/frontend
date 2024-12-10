@@ -275,7 +275,8 @@ const RealTimeLineChart = () => {
 
               {/* Column 3 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                <Line data={chartData} options={options} className='mt-36 ' />
+                {/* <Line data={chartData} options={options} className='mt-36 ' /> */}
+                <RealTimeLineChart1/>
               </div>
 
             </div>
