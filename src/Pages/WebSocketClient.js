@@ -300,14 +300,14 @@ const RealTimeLineChart = () => {
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
         <div className='col-span-12 h-9 bg-gray-900 text-white items-center flex
          justify-around lg:hidden'>
-          <div>
+          <div className='bg-green-900 rounded-md m-2'>
           <span class="material-icons text-white">
                 description
               </span>
               <button onClick={() => setIsaDaily(0)}>Daily Production</button>
           </div>
            
-            <div>
+            <div className='bg-blue-500 rounded-md m-4 '>
             <span class="material-icons ">
                 description
               </span>
