@@ -295,7 +295,34 @@ const RealTimeLineChart = () => {
 
   return (
     <>
+     
+      
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
+        <div className='col-span-12 h-9 bg-gray-900 text-white items-center flex
+         justify-around lg:hidden'>
+          <div>
+          <span class="material-icons text-white">
+                description
+              </span>
+              <button onClick={() => setIsaDaily(0)}>Daily Production</button>
+          </div>
+           
+            <div>
+            <span class="material-icons ">
+                description
+              </span>
+              <button onClick={() => setIsaDaily(1)}> Monthly Production</button>
+            </div>
+             <div>
+             <span class="material-icons">
+                download
+              </span>
+              <button>Report Download</button>
+             </div>
+              
+
+
+        </div>
         <div class="bg-gray-800 p-4 row-span-10 col-span-2   hidden lg:block ">
           <ul className='m-4 text-white'>
             <li className='  text-center'>MENUE</li>
@@ -317,6 +344,7 @@ const RealTimeLineChart = () => {
           </ul>
 
         </div>
+        
         <div class="bg-gray-700 p-4 row-span-10 col-span-10 min-h-screen">
           <div className="container mx-auto p-4">
             {/* 3-Column Grid */}
