@@ -50,9 +50,9 @@ const PieChartCard = (prop) => {
       </div>
       
       {/* Card Content */}
-      <div className="text-center">
+      {/* <div className="text-center">
         <p className="text-sm text-gray-600">This is a pie chart showing the sales distribution a</p>
-      </div>
+      </div> */}
     </div>
   );
 };

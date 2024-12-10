@@ -187,28 +187,24 @@ const RealTimeLineChart = () => {
   return (
     <>
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-
-
         <div class="bg-gray-800 p-4 row-span-10 col-span-2   hidden lg:block ">
-
           <ul className='m-4 text-white'>
             <li className='  text-center'>MENUE</li>
             <li className='p-2'>
               <span class="material-icons text-white">
                 description
               </span>
-              Daily Production</li>
+              <button onClick={() => setIsaDaily(0)}>Daily Production</button></li>
             <li className='p-2'>
-            <span class="material-icons text-white">
+              <span class="material-icons ">
                 description
               </span>
-              Monthly Production</li>
+              <button onClick={() => setIsaDaily(1)}> Monthly Production</button></li>
             <li className='p-2'>
-            <span class=" text-3xl material-icons">
-             download
-             </span>
-              
-              Report Download</li>
+              <span class="material-icons">
+                download
+              </span>
+              <button>Report Download</button></li>
           </ul>
 
         </div>
@@ -246,8 +242,20 @@ const RealTimeLineChart = () => {
                     </div>
 
                     <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">No of Taype detect  :</span>
+                      <span className="text-gray-800 text-sm">{'0'}</span>
+                    </div>
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">No of String Brkoen :</span>
+                      <span className="text-gray-800 text-sm">{'0'}</span>
+                    </div>
+                    <div className="flex justify-between text-gray-600">
+                      <span className="font-medium">Others :</span>
+                      <span className="text-gray-800 text-sm">{'0'}</span>
+                    </div>
+                    <div className="flex justify-between text-gray-600">
                       <span className="font-medium">Last Update</span>
-                      <span className="text-gray-800 text-sm">{''}</span>
+                      <span className="text-gray-800 text-sm">{'0'}</span>
                     </div>
                   </div>
                 </div>
@@ -255,31 +263,21 @@ const RealTimeLineChart = () => {
 
               {/* Column 2 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">Column 2</h3>
-                <p className="text-gray-600">This is some content for the second column.</p>
+
+                {isDaily == 0 ? (<DynamicPieChart title={"Daily Prodcution"}
+                  ruunigvalue={parseInt(_todayTotalRun, 10) + parseInt(_current_running_time)}
+                  breakingvalue={parseInt(_todayTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />
+                ) : <DynamicPieChart title={"Monthly Production"}
+                  ruunigvalue={parseInt(_thismontTotalRun, 10) + parseInt(_current_running_time)}
+                  breakingvalue={parseInt(_thismontTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />}
+
               </div>
 
               {/* Column 3 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">Column 3</h3>
-                <p className="text-gray-600">This is some content for the third column.</p>
-              </div>
-              {/* Row2 Column1  */}
-              <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
-                <DynamicPieChart title={"Daily Prodcution"}
-                  ruunigvalue={parseInt(_todayTotalRun, 10) + parseInt(_current_running_time)}
-                  breakingvalue={parseInt(_todayTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />
-              </div>
-              {/*Row2  Column 2 */}
-              <div className="bg-gray-200 p-6  rounded-lg shadow-lg ">
                 <Line data={chartData} options={options} className='mt-36 ' />
               </div>
 
-              {/*Row2  Column 3 */}
-              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                <h3 className="text-xl font-semibold mb-2">Column 3</h3>
-                <p className="text-gray-600">This is some content for the third column.</p>
-              </div>
             </div>
           </div>
 
