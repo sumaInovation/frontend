@@ -19,6 +19,9 @@ const RealTimeProductionChart = () => {
       align: 'center',
     },
     xaxis: {
+      title: {
+        text: 'TIME',
+      },
       type: 'datetime',  // Use datetime for x-axis
       labels: {
         format: 'HH:mm:ss', // Format the x-axis as HH:mm:ss (local time)

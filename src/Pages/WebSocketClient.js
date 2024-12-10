@@ -1,21 +1,56 @@
 import React, { useState, useEffect } from 'react';
-import { Line } from 'react-chartjs-2';
+import ApexCharts from 'react-apexcharts';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import DynamicPieChart from './DynamicPiechart'
-import RealTimeLineChart1 from '../Component/Linechart'
 
-// Register necessary Chart.js components
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  PointElement,
-  LineElement,
-  Title,
-  Tooltip,
-  Legend
-);
+
+
 
 const RealTimeLineChart = () => {
+
+  const [options1, setOptions] = useState({
+    chart: {
+      id: 'real-time-production',
+      type: 'line',
+      height: 350,
+      animations: {
+      enabled: false, // Disable animations for real-time updates
+      },
+      toolbar: {
+        show: false, // Disable the chart toolbar (including zoom and reset buttons)
+      },
+    },
+    title: {
+      text: 'Machine Production Rate',
+      align: 'center',
+    },
+    xaxis: {
+      title: {
+        text: 'TIME',
+      },
+      type: 'datetime',  // Use datetime for x-axis
+      labels: {
+        format: 'HH:mm:ss', // Format the x-axis as HH:mm:ss (local time)
+      },
+    },
+    yaxis: {
+      title: {
+        text: 'Production Rate (units/hour)',
+      },
+    },
+  });
+
+  const [series, setSeries] = useState([
+    {
+      name: 'Production Rate',
+      data: [],
+    },
+  ]);
+
+  const monthNames = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'
+  ];
+
   const [_current_running_time, setCurrent_running_time] = useState(0);
   const [_current_breaking_time, setCurrent_breaking_time] = useState(0);
   const [_todayTotalBreake, setTodaybreaktime] = useState(0);
@@ -29,6 +64,7 @@ const RealTimeLineChart = () => {
   const [clientId, setClientId] = useState('');
   const [machinestate, setMachinestate] = useState(0);
   const [isDaily, setIsaDaily] = useState(0);
+  const [Isconnnected,setIsconnect]=useState(0);
 
 
 
@@ -51,16 +87,65 @@ const RealTimeLineChart = () => {
   });
 
 
+  //Inizialize Piechart for daily
+  const daily = {
+    series: [_todayTotalBreake,100, _todayTotalRun],
+    options: {
+      chart: {
+        type: 'pie',
+        width: '100%',
+      },
+      labels: ['Broken', 'Others', 'Run'],
+      legend: {
+        position: 'top',
+        horizontalAlign: 'center',
+      },
+      title: {
+        text: 'Daily Cable Production',
+        align: 'center',
+      },
+      colors: ['#FF0000', '#0000FF', '#00FF00'],
+    },
+  };
+
+  // Data for the second pie chart
+  const Monthly = {
+    series: [_thismontTotalBreake,100, _thismontTotalRun],
+    options: {
+      chart: {
+        type: 'pie',
+        width: '100%',
+      },
+      labels: ['Broken', 'Others', 'Run'],
+      legend: {
+        position: 'top',
+        horizontalAlign: 'center',
+      },
+      title: {
+        text: 'Monthly Cable Production',
+        align: 'center',
+      },
+      colors: ['#FF0000', '#0000FF', '#00FF00'],
+    },
+  };
+
+  
+
+
 
   useEffect(() => {
     // WebSocket URL - replace with your WebSocket server URL
     const websocket = new WebSocket('https://googlesheet-yuetcisb.b4a.run/');
     websocket.onopen = () => {
       console.log('WebSocket is connected');
+      setIsconnect(1);
       // Generate a unique client ID
       const id = Math.floor(Math.random() * 1000);
       setClientId(id);
     };
+    websocket.onclose=()=>{
+      setIsconnect(0);
+    }
 
     // WebSocket message handler
     websocket.onmessage = (event) => {
@@ -106,7 +191,31 @@ const RealTimeLineChart = () => {
         if (thismontTotalRun !== undefined) {
           setThismonthTotalRun(thismontTotalRun);
         }
+      
+        
+        //  Linechart
+       // Get the current local time (milliseconds)
+      const currentTime1 = new Date();
+      const localMillis = currentTime.getTime();  // Get time in milliseconds (local time)
 
+      // Adjust for the time zone offset (in milliseconds)
+      const timezoneOffsetMillis = currentTime1.getTimezoneOffset() * 60 * 1000;  // Convert minutes to milliseconds
+      const adjustedTimeMillis = localMillis - timezoneOffsetMillis;  // Adjust the time by the time zone offset
+
+      // Simulate production rate
+      const productionRate =_current_breaking_time// Math.floor(Math.random() * 100); 
+
+      // Add new data point with adjusted time
+      setSeries((prevSeries) => {
+        const newData = [...prevSeries[0].data, [adjustedTimeMillis, productionRate]];
+
+        // Limit to the last 10 data points
+        if (newData.length > 10) {
+          newData.shift(); // Remove the oldest data point
+        }
+
+        return [{ ...prevSeries[0], data: newData }];
+      });
 
 
 
@@ -237,7 +346,7 @@ const RealTimeLineChart = () => {
                         className={`text-lg font-semibold ${machinestate === "Running" ? "text-green-600" : "text-red-600"
                           }`}
                       >
-                        {machinestate ? "Running" : "Stop"}
+                        {machinestate ? "Running" : "Stop"}   
                       </span>
                     </div>
 
@@ -261,32 +370,47 @@ const RealTimeLineChart = () => {
                 </div>
               </div>
 
-              {/* Column 2 */}
+              {/*Piechar Part*/}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-
-                {isDaily == 0 ? (<DynamicPieChart title={"Daily Prodcution"}
-                  ruunigvalue={parseInt(_todayTotalRun, 10) + parseInt(_current_running_time)}
-                  breakingvalue={parseInt(_todayTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />
-                ) : <DynamicPieChart title={"Monthly Production"}
-                  ruunigvalue={parseInt(_thismontTotalRun, 10) + parseInt(_current_running_time)}
-                  breakingvalue={parseInt(_thismontTotalBreake, 10) + parseInt(_current_breaking_time, 10)} />}
-
+             {isDaily==1? <ApexCharts
+            key="pie-chart-2"
+            options={Monthly.options}
+            series={Monthly.series}
+            type="pie"
+            height={350}
+            />: <ApexCharts
+            key="pie-chart-1"
+            options={daily.options}
+            series={daily.series}
+            type="pie"
+            height={350}
+          />}
+                
               </div>
 
-              {/* Column 3 */}
+              {/* Linechart Part */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
                 {/* <Line data={chartData} options={options} className='mt-36 ' /> */}
-                <RealTimeLineChart1/>
+                <ApexCharts options={options1} series={series} type="line" height={350} />
               </div>
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                <h1 className='text-3xl'>This {monthNames[new Date().getMonth()]}</h1>
+                <h1>Maximum Production hours/Day  : {'0'}</h1>
+                <h1>Minimum Production hours/Day  : {'0'}</h1>
+
+              </div>
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg text-center text-4xl">
+                    {Isconnnected==0?<h1 className='text-green-600'>Sever Connected</h1>:
+                    <h1 className='text-red-600'>Server Disconnect</h1>}
+                </div>
+                <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+                
+                </div>
 
             </div>
           </div>
 
         </div>
-
-
-
-
       </div>
     </>
   );
