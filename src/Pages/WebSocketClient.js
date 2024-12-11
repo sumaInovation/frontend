@@ -298,19 +298,15 @@ const RealTimeLineChart = () => {
      
       
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-      <div class=" bg-gray-700  flex flex-wrap items-center  justify-evenly   fixed left-0  w-full z-50   ">
-           <div className='bg-emerald-400 rounded-lg'>
-          <span class="material-icons text-white">n
-                description
-              </span>
-              <button onClick={() => setIsaDaily(0)}>Daily Production</button>
+      <div class=" bg-gray-800  flex flex-wrap items-center  justify-evenly   fixed left-0  w-full z-50 lg:hidden   ">
+           <div >
+          
+              <button className='bg-blue-700 rounded-lg' onClick={() => setIsaDaily(0)}>Daily Production</button>
           </div>
            
-            <div className='bg-emerald-400 rounded-lg'>
-            <span class="material-icons ">
-                description
-              </span>
-              <button onClick={() => setIsaDaily(1)}> Monthly Production</button>
+            <div >
+           
+              <button button className='bg-blue-700 rounded-lg' onClick={() => setIsaDaily(1)}> Monthly Production</button>
             </div>
             
               
@@ -339,7 +335,7 @@ const RealTimeLineChart = () => {
 
         </div>
         
-        <div class="bg-gray-700 p-4 row-span-10 col-span-10 min-h-screen">
+        <div class="bg-gray-800 p-4 row-span-10 col-span-10 min-h-screen">
           <div className="container mx-auto p-4">
             {/* 3-Column Grid */}
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
