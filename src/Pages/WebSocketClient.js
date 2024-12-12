@@ -3,7 +3,7 @@ import ApexCharts from 'react-apexcharts';
 
 import "react-datepicker/dist/react-datepicker.css";  // Import the default styles for DatePicker
 import DatePicker from 'react-datepicker';  // Import DatePicker
-
+import Scrolltop from './Scrolltop'
 
 const RealTimeLineChart = () => {
 
@@ -297,7 +297,7 @@ const RealTimeLineChart = () => {
         {/* Mobile second navbar */}
         <div className='  z-50 fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center '>
 
-          <div className={` p-2  ml-2 mb-2 text-white  text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={` p-2  ml-2 mb-2 text-white  text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-green-500' : 'bg-black'
             }`}>
             <button onClick={() => {
               setIsaDaily(1)
@@ -312,7 +312,7 @@ const RealTimeLineChart = () => {
 
             }}>Monthly  Production</button>
           </div>
-          <div className={` p-2  mb-2  text-white text-[12px]  font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={` p-2  mb-2  text-white text-[12px]  font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-green-500' : 'bg-black'
             }`}>
             <button onClick={() => { setIsaDaily(2) 
               window.scrollTo({
@@ -321,7 +321,7 @@ const RealTimeLineChart = () => {
               });
             }}>Download</button>
           </div>
-          <div className={`p-2  mb-2  text-white text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={`p-2  mb-2  text-white text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-green-500' : 'bg-black'
             }`}>
             <button onClick={() => { setIsaDaily(0) 
               window.scrollTo({
