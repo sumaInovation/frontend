@@ -476,95 +476,95 @@ const RealTimeLineChart = () => {
           </div>
 
         </div>)}
-
         {isDaily==2 && (<>
        
-            <div className='col-span-2 top-24 '></div>
-            <div className=' col-span-5 gap-10 p-4 bg-gray-900 m-28 '>
-            <h2 className="text-2xl font-semibold text-center mb-6 text-white">Report Download</h2>
-            <form onSubmit={handleSubmit}>
-              {/* Date Range Selectors */}
-              <div className="mb-4">
-                <label htmlFor="fromDate" className="block text-sm font-medium text-gray-300">From Date</label>
-                <DatePicker
-                  selected={formData.fromDate}
-                  onChange={(date) => handleDateChange(date, 'fromDate')} // Update state with selected date
-                  dateFormat="yyyy-MM-dd"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholderText="Select Start Date"
-                />
-              </div>
-      
-              <div className="mb-4">
-                <label htmlFor="toDate" className="block text-sm font-medium text-gray-300">To Date</label>
-                <DatePicker
-                  selected={formData.toDate}
-                  onChange={(date) => handleDateChange(date, 'toDate')} // Update state with selected date
-                  dateFormat="yyyy-MM-dd"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                  placeholderText="Select End Date"
-                />
-              </div>
-      
-              {/* Select Dropdown */}
-              <div className="mb-4">
-                <label htmlFor="option" className="block text-sm font-medium text-gray-300">Select Option</label>
-                <select
-                  name="option"
-                  id="option"
-                  value={formData.option}
-                  onChange={handleInputChange}
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                >
-                  <option value="">Select an Option</option>
-                  <option value="option1">Running Time</option>
-                  <option value="option2">Breking Time</option>
-                  <option value="option3">Full Report</option>
-                </select>
-              </div>
-      
-              {/* Username Input */}
-              <div className="mb-4">
-                <label htmlFor="username" className="block text-sm font-medium text-gray-300">Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  value={formData.username}
-                  onChange={handleInputChange}
-                  placeholder="Enter your username"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                />
-              </div>
-      
-              {/* Password Input */}
-              <div className="mb-6">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-300">Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  placeholder="Enter your password"
-                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-                />
-              </div>
-      
-              {/* Submit Button */}
-              <div className="flex justify-center">
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                >
-                  Download
-                </button>
-              </div>
-            </form>
-          </div>
-          </>
-        )}
-      </div>
+           
+       <div className='lg:gap-10 p-4 bg-gray-900 lg:m-28 lg:col-span-10 top-96 mt-24'>
+       <h2 className="text-2xl font-semibold text-center mb-6 text-white">Report Download</h2>
+       <form onSubmit={handleSubmit}>
+         {/* Date Range Selectors */}
+         <div className="mb-4">
+           <label htmlFor="fromDate" className="block text-sm font-medium text-gray-300">From Date</label>
+           <DatePicker
+             selected={formData.fromDate}
+             onChange={(date) => handleDateChange(date, 'fromDate')} // Update state with selected date
+             dateFormat="yyyy-MM-dd"
+             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+             placeholderText="Select Start Date"
+           />
+         </div>
+ 
+         <div className="mb-4">
+           <label htmlFor="toDate" className="block text-sm font-medium text-gray-300">To Date</label>
+           <DatePicker
+             selected={formData.toDate}
+             onChange={(date) => handleDateChange(date, 'toDate')} // Update state with selected date
+             dateFormat="yyyy-MM-dd"
+             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+             placeholderText="Select End Date"
+           />
+         </div>
+ 
+         {/* Select Dropdown */}
+         <div className="mb-4">
+           <label htmlFor="option" className="block text-sm font-medium text-gray-300">Select Option</label>
+           <select
+             name="option"
+             id="option"
+             value={formData.option}
+             onChange={handleInputChange}
+             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+           >
+             <option value="">Select an Option</option>
+             <option value="option1">Running Time</option>
+             <option value="option2">Breking Time</option>
+             <option value="option3">Full Report</option>
+           </select>
+         </div>
+ 
+         {/* Username Input */}
+         <div className="mb-4">
+           <label htmlFor="username" className="block text-sm font-medium text-gray-300">Username</label>
+           <input
+             type="text"
+             name="username"
+             id="username"
+             value={formData.username}
+             onChange={handleInputChange}
+             placeholder="Enter your username"
+             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+           />
+         </div>
+ 
+         {/* Password Input */}
+         <div className="mb-6">
+           <label htmlFor="password" className="block text-sm font-medium text-gray-300">Password</label>
+           <input
+             type="password"
+             name="password"
+             id="password"
+             value={formData.password}
+             onChange={handleInputChange}
+             placeholder="Enter your password"
+             className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+           />
+         </div>
+ 
+         {/* Submit Button */}
+         <div className="flex justify-center">
+           <button
+             type="submit"
+             className="px-4 py-2 bg-blue-500 text-white rounded-md shadow-md hover:bg-blue-600 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+           >
+             Download
+           </button>
+         </div>
+       </form>
+     </div>
+     </>
+   )}
+         </div>
+         
     </>
   );
 };
