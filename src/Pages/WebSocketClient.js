@@ -298,21 +298,20 @@ const RealTimeLineChart = () => {
      
       
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-      <div class=" bg-gray-800  flex flex-wrap items-center  justify-evenly   fixed left-0  w-full z-50 lg:hidden   ">
-           <div >
-          
-              <button className='bg-blue-700 rounded-lg' onClick={() => setIsaDaily(0)}>Daily Production</button>
-          </div>
-           
-            <div >
-           
-              <button button className='bg-blue-700 rounded-lg' onClick={() => setIsaDaily(1)}> Monthly Production</button>
-            </div>
-            
-              
+      <div className='fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center'>
+       <div className='text-white p-3'>
+        <button >Download</button>
+       </div>
+       <div className='text-white p-3'>
+        <button >Monthly  Production</button>
+       </div>
+       <div className='text-white p-3'>
+        <button >Daily Production</button>
+       </div>
+       
 
+      </div>
 
-        </div>
         <div class="bg-gray-800 p-4 row-span-10 col-span-2   hidden lg:block ">
           <ul className='m-4 text-white'>
             <li className='  text-center'>MENUE</li>
