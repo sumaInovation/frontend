@@ -479,8 +479,8 @@ const RealTimeLineChart = () => {
 
         {isDaily==2 && (<>
        
-            <div className='col-span-2 '></div>
-            <div className=' col-span-5 gap-10 p-4 bg-gray-900 '>
+            <div className='col-span-2 top-24 '></div>
+            <div className=' col-span-5 gap-10 p-4 bg-gray-900 m-28 '>
             <h2 className="text-2xl font-semibold text-center mb-6 text-white">Report Download</h2>
             <form onSubmit={handleSubmit}>
               {/* Date Range Selectors */}
