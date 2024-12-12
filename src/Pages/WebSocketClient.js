@@ -299,15 +299,19 @@ const RealTimeLineChart = () => {
 
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
         {/* Mobile second navbar */}
-        <div className='fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center'>
-          <div className='text-white p-3'>
-            <button onClick={()=>{}}>Download</button>
+        <div className='  z-50 fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center'>
+          
+          <div className={` p-3 m-1 text-white font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
+            }`}>
+            <button onClick={() => { setIsaDaily(1) }}>Monthly  Production</button>
           </div>
-          <div className='text-white p-3'>
-            <button onClick={()=>{ setIsaDaily(1) }}>Monthly  Production</button>
+          <div className={` p-3  m-1 text-white font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-blue-500' : 'bg-gray-500'
+            }`}>
+            <button onClick={() => { setIsaDaily(2)}}>Download</button>
           </div>
-          <div className='text-white p-3'>
-            <button onClick={()=>{setIsaDaily(0)}}>Daily Production</button>
+          <div className={`p-3  m-1 text-white font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-blue-500' : 'bg-gray-500'
+            }`}>
+            <button onClick={() => { setIsaDaily(0) }}>Daily Production</button>
           </div>
 
 
@@ -330,12 +334,12 @@ const RealTimeLineChart = () => {
               <span class="material-icons">
                 download
               </span>
-              <button>Report Download</button></li>
+              <button onClick={() => setIsaDaily(2)}>Report Download</button></li>
           </ul>
 
         </div>
 
-        <div class="bg-gray-800 p-4 row-span-10 col-span-10 min-h-screen">
+        {isDaily!=2 &&(<div class="bg-gray-800 p-4 row-span-10 col-span-10 min-h-screen">
           <div className="container mx-auto p-4">
             {/* 3-Column Grid for large screen and 1 Colum for small screen */}
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
@@ -431,7 +435,7 @@ const RealTimeLineChart = () => {
             </div>
           </div>
 
-        </div>
+        </div>)}
       </div>
     </>
   );
