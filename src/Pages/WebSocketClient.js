@@ -247,7 +247,7 @@ const RealTimeLineChart = () => {
         if (thismontTotalRun !== undefined) {
           setThismonthTotalRun(thismontTotalRun);
         }
-       //Line Chart Updte when socket data is comming
+        //Line Chart Updte when socket data is comming
         if (current_breaking_time != undefined) {
           const timestamp = new Date().getTime() + 19800000; // Get current timestamp (milliseconds)
           setChartData((prevState) => {
@@ -267,8 +267,8 @@ const RealTimeLineChart = () => {
               ],
             };
           });
-          }
-  ////////////////////////////////////////////////////
+        }
+        ////////////////////////////////////////////////////
 
 
       } catch {
@@ -282,7 +282,7 @@ const RealTimeLineChart = () => {
     };
   }, []); // Empty dependency array means this effect runs once when the component mounts
 
-  
+
 
 
 
@@ -299,15 +299,36 @@ const RealTimeLineChart = () => {
 
           <div className={` p-2  ml-2 mb-2 text-white  text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
-            <button onClick={() => { setIsaDaily(1) }}>Monthly  Production</button>
+            <button onClick={() => {
+              setIsaDaily(1)
+              // Scroll to top
+
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // smooth scroll animation
+              });
+
+
+
+            }}>Monthly  Production</button>
           </div>
           <div className={` p-2  mb-2  text-white text-[12px]  font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
-            <button onClick={() => { setIsaDaily(2) }}>Download</button>
+            <button onClick={() => { setIsaDaily(2) 
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // smooth scroll animation
+              });
+            }}>Download</button>
           </div>
           <div className={`p-2  mb-2  text-white text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
-            <button onClick={() => { setIsaDaily(0) }}>Daily Production</button>
+            <button onClick={() => { setIsaDaily(0) 
+              window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // smooth scroll animation
+              });
+            }}>Daily Production</button>
           </div>
 
 
