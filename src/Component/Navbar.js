@@ -25,6 +25,8 @@ const Navbarr = () => {
   
 
   const [isOpen, setIsOpen] = useState(0);
+  const [isPlcDropdownOpen,setIsPlcDropdownOpen]=useState(false)
+  const [isMoreDropdownOpen,setIsMoreDropdownOpen]=useState(false)
   return (<>
     <nav className="flex items-center justify-between relative gap-10 ">
 
@@ -131,34 +133,81 @@ const Navbarr = () => {
     </nav>
 
     {/* Mobile Navbar (Hidden by default) */}
-    <div className={`lg:hidden ${isOpen  ? 'block' : 'hidden'} bg-transparent  p-4 space-y-4 z-100 pt-16 
-     justify-around`}  onClick={()=>{setIsOpen(0)}}
-    >
+    
+    {isOpen && (
+  <div className="fixed top-24 left-0 w-full h-full bg-black bg-opacity-50 z-50">
+    <div className=" top-0 right-0 w-64 h-full bg-white p-4 transition-transform transform duration-300 ease-in-out translate-x-full"
+      style={{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)' }}>
+      <div className="flex flex-col items-center space-y-6">
+            <a href="/" className="hover:text-gray-400">Home</a>
+            <a href="/plc" className="hover:text-gray-400">PLC</a>
+            {/*Robotics Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsPlcDropdownOpen(!isPlcDropdownOpen)}
+                className="hover:text-gray-400"
+              >
+                Robotics
+              </button>
+              {isPlcDropdownOpen && (
+                <div className="absolute left-0 w-48 bg-gray-900 mt-2 rounded-lg shadow-md">
+                  <ul>
+                    <li className="hover:bg-gray-700 text-white"><a href="/cpro" className="block px-4 py-2">Advance Robotics</a></li>
+                    <li className="hover:bg-gray-700 text-white"><a href="/kids" className="block px-4 py-2">Kids Robotics</a></li>
+                    
+                  </ul>
+                </div>
+                   )}
+                   </div>
+                   
 
-      <a href="/" className="block px-4 py-2 "onClick={scrollToTop}>Home</a>
-      <a href="/" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>HOME</a>
-      <a href="/cpro" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Advance Robotics</a>
-      <a href="/kids" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Kids Robotics</a>
-      <a href="/plc" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>PLC</a>
-      <a href="/online" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Online Course</a>
-      <a href="/workshop" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center"onClick={scrollToTop}>Workshop</a>
-      <a href="/Test" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">API</a>
-      <a href="/contact" className="block px-4 py-2 bg-gray-500 rounded-md w-1/4  text-center">Contact</a>
+                   {/*Robotics Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setIsMoreDropdownOpen(!isMoreDropdownOpen)}
+                className="hover:text-gray-400"
+              >
+                More
+              </button>
+              {isMoreDropdownOpen && (
+                <div className="absolute left-0 w-48 bg-gray-900 mt-2 rounded-lg shadow-md">
+                  <ul>
+                    <li className="hover:bg-gray-600 text-white"><a href="/online" className="block px-4 py-2">Online Course</a></li>
+                    <li className="hover:bg-gray-600 text-white"><a href="/workshop" className="block px-4 py-2">Workshop</a></li>
+                    
+                  </ul>
+                </div>
+                   )}
+                   </div>
+                  <a href="/test" className="hover:text-gray-400">API</a> 
+                  
+                  
+        <div className="">
+        {/* Sign Up Button */}
+        <div className="mb-4">
 
+        
+        <button className="px-6 py-3 text-white bg-blue-600 hover:bg-blue-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-full transition duration-300 ease-in-out">
+          Sign Up
+        </button>
+        </div>
+        <div>
 
+        {/* Sign In Button */}
+        <button className="px-6 py-3 text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-full transition duration-300 ease-in-out">
+          Sign In
+        </button>
+        </div>
+      </div>
+                  </div>     
 
-
-
-      {/* Sign Up / Sign In buttons for mobile */}
-      <a
-        href="/signup"
-        className="block px-4 py-2 bg-gray-500 text-black text-center rounded-md text-lg w-1/4"
-      >
-        Sign Up
-      </a>
-
-
+      
+     
     </div>
+  </div>
+)}
+  
+    
 
   </>)
 
