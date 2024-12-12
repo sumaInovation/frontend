@@ -341,15 +341,15 @@ const RealTimeLineChart = () => {
         {/* Mobile second navbar */}
         <div className='  z-40 fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center '>
           
-          <div className={` p-2  ml-2 mb-2 text-white  text-[10px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={` p-2  ml-2 mb-2 text-white  text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
             <button onClick={() => { setIsaDaily(1) }}>Monthly  Production</button>
           </div>
-          <div className={` p-2  mb-2  text-white text-[10px]  font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={` p-2  mb-2  text-white text-[12px]  font-bold rounded-lg transition duration-300 ${isDaily === 2 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
             <button onClick={() => { setIsaDaily(2)}}>Download</button>
           </div>
-          <div className={`p-2  mb-2  text-white text-[10px] font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-blue-500' : 'bg-gray-500'
+          <div className={`p-2  mb-2  text-white text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 0 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
             <button onClick={() => { setIsaDaily(0) }}>Daily Production</button>
           </div>
