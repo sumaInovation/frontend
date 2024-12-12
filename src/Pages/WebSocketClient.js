@@ -293,9 +293,9 @@ const RealTimeLineChart = () => {
     <>
 
 
-      <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
+      <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-[76px] ">
         {/* Mobile second navbar */}
-        <div className='  z-40 fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center '>
+        <div className='  z-50 fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center '>
 
           <div className={` p-2  ml-2 mb-2 text-white  text-[12px] font-bold rounded-lg transition duration-300 ${isDaily === 1 ? 'bg-blue-500' : 'bg-gray-500'
             }`}>
