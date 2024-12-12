@@ -13,7 +13,7 @@ const RealTimeLineChart = () => {
       type: 'line',
       height: 350,
       animations: {
-      enabled: false, // Disable animations for real-time updates
+        enabled: false, // Disable animations for real-time updates
       },
       toolbar: {
         show: false, // Disable the chart toolbar (including zoom and reset buttons)
@@ -64,7 +64,7 @@ const RealTimeLineChart = () => {
   const [clientId, setClientId] = useState('');
   const [machinestate, setMachinestate] = useState(0);
   const [isDaily, setIsaDaily] = useState(0);
-  const [Isconnnected,setIsconnect]=useState(0);
+  const [Isconnnected, setIsconnect] = useState(0);
 
 
 
@@ -89,7 +89,7 @@ const RealTimeLineChart = () => {
 
   //Inizialize Piechart for daily
   const daily = {
-    series: [_todayTotalBreake,100, _todayTotalRun],
+    series: [_todayTotalBreake, 100, _todayTotalRun],
     options: {
       chart: {
         type: 'pie',
@@ -110,7 +110,7 @@ const RealTimeLineChart = () => {
 
   // Data for the second pie chart
   const Monthly = {
-    series: [_thismontTotalBreake,100, _thismontTotalRun],
+    series: [_thismontTotalBreake, 100, _thismontTotalRun],
     options: {
       chart: {
         type: 'pie',
@@ -129,7 +129,7 @@ const RealTimeLineChart = () => {
     },
   };
 
-  
+
 
 
 
@@ -143,7 +143,7 @@ const RealTimeLineChart = () => {
       const id = Math.floor(Math.random() * 1000);
       setClientId(id);
     };
-    websocket.onclose=()=>{
+    websocket.onclose = () => {
       setIsconnect(0);
     }
 
@@ -191,31 +191,31 @@ const RealTimeLineChart = () => {
         if (thismontTotalRun !== undefined) {
           setThismonthTotalRun(thismontTotalRun);
         }
-      
-        
+
+
         //  Linechart
-       // Get the current local time (milliseconds)
-      const currentTime1 = new Date();
-      const localMillis = currentTime.getTime();  // Get time in milliseconds (local time)
+        // Get the current local time (milliseconds)
+        const currentTime1 = new Date();
+        const localMillis = currentTime.getTime();  // Get time in milliseconds (local time)
 
-      // Adjust for the time zone offset (in milliseconds)
-      const timezoneOffsetMillis = currentTime1.getTimezoneOffset() * 60 * 1000;  // Convert minutes to milliseconds
-      const adjustedTimeMillis = localMillis - timezoneOffsetMillis;  // Adjust the time by the time zone offset
+        // Adjust for the time zone offset (in milliseconds)
+        const timezoneOffsetMillis = currentTime1.getTimezoneOffset() * 60 * 1000;  // Convert minutes to milliseconds
+        const adjustedTimeMillis = localMillis - timezoneOffsetMillis;  // Adjust the time by the time zone offset
 
-      // Simulate production rate
-      const productionRate =_current_breaking_time// Math.floor(Math.random() * 100); 
+        // Simulate production rate
+        const productionRate = _current_breaking_time// Math.floor(Math.random() * 100); 
 
-      // Add new data point with adjusted time
-      setSeries((prevSeries) => {
-        const newData = [...prevSeries[0].data, [adjustedTimeMillis, productionRate]];
+        // Add new data point with adjusted time
+        setSeries((prevSeries) => {
+          const newData = [...prevSeries[0].data, [adjustedTimeMillis, productionRate]];
 
-        // Limit to the last 10 data points
-        if (newData.length > 10) {
-          newData.shift(); // Remove the oldest data point
-        }
+          // Limit to the last 10 data points
+          if (newData.length > 10) {
+            newData.shift(); // Remove the oldest data point
+          }
 
-        return [{ ...prevSeries[0], data: newData }];
-      });
+          return [{ ...prevSeries[0], data: newData }];
+        });
 
 
 
@@ -295,23 +295,24 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-     
-      
+
+
       <div class="lg:grid lg:grid-cols-12 lg:grid-rows-12 pt-24 ">
-      <div className='fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center'>
-       <div className='text-white p-3'>
-        <button >Download</button>
-       </div>
-       <div className='text-white p-3'>
-        <button >Monthly  Production</button>
-       </div>
-       <div className='text-white p-3'>
-        <button >Daily Production</button>
-       </div>
-       
+        {/* Mobile second navbar */}
+        <div className='fixed bg-black  w-full  lg:hidden  grid grid-cols-3 justify-items-center'>
+          <div className='text-white p-3'>
+            <button onClick={()=>{}}>Download</button>
+          </div>
+          <div className='text-white p-3'>
+            <button onClick={()=>{ setIsaDaily(1) }}>Monthly  Production</button>
+          </div>
+          <div className='text-white p-3'>
+            <button onClick={()=>{setIsaDaily(0)}}>Daily Production</button>
+          </div>
 
-      </div>
 
+        </div>
+        {/* Large screen second navbar */}
         <div class="bg-gray-800 p-4 row-span-10 col-span-2   hidden lg:block ">
           <ul className='m-4 text-white'>
             <li className='  text-center'>MENUE</li>
@@ -333,10 +334,10 @@ const RealTimeLineChart = () => {
           </ul>
 
         </div>
-        
+
         <div class="bg-gray-800 p-4 row-span-10 col-span-10 min-h-screen">
           <div className="container mx-auto p-4">
-            {/* 3-Column Grid */}
+            {/* 3-Column Grid for large screen and 1 Colum for small screen */}
             <div className="grid grid-cols-1  lg:grid-cols-3 gap-6">
               {/* Column 1 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
@@ -363,7 +364,7 @@ const RealTimeLineChart = () => {
                         className={`text-lg font-semibold ${machinestate === "Running" ? "text-green-600" : "text-red-600"
                           }`}
                       >
-                        {machinestate ? "Running" : "Stop"}   
+                        {machinestate ? "Running" : "Stop"}
                       </span>
                     </div>
 
@@ -387,42 +388,45 @@ const RealTimeLineChart = () => {
                 </div>
               </div>
 
-              {/*Piechar Part*/}
+              {/* colum2 Piechar Part*/}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-             {isDaily==1? <ApexCharts
-            key="pie-chart-2"
-            options={Monthly.options}
-            series={Monthly.series}
-            type="pie"
-            height={350}
-            />: <ApexCharts
-            key="pie-chart-1"
-            options={daily.options}
-            series={daily.series}
-            type="pie"
-            height={350}
-          />}
-                
+                {isDaily == 1 ? <ApexCharts
+                  key="pie-chart-2"
+                  options={Monthly.options}
+                  series={Monthly.series}
+                  type="pie"
+                  height={350}
+                /> : <ApexCharts
+                  key="pie-chart-1"
+                  options={daily.options}
+                  series={daily.series}
+                  type="pie"
+                  height={350}
+                />}
+
               </div>
 
-              {/* Linechart Part */}
+              {/* colum3 Linechart Part */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                {/* <Line data={chartData} options={options} className='mt-36 ' /> */}
                 <ApexCharts options={options1} series={series} type="line" height={350} />
               </div>
+              {/* row2 colum1 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
                 <h1 className='text-3xl'>This {monthNames[new Date().getMonth()]}</h1>
                 <h1>Maximum Production hours/Day  : {'0'}</h1>
                 <h1>Minimum Production hours/Day  : {'0'}</h1>
 
               </div>
+              {/* Row 2 colum2 */}
               <div className="bg-gray-200 p-6 rounded-lg shadow-lg text-center text-4xl">
-                    {Isconnnected==0?<h1 className='text-green-600'>Sever Connected</h1>:
-                    <h1 className='text-red-600'>Server Disconnect</h1>}
-                </div>
-                <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
-                
-                </div>
+                {Isconnnected == 0 ? <h1 className='text-green-600'>Sever Connected</h1> :
+                  <h1 className='text-red-600'>Server Disconnect</h1>}
+              </div>
+              {/* row 2 colum3 */}
+              <div className="bg-gray-200 p-6 rounded-lg shadow-lg">
+
+              </div>
+
 
             </div>
           </div>
