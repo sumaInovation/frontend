@@ -1,7 +1,7 @@
 // src/ProductionReport.js
 import React, { useState } from 'react';
 import { Line, Pie } from 'react-chartjs-2';
-import { Chart as ChartJS } from 'chart.js/auto';
+
 
 // Helper function to generate random data
 const generateRandomData = (days) => {
