@@ -11,6 +11,10 @@ const lineData = [
   { date: '2024-01-02', units: 70 },
   { date: '2024-01-03', units: 90 },
   { date: '2024-01-04', units: 120 },
+  { date: '2024-01-05', units: 50 },
+  { date: '2024-01-06', units: 70 },
+  { date: '2024-01-07', units: 90 },
+  
 ];
 
 const pieData = [
@@ -24,12 +28,20 @@ const barData = [
   { name: 'Day 1', production: 100, downtime: 20 },
   { name: 'Day 2', production: 120, downtime: 15 },
   { name: 'Day 3', production: 90, downtime: 30 },
+  { name: 'Day 4', production: 100, downtime: 20 },
+  { name: 'Day 5', production: 120, downtime: 15 },
+  { name: 'Day 6', production: 90, downtime: 30 },
+  { name: 'Day 7', production: 90, downtime: 30 },
 ];
 
 const tableData = [
   { date: '2024-01-01', produced: 50, defective: 5, downtime: 10 },
   { date: '2024-01-02', produced: 70, defective: 3, downtime: 8 },
   { date: '2024-01-03', produced: 90, defective: 2, downtime: 7 },
+  { date: '2024-01-04', produced: 50, defective: 5, downtime: 10 },
+  { date: '2024-01-05', produced: 70, defective: 3, downtime: 8 },
+  { date: '2024-01-06', produced: 90, defective: 2, downtime: 7 },
+  { date: '2024-01-07', produced: 90, defective: 2, downtime: 7 },
 ];
 
 const columns = [
