@@ -3,8 +3,9 @@ import ApexCharts from 'react-apexcharts';
 
 import "react-datepicker/dist/react-datepicker.css";  // Import the default styles for DatePicker
 import DatePicker from 'react-datepicker';  // Import DatePicker
-import Scrolltop from './Scrolltop'
+
 import Weeklyreport from './Weeklyreport';
+
 
 const RealTimeLineChart = () => {
 
@@ -292,8 +293,15 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-
-    <Weeklyreport/>
+    <div className='text-white mt-20'>
+      <ul className='flex m-3'>
+      <li className='p-3'><button onClick={()=>{setIsaDaily(2)}}>Today</button></li>
+      <li className='p-3'><button onClick={()=>{setIsaDaily(3)}}>This Week</button></li>
+      <li className='p-3'><button onClick={()=>{setIsaDaily(4)}}>This Month</button></li>
+      <li className='p-3'><button onClick={()=>{setIsaDaily(5)}}>Download</button></li>
+      </ul>
+    </div>
+       {isDaily==3 &&<Weeklyreport/>}
      
     </>
   );
