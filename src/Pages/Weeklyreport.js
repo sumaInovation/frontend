@@ -35,19 +35,18 @@ const barData = [
 ];
 
 const tableData = [
-  { date: '2024-01-01', produced: 50,  downtime: 10 },
-  { date: '2024-01-02', produced: 70,  downtime: 8 },
-  { date: '2024-01-03', produced: 90, downtime: 7 },
-  { date: '2024-01-04', produced: 50, downtime: 10 },
-  { date: '2024-01-05', produced: 70, downtime: 8 },
-  { date: '2024-01-06', produced: 90, downtime: 7 },
-  { date: '2024-01-07', produced: 90, downtime: 7 },
+  { date: '2024-01-01', runtime: 50,  downtime: 10 },
+  { date: '2024-01-02', runtime: 70,  downtime: 8 },
+  { date: '2024-01-03', runtime: 90, downtime: 7 },
+  { date: '2024-01-04', runtime: 50, downtime: 10 },
+  { date: '2024-01-05', runtime: 70, downtime: 8 },
+  { date: '2024-01-06', runtime: 90, downtime: 7 },
+  { date: '2024-01-07', runtime: 90, downtime: 7 },
 ];
 
 const columns = [
   { Header: 'Date', accessor: 'date' },
-  { Header: 'Units Produced', accessor: 'produced' },
-
+  { Header: 'Runtime (hrs)', accessor: 'runtime' },
   { Header: 'Downtime (hrs)', accessor: 'downtime' },
 ];
 
