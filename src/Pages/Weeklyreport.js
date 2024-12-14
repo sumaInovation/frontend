@@ -7,14 +7,10 @@ import { useTable } from 'react-table';
 
 // Sample data for charts
 const lineData = [
-  { date: '01', units: 50 },
-  { date: '02', units: 70 },
-  { date: '03', units: 90 },
-  { date: '04', units: 120 },
-  { date: '05', units: 50 },
-  { date: '06', units: 70 },
-  { date: '07', units: 90 },
-  { date: '08', units: 120 },
+  { date: '2024-01-01', units: 50 },
+  { date: '2024-01-02', units: 70 },
+  { date: '2024-01-03', units: 90 },
+  { date: '2024-01-04', units: 120 },
 ];
 
 const pieData = [
@@ -28,20 +24,12 @@ const barData = [
   { name: 'Day 1', production: 100, downtime: 20 },
   { name: 'Day 2', production: 120, downtime: 15 },
   { name: 'Day 3', production: 90, downtime: 30 },
-  { name: 'Day 4', production: 100, downtime: 20 },
-  { name: 'Day 5', production: 120, downtime: 15 },
-  { name: 'Day 6', production: 90, downtime: 30 },
-  { name: 'Day 7', production: 90, downtime: 30 },
 ];
 
 const tableData = [
   { date: '2024-01-01', produced: 50, defective: 5, downtime: 10 },
   { date: '2024-01-02', produced: 70, defective: 3, downtime: 8 },
   { date: '2024-01-03', produced: 90, defective: 2, downtime: 7 },
-  { date: '2024-01-04', produced: 50, defective: 5, downtime: 10 },
-  { date: '2024-01-05', produced: 70, defective: 3, downtime: 8 },
-  { date: '2024-01-06', produced: 90, defective: 2, downtime: 7 },
-  { date: '2024-01-07', produced: 90, defective: 2, downtime: 7 },
 ];
 
 const columns = [
@@ -51,15 +39,15 @@ const columns = [
   { Header: 'Downtime (hrs)', accessor: 'downtime' },
 ];
 
-const Weeklyreport = () => {
+const Dashboard = () => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data: tableData });
 
   return (
-    <div className=" bg-gray-100  mt-16">
-      <div className=" grid lg:grid-cols-12 gap-10">
+    <div className="p-6 bg-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-6">
 
         {/* Card 1 - Line Chart */}
-        <div className="bg-white  rounded-lg shadow-md lg:col-span-4 col-span-12 m-3">
+        <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Production Over Time</h2>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={lineData}>
@@ -74,7 +62,7 @@ const Weeklyreport = () => {
         </div>
 
         {/* Card 2 - Pie Chart */}
-        <div className="bg-white  rounded-lg shadow-md lg:col-span-4 col-span-12 m-3">
+        <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Production Breakdown</h2>
           <PieResponsiveContainer width="100%" height={300}>
             <PieChart>
@@ -89,9 +77,9 @@ const Weeklyreport = () => {
         </div>
 
         {/* Card 3 - Bar Chart */}
-        <div className="bg-white  rounded-lg shadow-md lg:col-span-4 col-span-12 m-3">
+        <div className="bg-white p-4 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold mb-4">Production vs Downtime</h2>
-          <BarResponsiveContainer width="" height={300}>
+          <BarResponsiveContainer width="100%" height={300}>
             <BarChart data={barData}>
               <BarGrid strokeDasharray="3 3" />
               <BarXAxis dataKey="name" />
@@ -105,7 +93,7 @@ const Weeklyreport = () => {
         </div>
 
         {/* Card 4 - Summary Table */}
-        <div className="bg-white  rounded-lg shadow-md col-span-12 lg:col-span-6 m-3">
+        <div className="bg-white p-4 rounded-lg shadow-md col-span-1 lg:col-span-3">
           <h2 className="text-xl font-semibold mb-4">Daily Production Summary</h2>
           <div className="overflow-x-auto">
             <table {...getTableProps()} className="min-w-full table-auto">
@@ -143,6 +131,4 @@ const Weeklyreport = () => {
   );
 };
 
-export default Weeklyreport;
-
-
+export default Dashboard;
