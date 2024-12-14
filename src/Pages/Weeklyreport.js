@@ -35,19 +35,19 @@ const barData = [
 ];
 
 const tableData = [
-  { date: '2024-01-01', produced: 50, defective: 5, downtime: 10 },
-  { date: '2024-01-02', produced: 70, defective: 3, downtime: 8 },
-  { date: '2024-01-03', produced: 90, defective: 2, downtime: 7 },
-  { date: '2024-01-04', produced: 50, defective: 5, downtime: 10 },
-  { date: '2024-01-05', produced: 70, defective: 3, downtime: 8 },
-  { date: '2024-01-06', produced: 90, defective: 2, downtime: 7 },
-  { date: '2024-01-07', produced: 90, defective: 2, downtime: 7 },
+  { date: '2024-01-01', produced: 50,  downtime: 10 },
+  { date: '2024-01-02', produced: 70,  downtime: 8 },
+  { date: '2024-01-03', produced: 90, downtime: 7 },
+  { date: '2024-01-04', produced: 50, downtime: 10 },
+  { date: '2024-01-05', produced: 70, downtime: 8 },
+  { date: '2024-01-06', produced: 90, downtime: 7 },
+  { date: '2024-01-07', produced: 90, downtime: 7 },
 ];
 
 const columns = [
   { Header: 'Date', accessor: 'date' },
   { Header: 'Units Produced', accessor: 'produced' },
-  { Header: 'Defective Units', accessor: 'defective' },
+
   { Header: 'Downtime (hrs)', accessor: 'downtime' },
 ];
 
@@ -107,7 +107,7 @@ const Dashboard = () => {
         {/* Card 4 - Summary Table */}
         <div className="bg-white p-4 rounded-lg shadow-md col-span-1 lg:col-span-3">
           <h2 className="text-xl font-semibold mb-4">Daily Production Summary</h2>
-          <div className="overflow-x-auto">
+          <div className="">
             <table {...getTableProps()} className="min-w-full table-auto">
               <thead>
                 {headerGroups.map(headerGroup => (
