@@ -17,7 +17,8 @@ import Kids from "./Pages/Kidsrobotics"
 import Scrolltop from "./Pages/Scrolltop";
 import Googlelogin from "./Pages/Googlelogin"
 import Test from "./Pages/WebSocketClient";
-import Template1 from "./Pages/Template1";
+import Dashboard from './Pages/WebSocketClient'
+
 
      
 const App = () => {
@@ -39,9 +40,9 @@ const App = () => {
           <Route path="/loginuser" element={<UserLoggingData/>}/>
           <Route path="/kids" element={<Kids/>}/>
           <Route path="/abc" element={<Googlelogin/>}/>
-          <Route path="/test" element={<Test/>}/>
+          <Route path="/test" element={<Dashboard/>}/>
           <Route path="/*" element={<Notfound/>}/>
-          <Route path="/tem" element={<Template1/>}/>
+          
         </Routes>
         <Footer />
       </BrowserRouter> 
