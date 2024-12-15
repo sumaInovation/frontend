@@ -293,7 +293,7 @@ const RealTimeLineChart = () => {
 
   return (
     <>
-    <div className='text-white mt-20'>
+    <div className='text-white mt-20 fixed'>
       <ul className='flex m-3'>
       <li className='p-3'><button onClick={()=>{setIsaDaily(2)}}>Today</button></li>
       <li className='p-3'><button onClick={()=>{setIsaDaily(3)}}>This Week</button></li>
