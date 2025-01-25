@@ -1,84 +1,34 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.13.5",
-    "@emotion/styled": "^11.13.5",
-    "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.2.0",
-    "@material-tailwind/react": "^2.1.10",
-    "@mui/icons-material": "^6.1.10",
-    "@mui/material": "^6.1.9",
-    "@react-google-maps/api": "^2.19.2",
-    "@react-oauth/google": "^0.12.1",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "apexcharts": "^4.2.0",
-    "axios": "^1.7.7",
-    "chart.js": "^4.4.6",
-    "date-fns": "^4.1.0",
-    "file-saver": "^2.0.5",
-    "framer-motion": "^10.18.0",
-    "jspdf": "^2.5.2",
-    "jwt-decode": "^4.0.0",
-    "react": "^18.2.0",
-    "react-apexcharts": "^1.7.0",
-    "react-chartjs-2": "^5.2.0",
-    "react-datepicker": "^7.5.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0",
-    "react-router-dom": "^6.28.0",
-    "react-scripts": "5.0.1",
-    "react-table": "^7.8.0",
-    "react-typed": "^1.2.0",
-    "react-use-websocket": "^4.11.1",
-    "react-youtube": "^10.1.0",
-    "recharts": "^2.13.3",
-    "tw-elements-react": "^1.0.0-alpha-end",
-    "use-places-autocomplete": "^4.0.1",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "1.0.0",
+  "main": "backend/sever.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "NODE_ENV=development nodemon backend/sever.js",
+    "start": "cross-env  NODE_ENV=production node backend/sever.js",
+    "build": "npm install && npm install --force --prefix sumaautomation && npm run build --prefix sumaautomation"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumaInovation/frontend.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumaInovation/frontend/issues"
+  },
+  "homepage": "https://github.com/sumaInovation/frontend#readme",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "mongoose": "^8.9.5",
+    "nodemon": "^3.1.9"
+  },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@babel/preset-env": "^7.23.8",
-    "@babel/preset-react": "^7.23.3",
-    "babel-loader": "^9.1.3",
-    "css-loader": "^6.9.1",
-    "file-loader": "^6.2.0",
-    "sass": "^1.70.0",
-    "sass-loader": "^14.0.0",
-    "tailwindcss": "^3.4.1",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "cross-env": "^7.0.3"
   }
 }
