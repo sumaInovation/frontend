@@ -1,21 +1,18 @@
-{
-  "engines": {
-  "node": "20.x"
-},
 
-  "name": "server",
-  "type": "module",
+
+
+{
+  "name": "frontend-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node server.js",
-    "build": "cd ../client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "engines": {
+    "node": "20.x"
   }
 }
